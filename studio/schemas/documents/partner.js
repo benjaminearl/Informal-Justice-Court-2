@@ -1,7 +1,7 @@
 export default {
-  name: 'author',
+  name: 'partner',
   type: 'document',
-  title: 'Author',
+  title: 'Partner',
   fields: [
     {
       name: 'name',
@@ -20,20 +20,13 @@ export default {
     },
     {
       name: 'image',
-      type: 'mainImage',
-      title: 'Image'
+      type: 'image',
+      title: 'Logo or Image'
     },
     {
       name: 'bio',
-      type: 'bioPortableText',
+      type: 'text',
       title: 'Biography'
     }
-  ],
-  preview: {
-    select: {
-      title: 'name',
-      subtitle: 'slug.current',
-      media: 'image'
-    }
-  }
+  ]
 }

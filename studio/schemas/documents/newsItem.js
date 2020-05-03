@@ -1,9 +1,9 @@
 import {format} from 'date-fns'
 
 export default {
-  name: 'post',
   type: 'document',
-  title: 'Blog Post',
+  name: 'newsItem',
+  title: 'News Item',
   fields: [
     {
       name: 'title',
@@ -29,8 +29,8 @@ export default {
     },
     {
       name: 'mainImage',
-      type: 'mainImage',
-      title: 'Main image'
+      title: 'Main image',
+      type: 'mainImage'
     },
     {
       name: 'excerpt',
@@ -40,19 +40,19 @@ export default {
         'This ends up on summary pages, on Google, when people share your post in social media.'
     },
     {
-      name: 'authors',
-      title: 'Authors',
+      name: 'teamMembers',
+      title: 'Team Members',
       type: 'array',
       of: [
         {
-          type: 'authorReference'
+          type: 'teamMemberReference'
         }
       ]
     },
     {
       name: 'categories',
-      type: 'array',
       title: 'Categories',
+      type: 'array',
       of: [
         {
           type: 'reference',
@@ -70,8 +70,8 @@ export default {
   ],
   orderings: [
     {
-      name: 'publishingDateAsc',
       title: 'Publishing date new–>old',
+      name: 'publishingDateAsc',
       by: [
         {
           field: 'publishedAt',
@@ -84,8 +84,8 @@ export default {
       ]
     },
     {
-      name: 'publishingDateDesc',
       title: 'Publishing date old->new',
+      name: 'publishingDateDesc',
       by: [
         {
           field: 'publishedAt',
@@ -105,7 +105,7 @@ export default {
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, slug = {}, media}) {
+    prepare ({title = 'No title', publishedAt, slug, media}) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {

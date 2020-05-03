@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-newsItem
+---
+<article>
+  <h1>{{ newsItem.title }}</h1>
+  <p>Written by {% for teamMember in newsItem.teamMembers %}{{teamMember.name}}{% endfor %}  </p>
+  {{ newsItem.body | markdownify | safe }}
+  <p><a href="{{ '/' | url }}">← Home</a></p>
+</article>

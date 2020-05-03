@@ -4,7 +4,7 @@ module.exports =  async function() {
   return await client.fetch(groq`
     *[_id == "siteSettings"]{
       ...,
-      author->
+      teamMember->
     }[0]
   `)
 }

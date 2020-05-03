@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-teamMember
+---
+<h1>{{ teamMember.name }}</h1>
+
+{{ teamMember.bio | markdownify | safe }}
+
+<p><a href="{{ '/' | url }}">← Home</a></p>

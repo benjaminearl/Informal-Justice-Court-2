@@ -3,7 +3,7 @@ import MdSettings from 'react-icons/lib/md/settings'
 import MdPerson from 'react-icons/lib/md/person'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'author', 'post', 'siteSettings'].includes(listItem.getId())
+  !['category', 'teamMember', 'newsItem', 'siteSettings', 'partner', 'teamInformation'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -19,14 +19,30 @@ export default () =>
             .documentId('siteSettings')
         ),
       S.listItem()
-        .title('Blog posts')
-        .schemaType('post')
-        .child(S.documentTypeList('post').title('Blog posts')),
-      S.listItem()
-        .title('Authors')
-        .icon(MdPerson)
-        .schemaType('author')
-        .child(S.documentTypeList('author').title('Authors')),
+        .title('News Items')
+        .schemaType('newsItem')
+        .child(S.documentTypeList('newsItem').title('News Items')),
+        S.listItem()
+        .title('Team')
+        .child(
+          S.list()
+            .title('Team')
+            .items([
+              S.listItem()
+                .title('Team Information')
+                .schemaType('teamInformation')
+                .child(S.documentTypeList('teamInformation').title('Team Information')),
+              S.divider(),
+              S.listItem()
+                .title('Team Members')
+                .schemaType('teamMember')
+                .child(S.documentTypeList('teamMember').title('Team Members')),
+              S.listItem()
+                .title('Partners')
+                .schemaType('partner')
+                .child(S.documentTypeList('partner').title('Partners'))
+            ])
+        ),
       S.listItem()
         .title('Categories')
         .schemaType('category')
