@@ -17,3 +17,9 @@ navtitle: Home
 {% include "newsitemslist.njk" %}
 
 <p>More News Items can be found in <a href="{{ '/newsitems/' | url }}">the archive</a>.</p>
+
+
+<h1>About Us</h1>
+
+{% set teamdetaillist = collections.myTeamDetails %}
+{% include "teamdetaillist.njk" %}

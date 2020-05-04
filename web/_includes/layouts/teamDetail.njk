@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-teamDetail
+---
+<article>
+  <h1>{{ teamDetail.title }}</h1>
+  {{ teamDetail.body | markdownify | safe }}
+  <p><a href="{{ '/' | url }}">← Home</a></p>
+</article>
