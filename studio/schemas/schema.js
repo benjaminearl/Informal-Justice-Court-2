@@ -9,10 +9,9 @@ import teamMember from './documents/teamMember'
 import category from './documents/category'
 import newsItem from './documents/newsItem'
 import siteSettings from './documents/siteSettings'
-import homePage from './documents/homePage'
 import partner from './documents/partner'
 import projectDetail from './documents/projectDetail'
-import teamInformation from './documents/teamInformation'
+import teamDetail from './documents/teamDetail'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -39,10 +38,9 @@ export default createSchema({
     bodyPortableText,
     bioPortableText,
     excerptPortableText,
-    homePage,
     partner,
     projectDetail,
-    teamInformation
+    teamDetail
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

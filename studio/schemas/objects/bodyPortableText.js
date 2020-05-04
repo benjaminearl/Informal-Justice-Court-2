@@ -1,7 +1,7 @@
 export default {
   name: 'bodyPortableText',
   type: 'array',
-  title: 'News Item body',
+  title: 'detail',
   of: [
     {
       type: 'block',
@@ -37,10 +37,27 @@ export default {
                 type: 'url'
               }
             ]
+          },
+          {
+            name: 'internalLink',
+            type: 'object',
+            title: 'Internal link',
+            fields: [
+              {
+                name: 'reference',
+                type: 'reference',
+                title: 'Reference',
+                to: [
+                  { type: 'newsItem' },
+                  { type: 'partner' },
+                  { type: 'teamMember' },
+                  // other types you may want to link to
+                ]
+              }
+            ]
           }
         ]
-      },
-      of: [{type: 'teamMemberReference'}]
+      }
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array

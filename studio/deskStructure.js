@@ -29,9 +29,9 @@ export default () =>
             .title('Team')
             .items([
               S.listItem()
-                .title('Team Information')
-                .schemaType('teamInformation')
-                .child(S.documentTypeList('teamInformation').title('Team Information')),
+                .title('Team Pages')
+                .schemaType('teamDetail')
+                .child(S.documentTypeList('teamDetail').title('Team Pages')),
               S.divider(),
               S.listItem()
                 .title('Team Members')
