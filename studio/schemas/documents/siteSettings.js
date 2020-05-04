@@ -13,7 +13,7 @@ export default {
       name: 'tagline',
       type: 'string',
       title: 'Tagline'
-    }.
+    },
     {
       name: 'description',
       type: 'text',

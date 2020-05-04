@@ -23,7 +23,7 @@
         {%- endfor -%}
       </ul>
     </header>
-
+    <p>{{ metadata.description }}</p>
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
     </main>
