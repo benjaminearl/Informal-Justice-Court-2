@@ -5,16 +5,16 @@ const serializers = require('../utils/serializers')
 const overlayDrafts = require('../utils/overlayDrafts')
 const hasToken = !!client.config().token
 
-function generateProjectInformation (projectInformation) {
+function generateProjectDetail (projectDetail) {
   return {
-    ...projectInformation,
-    body: BlocksToMarkdown(projectInformation.body, { serializers, ...client.config() })
+    ...projectDetail,
+    body: BlocksToMarkdown(projectDetail.body, { serializers, ...client.config() })
   }
 }
 
-async function getProjectInformations () {
+async function getProjectDetails () {
   // Learn more: https://www.sanity.io/docs/data-store/how-queries-work
-  const filter = groq`*[_type == "projectInformation" && defined(slug) && publishedAt < now()]`
+  const filter = groq`*[_type == "projectDetail" && defined(slug) && publishedAt < now()]`
   const projection = groq`{
     _id,
     publishedAt,
@@ -38,8 +38,8 @@ async function getProjectInformations () {
   const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
-  const prepareprojectInformations = reducedDocs.map(generateProjectInformation)
-  return prepareProjectInformations
+  const prepareProjectDetails = reducedDocs.map(generateProjectDetail)
+  return prepareProjectDetails
 }
 
-module.exports = getProjectInformations
+module.exports = getProjectDetails

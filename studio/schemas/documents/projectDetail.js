@@ -2,8 +2,8 @@ import {format} from 'date-fns'
 
 export default {
   type: 'document',
-  name: 'projectInformation',
-  title: 'Project Information',
+  name: 'projectDetail',
+  title: 'Project Detail',
   fields: [
     {
       name: 'title',
