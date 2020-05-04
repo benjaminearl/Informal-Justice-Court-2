@@ -11,7 +11,7 @@ import newsItem from './documents/newsItem'
 import siteSettings from './documents/siteSettings'
 import homePage from './documents/homePage'
 import partner from './documents/partner'
-import projectElement from './documents/projectElement'
+import projectInformation from './documents/projectInformation'
 import teamInformation from './documents/teamInformation'
 
 // Object types
@@ -41,7 +41,7 @@ export default createSchema({
     excerptPortableText,
     homePage,
     partner,
-    projectElement,
+    projectInformation,
     teamInformation
 
     // When added to this list, object types can be used as

@@ -1,0 +1,9 @@
+<ol reversed class="projectinformationlist" style="counter-reset: start-from {{ projectinformationlist.length + 1 }}">
+{% for projectInformation in projectinformationlist | reverse %}
+  {% set currentProjectInformation = projectInformation.data.projectInformation %}
+  <li class="projectinformationlist-item{% if projectInformation.url == url %} projectinformationlist-item-active{% endif %}">
+    <a href="{{ projectInformation.url | url }}" class="projectinformationlist-link">{% if currentProjectInformation.title %}{{ currentProjectInformation.title }}{% else %}<code>{{ projectInformation.url }}</code>{% endif %}</a>
+    <time class="projectinformationlist-date" datetime="{{ currentProjectInformation.publishedAt }}">{{ currentProjectInformation.publishedAt|readableDate }}</time>
+  </li>
+{% endfor %}
+</ol>
