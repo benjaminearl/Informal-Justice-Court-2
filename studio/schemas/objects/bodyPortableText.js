@@ -1,7 +1,7 @@
 export default {
   name: 'bodyPortableText',
   type: 'array',
-  title: 'Item body',
+  title: 'News Item body',
   of: [
     {
       type: 'block',
@@ -48,9 +48,6 @@ export default {
     {
       type: 'image',
       options: {hotspot: true}
-    },
-    {
-      type: 'code'
     }
   ]
 }

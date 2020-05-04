@@ -1,0 +1,9 @@
+<ol reversed class="newsitemslist" style="counter-reset: start-from {{ newsitemslist.length + 1 }}">
+{% for newsItem in newsitemslist | reverse %}
+  {% set currentNewsItem = newsItem.data.newsItem %}
+  <li class="newsitemslist-item{% if newsItem.url == url %} newsitemslist-item-active{% endif %}">
+    <a href="{{ newsItem.url | url }}" class="newsitemslist-link">{% if currentNewsItem.title %}{{ currentNewsItem.title }}{% else %}<code>{{ newsItem.url }}</code>{% endif %}</a>
+    <time class="newsitemslist-date" datetime="{{ currentNewsItem.publishedAt }}">{{ currentNewsItem.publishedAt|readableDate }}</time>
+  </li>
+{% endfor %}
+</ol>
