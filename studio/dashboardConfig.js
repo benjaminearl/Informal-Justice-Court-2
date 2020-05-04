@@ -1,11 +1,5 @@
 export default {
   widgets: [
-    {
-      name: 'sanity-tutorials',
-      options: {
-        templateRepoId: 'sanity-io/sanity-template-eleventy-blog'
-      }
-    },
     {name: 'structure-menu'},
     {
       name: 'project-info',
@@ -34,11 +28,6 @@ export default {
           }
         ],
         data: [
-          {
-            title: 'GitHub repo',
-            value: 'https://github.com/benjaminearl/Informal-Justice-Court-2',
-            category: 'Code'
-          },
           {title: 'Frontend', value: 'https://Informal-Justice-Court-2.netlify.app', category: 'apps'}
         ]
       }
@@ -46,7 +35,7 @@ export default {
     {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      options: {title: 'Recent news', order: '_createdAt desc', types: ['newsItem']},
       layout: {width: 'medium'}
     }
   ]
