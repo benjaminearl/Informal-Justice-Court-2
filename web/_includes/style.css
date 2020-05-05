@@ -29,3 +29,13 @@ a {
 .header-item {
   display: inline-block;
 }
+
+.intro img {
+  max-width: 40%;
+  display: inline-block;
+}
+
+.intro p {
+  display: inline-block;
+  max-width: 40%;
+}
