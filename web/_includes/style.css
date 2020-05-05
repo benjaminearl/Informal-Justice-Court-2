@@ -53,7 +53,6 @@ header {
 
 .intro p {
   display: inline-block;
-  max-width: 40%;
 }
 
 .container {
@@ -64,6 +63,7 @@ header {
   border: 1px solid #000;
   width: auto;
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 .section-title h1 {
@@ -71,6 +71,33 @@ header {
   padding: 15px;
 }
 
+.section-content {
+  margin-bottom: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+tr {
+  border: 1px solid #000;
+}
+.projectdetailslist-item {
+  border-bottom: 1px solid #000;
+}
+
+.teamdetailslist-item {
+  border: 1px solid #000;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+
+td {
+  padding: 15px;
+}
 /* GRID SYSTEM */
 
 .grid-one {

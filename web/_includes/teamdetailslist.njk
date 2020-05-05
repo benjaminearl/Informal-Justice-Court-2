@@ -1,8 +1,6 @@
-<ol reversed class="teamdetailslist" style="counter-reset: start-from {{ teamdetailslist.length + 1 }}">
 {% for teamDetail in teamdetailslist | reverse %}
   {% set currentTeamDetail = teamDetail.data.teamDetail %}
-  <li class="teamdetailslist-item{% if teamDetail.url == url %} teamdetailslist-item-active{% endif %}">
+  <div class="teamdetailslist-item{% if teamDetail.url == url %} teamdetailslist-item-active{% endif %}">
     <a href="{{ teamDetail.url | url }}" class="teamdetailslist-link">{% if currentTeamDetail.title %}{{ currentTeamDetail.title }}{% else %}<code>{{ teamDetail.url }}</code>{% endif %}</a>
-  </li>
+  </div>
 {% endfor %}
-</ol>
