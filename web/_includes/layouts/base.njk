@@ -14,24 +14,26 @@
     </style>
   </head>
   <body>
-    <header>
-      <div class="title header-item">
-        <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-      </div>
-      <div class="tagline header-item">
-        <h2 class="home">{{ metadata.tagline }}</h2>
-      </div>
-      <div class="navigation header-item">
-        <ul class="nav">
-          {%- for nav in collections.nav | reverse -%}
-          <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
-          {%- endfor -%}
-        </ul>
-      </div>
-    </header>
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
-    </main>
-    <!-- Current page: {{ page.url | url }} -->
+      <header>
+        <div class="title header-item">
+          <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+        </div>
+        <div class="tagline header-item">
+          <h2 class="home">{{ metadata.tagline }}</h2>
+        </div>
+        <div class="navigation header-item">
+          <ul class="nav">
+            {%- for nav in collections.nav | reverse -%}
+            <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </header>
+      <div class="container">
+      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+        {{ content | safe }}
+      </main>
+      <!-- Current page: {{ page.url | url }} -->
+    </div>
   </body>
 </html>

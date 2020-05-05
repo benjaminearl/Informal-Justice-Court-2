@@ -26,16 +26,56 @@ a {
   font-weight: normal;
 }
 
+header {
+  margin: 20px;
+}
+
 .header-item {
   display: inline-block;
+  border: 1px solid #000;
+}
+
+.header-item h1 {
+  margin: 0;
+  padding: 15px;
+}
+
+.header-item h2 {
+  padding: 15px;
+  margin: 0;
 }
 
 .intro img {
   max-width: 40%;
   display: inline-block;
+  margin-right: 20px;
 }
 
 .intro p {
   display: inline-block;
   max-width: 40%;
+}
+
+.container {
+  margin: 20px;
+}
+
+.section-title {
+  border: 1px solid #000;
+  width: auto;
+  display: inline-block;
+}
+
+.section-title h1 {
+  margin: 0;
+  padding: 15px;
+}
+
+/* GRID SYSTEM */
+
+.grid-one {
+  max-width: 30%;
+}
+.grid-two {
+  max-width: 60%;
 }

@@ -6,24 +6,36 @@ tags:
 navtitle: Home
 ---
 <div class="intro">
-  <img src="{{ metadata.imageUrl | url }}"/>
-  <p>{{ metadata.description }}</p>
+  <img src="{{ metadata.imageUrl | url }}" class="grid-one"/>
+  <p class="grid-two">{{ metadata.description }}</p>
 </div>
 
-<div class="background">
-  <h1>Background</h1>
-  {% set projectdetailslist = collections.myProjectDetails %}
-  {% include "projectdetailslist.njk" %}
+<div class="background section">
+  <div class="section-title">
+    <h1>Background</h1>
+  </div>
+  <div class="section-content">
+    {% set projectdetailslist = collections.myProjectDetails %}
+    {% include "projectdetailslist.njk" %}
+  </div
 </div>
 
-<div class="news">
-  <h1>News</h1>
-  {% set newsitemslist = collections.myNewsItems %}
-  {% include "newsitemslist.njk" %}
+<div class="news section">
+  <div class="section-title">
+    <h1>News</h1>
+  </div>
+  <div class="section-content">
+    {% set newsitemslist = collections.myNewsItems %}
+    {% include "newsitemslist.njk" %}
+  </div>
 </div>
 
-<div class="about">
-  <h1>About Us</h1>
-  {% set teamdetailslist = collections.myTeamDetails %}
-  {% include "teamdetailslist.njk" %}
+<div class="about section">
+  <div class="section-title">
+    <h1>About Us</h1>
+  </div>
+  <div class="section-content">
+    {% set teamdetailslist = collections.myTeamDetails %}
+    {% include "teamdetailslist.njk" %}
+  </div>
 </div>
