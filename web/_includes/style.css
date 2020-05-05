@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier', monospace;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+a {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.header-item {
+  display: inline-block;
+}

@@ -1,21 +1,29 @@
 ---
 layout: layouts/home.njk
+title: Informal Justice Court home
 tags:
   - nav
 navtitle: Home
 ---
-<h1>Background</h1>
+<div class="intro">
+  <img src="{{ metadata.mainImage | url }}"/>
+  <p>{{ metadata.description }}</p>
+</div>
 
-{% set projectdetailslist = collections.myProjectDetails %}
-{% include "projectdetailslist.njk" %}
+<div class="background">
+  <h1>Background</h1>
+  {% set projectdetailslist = collections.myProjectDetails %}
+  {% include "projectdetailslist.njk" %}
+</div>
 
-<h1>News</h1>
+<div class="news">
+  <h1>News</h1>
+  {% set newsitemslist = collections.myNewsItems %}
+  {% include "newsitemslist.njk" %}
+</div>
 
-{% set newsitemslist = collections.myNewsItems %}
-{% include "newsitemslist.njk" %}
-
-
-<h1>About Us</h1>
-
-{% set teamdetailslist = collections.myTeamDetails %}
-{% include "teamdetailslist.njk" %}
+<div class="about">
+  <h1>About Us</h1>
+  {% set teamdetailslist = collections.myTeamDetails %}
+  {% include "teamdetailslist.njk" %}
+</div>

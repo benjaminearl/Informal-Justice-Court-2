@@ -21,6 +21,11 @@ export default {
       description: 'Describe your blog for search engines and social media.'
     },
     {
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'mainImage'
+    },
+    {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',
