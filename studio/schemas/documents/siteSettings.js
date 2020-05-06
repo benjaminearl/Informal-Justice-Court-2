@@ -38,7 +38,6 @@ export default {
     {
       name: 'teamMember',
       type: 'reference',
-      description: 'Publish an team member and set a reference to them here.',
       title: 'Team Member',
       to: [{type: 'teamMember'}]
     }
