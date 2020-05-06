@@ -1,10 +1,12 @@
 ---
-layout: layouts/home.njk
-navtitle: News Item Archive
+layout: layouts/staticContent.njk
+navtitle: News
+tags:
+  - nav
 permalink: /newsItems/
 ---
 
-<h1>News Item Archive</h1>
+<h1>News</h1>
 
 {% set newsitemslist = collections.myNewsItems %}
 {% include "newsitemslist.njk" %}

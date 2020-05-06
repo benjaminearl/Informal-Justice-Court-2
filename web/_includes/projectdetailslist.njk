@@ -1,10 +1,11 @@
-<table class="projectdetailslist" style="counter-reset: start-from {{ newsitemslist.length + 1 }}">
-  <tbody>
-    {% for projectDetail in projectdetailslist | reverse %}
-      {% set currentProjectDetail = projectDetail.data.projectDetail %}
-      <tr class="projectdetailslist-item{% if projectDetail.url == url %} projectdetailslist-item-active{% endif %}">
-        <td><a href="{{ projectDetail.url | url }}" class="projectdetailslist-link">{% if currentProjectDetail.title %}{{ currentProjectDetail.title }}{% else %}<code>{{ projectDetail.url }}</code>{% endif %}</a></td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="project-details">
+<ul class="static-content-nav">
+<li class="static-content-title">The Project</li>
+{% for projectDetail in projectdetailslist | reverse %}
+  {% set currentProjectDetail = projectDetail.data.projectDetail %}
+  <a href="{{ projectDetail.url | url }}" class="static-content-link">
+  <li class="static-nav-item{% if projectDetail.url == url %} projectdetailslist-item-active{% endif %}">
+    {% if currentProjectDetail.title %}{{ currentProjectDetail.title }}{% else %}<code>{{ projectDetail.url }}</code>{% endif %}
+  </li></a>
+{% endfor %}
+</div>

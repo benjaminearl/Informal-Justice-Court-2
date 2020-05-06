@@ -3,12 +3,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Courier', monospace;
+  font-family: 'Courier Prime', monospace;
 }
 
 h1 {
   font-size: 18px;
-  font-weight: normal;
 }
 
 h2 {
@@ -24,10 +23,36 @@ p {
 a {
   font-size: 18px;
   font-weight: normal;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
 }
 
 header {
   margin: 20px;
+}
+
+.navigation {
+  display: inline-block;
+  margin: 20px;
+}
+
+.nav {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-item {
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.nav-item a {
+  color: #000;
+  text-decoration: none;
 }
 
 .header-item {
@@ -83,21 +108,48 @@ table {
 tr {
   border: 1px solid #000;
 }
+
+td.projectdetailslist-title {
+  border: 1px solid #000;
+}
+
 .projectdetailslist-item {
   border-bottom: 1px solid #000;
 }
 
-.teamdetailslist-item {
-  border: 1px solid #000;
+.projectdetailslist-item-active {
   display: inline-block;
-  width: 200px;
-  height: 200px;
+}
+
+.projectdetailslist-item-hide {
+  display: none;
 }
 
 
-td {
+.static-content-title {
+  list-style: none;
+  border: 1px solid #000;
+}
+
+.static-content-nav {
+  display: inline-block;
+  padding-left: 0px;
+}
+
+.static-nav-item {
+  border: 1px solid #000;
+  list-style: none;
+
+}
+
+.static-nav-item a {
   padding: 15px;
 }
+
+.static-container {
+  margin: 20px;
+}
+
 /* GRID SYSTEM */
 
 .grid-one {

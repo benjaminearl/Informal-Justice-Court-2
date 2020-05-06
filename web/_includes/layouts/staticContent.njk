@@ -28,22 +28,11 @@
           <h2 class="home">{{ metadata.tagline }}</h2>
         </div>
       </header>
-      <div class="navigation">
-        <ul class="nav">
-          {%- for nav in collections.nav | reverse -%}
-          <a href="{{ nav.url | url }}">
-            <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">{{ nav.data.navtitle }}</li>
-          </a>
-          {%- endfor -%}
-        </ul>
-      </div>
       <div class="static-container">
-        <div class="container">
       <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
       </main>
       <!-- Current page: {{ page.url | url }} -->
-    </div>
       </div>
   </body>
 </html>

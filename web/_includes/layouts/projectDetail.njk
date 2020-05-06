@@ -1,7 +1,9 @@
 ---
-layout: layouts/base.njk
+layout: layouts/staticContent.njk
 templateClass: tmpl-projectDetail
 ---
+{% set projectdetailslist = collections.myProjectDetails %}
+{% include "projectdetailslist.njk" %}
 <article>
   <h1>{{ projectDetail.title }}</h1>
   {{ projectDetail.body | markdownify | safe }}
