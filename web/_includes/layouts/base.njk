@@ -28,6 +28,7 @@
           <h2 class="home">{{ metadata.tagline }}</h2>
         </div>
       </header>
+      <div class="static-container">
       <div class="navigation">
         <ul class="nav">
           {%- for nav in collections.nav | reverse -%}
@@ -37,7 +38,6 @@
           {%- endfor -%}
         </ul>
       </div>
-      <div class="static-container">
         <div class="container">
       <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}

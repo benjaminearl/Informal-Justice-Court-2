@@ -37,12 +37,12 @@ header {
 
 .navigation {
   display: inline-block;
-  margin: 20px;
 }
 
 .nav {
   list-style: none;
   padding-left: 0;
+  margin-top: 0
 }
 
 .nav-item {
@@ -139,6 +139,19 @@ header {
   border: 1px solid #000;
   margin-left: 0px;
   padding: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+tr {
+  border: 1px solid #000;
+}
+
+td {
+  padding: 20px;
 }
 
 /* GRID SYSTEM */
