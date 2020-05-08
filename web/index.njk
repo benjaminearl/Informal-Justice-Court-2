@@ -2,3 +2,74 @@
 layout: layouts/home.njk
 title: Informal Justice Court
 ---
+<div class="updates">
+  <div class="update">
+  </div>
+  <div class="update">
+  </div>
+  <div class="update">
+  </div>
+  <div class="update">
+  </div>
+  <div class="update">
+  </div>
+</div>
+
+<div class="project-details">
+<table class="static-content">
+  <thead>
+    <tr>
+    <th class="section-title">
+        <p>The Project</p>
+    </th>
+    </tr>
+    </thead>
+  {% set projectdetailslist = collections.myProjectDetails %}
+  {% include "projectdetailslist.njk" %}
+  </tbody>
+  </table>
+</div>
+
+<div class="database">
+  <table>
+    <tbody>
+    <tr>
+      <th class="section-title">
+      <p>Research Database</p>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="news">
+  <table reversed class="newsitemslist" style="counter-reset: start-from {{ newsitemslist.length + 1 }}">
+    <thead>
+    <tr>
+      <th class="section-title"  colspan="2">
+        <p>News</p>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+  {% set newsitemslist = collections.myNewsItems %}
+  {% include "newsitemslist.njk" %}
+  </tbody>
+</table>
+</div>
+
+<div class="about">
+  <table>
+    <thead>
+    <tr>
+      <th class="section-title">
+        <p>About Us</p>
+      </th>
+      <tr>
+    </thead>
+    <tbody>
+  {% set teamdetailslist = collections.myTeamDetails %}
+  {% include "teamdetailslist.njk" %}
+  </tbody>
+  </table>
+</div>

@@ -4,61 +4,44 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Courier Prime', monospace;
+  color: #008751;
 }
 
 h1 {
-  font-size: 18px;
+  font-size: 17px;
   margin: 0px;
+  color: #008751;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: normal;
 }
 
 p {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: normal;
+  margin: 0px;
 }
 
 a {
-  font-size: 18px;
+  font-size: 17px;;
   font-weight: normal;
   text-decoration: none;
+  color: #008751;
 }
 
 a:visited {
-  color: #000;
+  color: #008751;
 }
 
 header {
   margin: 20px;
 }
 
-.navigation {
-  display: inline-block;
-}
-
-.nav {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0
-}
-
-.nav-item {
-  border: 1px solid #000;
-  margin-bottom: 10px;
-  padding: 15px;
-}
-
-.nav-item a {
-  color: #000;
-  text-decoration: none;
-}
-
 .header-item {
   display: inline-block;
-  border: 1px solid #000;
+  border: 1px solid #008751;
 }
 
 .header-item h1 {
@@ -71,30 +54,32 @@ header {
   margin: 0;
 }
 
-.intro img {
-  max-width: 40%;
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.intro p {
-  display: inline-block;
+.tagline {
+  width: 83.7%
 }
 
 .container {
   margin: 20px;
 }
 
-.section-title {
-  border: 1px solid #000;
-  width: auto;
+.updates {
+  margin-bottom: 30px;
+}
+
+.update {
+  width: 320px;
+  height: 320px;
+  border: 1px solid #008751;
   display: inline-block;
-  margin-bottom: 10px;
+
+}
+
+.section-title {
+  border: 1px solid #008751;
 }
 
 .section-title h1 {
   margin: 0;
-  padding: 15px;
 }
 
 .section-content {
@@ -102,32 +87,26 @@ header {
 }
 
 .subnav {
-  display: inline-block;
   vertical-align: top;
 }
 
 .static-content-title {
   list-style: none;
-  border: 1px solid #000;
+  border: 1px solid #008751;
   padding: 15px;
   margin-bottom: -1px;
 }
 
 .static-content-nav {
-  display: inline-block;
   padding-left: 0px;
   margin-top: 0px;
 }
 
 .static-nav-item {
-  border: 1px solid #000;
+  border: 1px solid #008751;
   list-style: none;
   padding: 15px;
   margin-bottom: -1px;
-}
-
-.static-nav-item a {
-  padding: 15px;
 }
 
 .static-container {
@@ -135,7 +114,6 @@ header {
 }
 
 .static-content-container {
-  display: inline-block;
   border: 1px solid #000;
   margin-left: 0px;
   padding: 15px;
@@ -144,14 +122,24 @@ header {
 table {
   border-collapse: collapse;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 tr {
-  border: 1px solid #000;
+  border: 1px solid #008751;
+}
+
+.section-title {
+  background-color: #008751;
+  color: #fff;
 }
 
 td {
-  padding: 20px;
+  padding: 5px;
+}
+
+th {
+  padding: 5px;
 }
 
 /* GRID SYSTEM */

@@ -1,11 +1,11 @@
-<table reversed class="newsitemslist" style="counter-reset: start-from {{ newsitemslist.length + 1 }}">
-  <tbody>
-    {% for newsItem in newsitemslist | reverse %}
-      {% set currentNewsItem = newsItem.data.newsItem %}
-      <tr class="newsitemslist-item{% if newsItem.url == url %} newsitemslist-item-active{% endif %}">
-        <td><a href="{{ newsItem.url | url }}" class="newsitemslist-link">{% if currentNewsItem.title %}{{ currentNewsItem.title }}{% else %}<code>{{ newsItem.url }}</code>{% endif %}</a></td>
-        <td><time class="newsitemslist-date" datetime="{{ currentNewsItem.publishedAt }}">{{ currentNewsItem.publishedAt|readableDate }}</time></td>
-      </tr>
-    {% endfor %}
-  </tbody>
+{% for newsItem in newsitemslist | reverse %}
+{% set currentNewsItem = newsItem.data.newsItem %}
+<tr class="newsitemslist-item{% if newsItem.url == url %} newsitemslist-item-active{% endif %}">
+  <td>
+    <a href="{{ newsItem.url | url }}" class="newsitemslist-link">{% if currentNewsItem.title %}{{ currentNewsItem.title }}{% else %}<code>{{ newsItem.url }}</code>{% endif %}</a>
+  </td>
+  <td><time class="newsitemslist-date" datetime="{{ currentNewsItem.publishedAt }}">{{ currentNewsItem.publishedAt|readableDate }}</time></td>
+</tr>
+{% endfor %}
+</tbody>
 </table>
