@@ -55,7 +55,7 @@ header {
 }
 
 .tagline {
-  width: 83.7%
+  width: 81.5vw
 }
 
 .container {
@@ -67,8 +67,8 @@ header {
 }
 
 .update {
-  width: 320px;
-  height: 320px;
+  width: 19vw;
+  height: 19vw;
   border: 1px solid #008751;
   display: inline-block;
 
