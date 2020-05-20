@@ -2,8 +2,8 @@ import {format} from 'date-fns'
 
 export default {
   type: 'document',
-  name: 'newsItem',
-  title: 'News Item',
+  name: 'article',
+  title: 'Article',
   fields: [
     {
       name: 'title',
@@ -22,6 +22,21 @@ export default {
       options: {
         source: 'title',
         maxLength: 96
+      }
+    },
+    {
+      title: 'Content Type',
+      name: 'contentType',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: [
+          {title: 'Article', value: 'article'},
+          {title: 'Interview', value: 'interview'},
+          {title: 'Exhibitions and Seminars', value: 'exhibitonsSeminars'},
+          {title: 'Art and Research', value: 'artResearch'},
+          {title: 'Data and Resources', value: 'dataResources'}
+        ]
       }
     },
     {

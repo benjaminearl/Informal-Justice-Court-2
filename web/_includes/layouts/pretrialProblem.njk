@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-pretrialProblem
+---
+<div class="subnav grid-one">
+  {% set pretrialproblemlist = collections.thePretrialProblem %}
+  {% include "pretrialproblemlist.njk" %}
+</div>
+<div class="static-content-container grid-two">
+  <h1>{{ pretrialProblem.title }}</h1>
+  {{ pretrialProblem.body | markdownify | safe }}
+  <p><a href="{{ '/' | url }}">← Home</a></p>
+</div>

@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-projectBackground
+---
+<div class="subnav grid-one">
+  {% set projectbackgroundlist = collections.theProjectBackground %}
+  {% include "projectbackgroundlist.njk" %}
+</div>
+<div class="static-content-container grid-two">
+  <h1>{{ projectBackground.title }}</h1>
+  {{ projectBackground.body | markdownify | safe }}
+  <p><a href="{{ '/' | url }}">← Home</a></p>
+</div>

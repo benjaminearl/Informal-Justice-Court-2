@@ -1,0 +1,10 @@
+{% for pretrialProblem in pretrialproblemlist | reverse %}
+  {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
+  <ul class="static-nav-item{% if pretrialProblem.url == url %} pretrialproblemlist-item-active{% endif %}">
+      <li>
+      <a href="{{ pretrialProblem.url | url }}" class="static-content-link">
+        {% if currentPretrialProblem.title %}{{ currentPretrialProblem.title }}{% else %}<code>{{ pretrialProblem.url }}</code>{% endif %}
+      </a>
+    </li>
+  </ul>
+{% endfor %}

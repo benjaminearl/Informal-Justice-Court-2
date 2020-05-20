@@ -1,9 +1,0 @@
----
-layout: layouts/staticContent.njk
-templateClass: tmpl-newsItem
----
-<article>
-  <h1>{{ newsItem.title }}</h1>
-  {{ newsItem.body | markdownify | safe }}
-  <p><a href="{{ '/' | url }}">← Home</a></p>
-</article>

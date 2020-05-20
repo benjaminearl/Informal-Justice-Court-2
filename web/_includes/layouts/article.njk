@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-article
+---
+<div class="subnav grid-one">
+  {% set articlelist = collections.theArticle %}
+  {% include "articlelist.njk" %}
+</div>
+<div class="static-content-container grid-two">
+  <h1>{{ article.title }}</h1>
+  {{ article.body | markdownify | safe }}
+  <p><a href="{{ '/' | url }}">← Home</a></p>
+</div>

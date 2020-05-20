@@ -4,14 +4,23 @@ export default {
   title: 'Category',
   fields: [
     {
-      name: 'title',
       title: 'Title',
+      name: 'title',
       type: 'string'
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text'
-    }
+      title: 'Content Type',
+      name: 'contentType',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Project Background', value: 'projectBackground'},
+          {title: 'Pretrail Problem', value: 'pretrialProblem'},
+          {title: 'Project Inspiration', value: 'projectInspiration'},
+          {title: 'About Us', value: 'aboutUs'}
+        ], // <-- predefined values
+        layout: 'radio' // <-- defaults to 'dropdown'
+  }
+}
   ]
 }

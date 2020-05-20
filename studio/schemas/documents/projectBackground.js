@@ -1,12 +1,14 @@
+import {format} from 'date-fns'
+
 export default {
-  name: 'teamDetail',
   type: 'document',
-  title: 'Team Detail',
+  name: 'projectBackground',
+  title: 'Project Background',
   fields: [
     {
       name: 'title',
       type: 'string',
-      title: 'Title'
+      title: 'Title',
     },
     {
       name: 'subtitle',
@@ -21,6 +23,16 @@ export default {
         source: 'title',
         maxLength: 96
       }
+    },
+    {
+      name: 'mainImage',
+      title: 'Thumbnail Image',
+      type: 'mainImage'
+    },
+    {
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'excerptPortableText'
     },
     {
       name: 'body',

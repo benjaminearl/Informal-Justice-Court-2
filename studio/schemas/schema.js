@@ -1,17 +1,19 @@
-// First, we must import the schema creator
 import createSchema from 'part:@sanity/base/schema-creator'
 
-// Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
 import teamMember from './documents/teamMember'
 import category from './documents/category'
-import newsItem from './documents/newsItem'
 import siteSettings from './documents/siteSettings'
 import partner from './documents/partner'
-import projectDetail from './documents/projectDetail'
-import teamDetail from './documents/teamDetail'
+import projectBackground from './documents/projectBackground'
+import pretrialProblem from './documents/pretrialProblem'
+import justiceInspiration from './documents/justiceInspiration'
+import aboutUs from './documents/aboutUs'
+import article from './documents/article'
+import newsItem from './documents/newsItem'
+import splashImage from './documents/splashImage'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -20,17 +22,12 @@ import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import teamMemberReference from './objects/teamMemberReference'
 
-// Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
-  // We name our schema
+
   name: 'Informal Justice Court',
-  // Then proceed to concatenate our our document type
-  // to the ones provided by any plugins that are installed
+
   types: schemaTypes.concat([
-    // The following are document types which will appear
-    // in the studio.
     siteSettings,
-    newsItem,
     category,
     teamMember,
     mainImage,
@@ -39,10 +36,13 @@ export default createSchema({
     bioPortableText,
     excerptPortableText,
     partner,
-    projectDetail,
-    teamDetail
+    projectBackground,
+    pretrialProblem,
+    justiceInspiration,
+    aboutUs,
+    article,
+    newsItem,
+    splashImage
 
-    // When added to this list, object types can be used as
-    // { type: 'typename' } in other document schemas
   ])
 })

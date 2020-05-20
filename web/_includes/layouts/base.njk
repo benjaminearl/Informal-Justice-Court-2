@@ -20,28 +20,24 @@
     </script>
   </head>
   <body>
+    <div class="header-container">
       <header>
         <div class="title header-item">
-          <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+          <h1><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
         </div>
         <div class="tagline header-item">
-          <h2 class="home">{{ metadata.tagline }}</h2>
+          <h2>{{ metadata.tagline }}</h2>
+        </div>
+        <div class="weather header-item">
+          <p>sun</p>
+        </div>
+        <div class="time header-item">
+            <p>12:00</p>
         </div>
       </header>
-      <div class="static-container">
-      <!-- <div class="navigation">
-        <ul class="nav">
-          {%- for nav in collections.nav | reverse -%}
-          <a href="{{ nav.url | url }}">
-            <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">{{ nav.data.navtitle }}</li>
-          </a>
-          {%- endfor -%}
-        </ul>
-      </div> -->
+    </div>
       <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
       </main>
-      <!-- Current page: {{ page.url | url }} -->
-      </div>
   </body>
 </html>

@@ -2,14 +2,18 @@ import {format} from 'date-fns'
 
 export default {
   type: 'document',
-  name: 'projectDetail',
-  title: 'Project Detail',
+  name: 'justiceInspiration',
+  title: 'Justice Inspiration',
   fields: [
     {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: 'Titles should be descriptive, and not too long'
+    },
+    {
+      name: 'subtitle',
+      type: 'string',
+      title: 'Subtitle'
     },
     {
       name: 'slug',
@@ -21,33 +25,19 @@ export default {
       }
     },
     {
-      name: 'publishedAt',
-      type: 'datetime',
-      title: 'Published at',
-    },
-    {
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Thumbnail Image',
       type: 'mainImage'
     },
     {
       name: 'excerpt',
-      type: 'excerptPortableText',
       title: 'Excerpt',
-      description:
-        'This ends up on summary pages, on Google, when people share your post in social media.'
+      type: 'excerptPortableText'
     },
     {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
     }
-  ],
-  preview: {
-    select: {
-      title: 'title',
-      slug: 'slug',
-      media: 'mainImage'
-    }
-  }
+  ]
 }

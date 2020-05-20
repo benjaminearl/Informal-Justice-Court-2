@@ -1,0 +1,10 @@
+{% for article in articlelist | reverse %}
+  {% set currentArticle = article.data.article %}
+  <ul class="static-nav-item{% if article.url == url %} articlelist-item-active{% endif %}">
+      <li>
+      <a href="{{ article.url | url }}" class="static-content-link">
+        {% if currentArticle.title %}{{ currentArticle.title }}{% else %}<code>{{ article.url }}</code>{% endif %}
+      </a>
+    </li>
+  </ul>
+{% endfor %}

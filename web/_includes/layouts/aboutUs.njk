@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-aboutUs
+---
+<div class="subnav grid-one">
+  {% set aboutuslist = collections.theAboutUs %}
+  {% include "aboutuslist.njk" %}
+</div>
+<div class="static-content-container grid-two">
+  <h1>{{ aboutUs.title }}</h1>
+  {{ aboutUs.body | markdownify | safe }}
+  <p><a href="{{ '/' | url }}">← Home</a></p>
+</div>

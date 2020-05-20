@@ -2,74 +2,45 @@
 layout: layouts/home.njk
 title: Informal Justice Court
 ---
-<div class="updates">
-  <div class="update">
-  </div>
-  <div class="update">
-  </div>
-  <div class="update">
-  </div>
-  <div class="update">
-  </div>
-  <div class="update">
-  </div>
+<div class="splash-container">
+  <img src="https://previews.dropbox.com/p/thumb/AAwNzFMVU-ZxVQVVVSUqReb4CFvs37ToNgauHvSBXqlC5F71U0tvWz4KiqnUbLFt9jbkrlQ_xOVC4qfkkhxUYUK37LwBM39OTHb3vs2kW6eholcsEBRLoJclU7cSVOT4MDsDrVbkL6bJTXPjSG3w2gCheyQPq2IJ4tfikSha3hXS7A8DCMC-qjQUiXrX-7IDH9--voUXkXp-8OkqQ9kBrSQ5GieHmQ-6UkNsCMlm11buPMU1Oreu2B73Os60il46xs0xTo5ocO43yivxmPSlGaQpdWLT2Pf0GKpkW6vGNXgb7VwVolV_y3BuhGB41HNWieNAhJ3aXIb2hnQpG3jcgMeu2QtNcm9wKRHwCuRvI73cvco8so1z3m5Em5OGJxlUVUI73zfGkfDVxM_7fY_8wJ8Y_AIcV_xK1wETD8kCM85d9XckUUX1EoF3UbDHqjbziTOiPq9RczMWTrNi1UFkhqFxlv_-4Yxihm8wF3j9-SNt8w/p.jpeg?fv_content=true&size_mode=5" />
 </div>
-
-<div class="project-details">
-<table class="static-content">
-  <thead>
-    <tr>
-    <th class="section-title">
-        <p>The Project</p>
-    </th>
-    </tr>
-    </thead>
-  {% set projectdetailslist = collections.myProjectDetails %}
-  {% include "projectdetailslist.njk" %}
-  </tbody>
-  </table>
+<div class="spacer">
 </div>
-
-<div class="database">
-  <table>
-    <tbody>
-    <tr>
-      <th class="section-title">
-      <p>Research Database</p>
-      </th>
-    </tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="news">
-  <table reversed class="newsitemslist" style="counter-reset: start-from {{ newsitemslist.length + 1 }}">
-    <thead>
-    <tr>
-      <th class="section-title"  colspan="2">
-        <p>News</p>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-  {% set newsitemslist = collections.myNewsItems %}
-  {% include "newsitemslist.njk" %}
-  </tbody>
-</table>
-</div>
-
-<div class="about">
-  <table>
-    <thead>
-    <tr>
-      <th class="section-title">
-        <p>About Us</p>
-      </th>
-      <tr>
-    </thead>
-    <tbody>
-  {% set teamdetailslist = collections.myTeamDetails %}
-  {% include "teamdetailslist.njk" %}
-  </tbody>
-  </table>
+<div class="content-menu">
+  <div class="project-background content-column">
+  <div class="column-header">
+    <h3>Project Background</h3>
+  </div>
+    {% set projectbackgroundlist = collections.theProjectBackground %}
+    {% include "projectbackgroundlist.njk" %}
+  </div>
+  <div class="pretrial-problem content-column">
+  <div class="column-header">
+    <h3>Pretrial Problem</h3>
+  </div>
+    {% set pretrialproblemlist = collections.thePretrialProblem %}
+    {% include "pretrialproblemlist.njk" %}
+  </div>
+  <div class="justice-inspiration content-column">
+  <div class="column-header">
+    <h3>Justice Inspiration</h3>
+  </div>
+    {% set justiceinspirationlist = collections.theJusticeInspiration %}
+    {% include "justiceinspirationlist.njk" %}
+  </div>
+  <div class="work content-column">
+  <div class="column-header">
+    <h3>Work</h3>
+  </div>
+    {% set articlelist = collections.theArticle %}
+    {% include "articlelist.njk" %}
+  </div>
+  <div class="about-us content-column">
+  <div class="column-header">
+    <h3>About Us</h3>
+  </div>
+    {% set aboutuslist = collections.theAboutUs %}
+    {% include "aboutuslist.njk" %}
+  </div>
 </div>

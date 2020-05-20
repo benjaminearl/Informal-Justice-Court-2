@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+navtitle: Article
+tags:
+  - nav
+permalink: /article/
+---
+{% set articlelist = collections.theArticle %}
+{% include "articlelist.njk" %}
