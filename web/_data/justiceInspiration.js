@@ -19,6 +19,7 @@ async function getJusticeInspiration () {
     _id,
     title,
     slug,
+    "imageUrl": mainImage.asset->url,
     excerpt[]{
       ...,
       children[]{

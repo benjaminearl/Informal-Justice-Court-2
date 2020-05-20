@@ -2,6 +2,7 @@
   {% set currentAboutUs = aboutUs.data.aboutUs %}
   <ul class="static-nav-item{% if aboutUs.url == url %} aboutuslist-item-active{% endif %}">
       <li>
+      <img src="{{ currentAboutUs.imageUrl }}" class="thumbnail"/>
       <a href="{{ aboutUs.url | url }}" class="static-content-link">
         {% if currentAboutUs.title %}{{ currentAboutUs.title }}{% else %}<code>{{ aboutUs.url }}</code>{% endif %}
       </a>

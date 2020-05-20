@@ -2,10 +2,10 @@
   {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
   <ul class="static-nav-item{% if justiceInspiration.url == url %} justiceinspirationlist-item-active{% endif %}">
       <li>
+      <img src="{{ currentJusticeInspiration.imageUrl }}" class="thumbnail"/>
       <a href="{{ justiceInspiration.url | url }}" class="static-content-link">
         {% if currentJusticeInspiration.title %}{{ currentJusticeInspiration.title }}
         {% else %}<code>{{ justiceInspiration.url }}</code>{% endif %}
-        {{ currentJusticeInspiration.excerpt | markdownify | safe }}
       </a>
     </li>
   </ul>

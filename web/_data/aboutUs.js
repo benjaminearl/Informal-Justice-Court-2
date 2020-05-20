@@ -18,6 +18,13 @@ async function getAboutUs () {
     _id,
     title,
     slug,
+    "imageUrl": mainImage.asset->url,
+    excerpt[]{
+      ...,
+      children[]{
+        ...,
+      }
+    },
     body[]{
       ...,
       children[]{

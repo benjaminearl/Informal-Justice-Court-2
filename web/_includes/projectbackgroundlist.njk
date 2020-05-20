@@ -2,6 +2,7 @@
   {% set currentProjectBackground = projectBackground.data.projectBackground %}
   <ul class="static-nav-item{% if projectBackground.url == url %} projectbackgroundlist-item-active{% endif %}">
       <li>
+      <img src="{{ currentProjectBackground.imageUrl }}" class="thumbnail"/>
       <a href="{{ projectBackground.url | url }}" class="static-content-link">
         {% if currentProjectBackground.title %}{{ currentProjectBackground.title }}{% else %}<code>{{ projectBackground.url }}</code>{% endif %}
       </a>

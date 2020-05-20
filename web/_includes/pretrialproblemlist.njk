@@ -2,6 +2,7 @@
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
   <ul class="static-nav-item{% if pretrialProblem.url == url %} pretrialproblemlist-item-active{% endif %}">
       <li>
+      <img src="{{ currentPretrialProblem.imageUrl }}" class="thumbnail"/>
       <a href="{{ pretrialProblem.url | url }}" class="static-content-link">
         {% if currentPretrialProblem.title %}{{ currentPretrialProblem.title }}{% else %}<code>{{ pretrialProblem.url }}</code>{% endif %}
       </a>

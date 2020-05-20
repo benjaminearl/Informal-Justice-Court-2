@@ -126,6 +126,10 @@ header {
   border-right: 1px solid #008751;
 }
 
+img.thumbnail {
+  max-width: 100%;
+}
+
 .content-column h3 {
   text-align: center;
 }
