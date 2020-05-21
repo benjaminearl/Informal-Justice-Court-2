@@ -2,12 +2,16 @@
 layout: layouts/base.njk
 templateClass: tmpl-projectBackground
 ---
-<div class="subnav grid-one">
-  {% set projectbackgroundlist = collections.theProjectBackground %}
-  {% include "projectbackgroundlist.njk" %}
+<div class="content-container">
+<div class="subnav">
+<ul class="content-navigation">
+      {% for justiceInspiration in collections.theJusticeInspiration %}
+      {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
+        <li><a href="{{ currentJusticeInspiration.url | url }}">{{ currentJusticeInspiration.title }}</a></li>
+      {% endfor %}
+      </ul>
 </div>
 <div class="static-content-container grid-two">
   <h1>{{ projectBackground.title }}</h1>
   {{ projectBackground.body | markdownify | safe }}
-  <p><a href="{{ '/' | url }}">← Home</a></p>
 </div>

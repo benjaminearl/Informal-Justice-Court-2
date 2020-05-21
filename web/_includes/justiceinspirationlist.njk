@@ -1,12 +1,12 @@
+  <ul class="static-nav-item{% if justiceInspiration.url == url %} justiceinspirationlist-item-active{% endif %}">
 {% for justiceInspiration in justiceinspirationlist | reverse %}
   {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
-  <ul class="static-nav-item{% if justiceInspiration.url == url %} justiceinspirationlist-item-active{% endif %}">
-      <li>
+    <a href="{{ justiceInspiration.url | url }}" class="static-content-link">
+      <li class="content-box">
       <img src="{{ currentJusticeInspiration.imageUrl }}" class="thumbnail"/>
-      <a href="{{ justiceInspiration.url | url }}" class="static-content-link">
         {% if currentJusticeInspiration.title %}{{ currentJusticeInspiration.title }}
         {% else %}<code>{{ justiceInspiration.url }}</code>{% endif %}
-      </a>
     </li>
-  </ul>
+    </a>
 {% endfor %}
+  </ul>

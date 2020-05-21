@@ -2,12 +2,18 @@
 layout: layouts/base.njk
 templateClass: tmpl-aboutUs
 ---
-<div class="subnav grid-one">
-  {% set aboutuslist = collections.theAboutUs %}
-  {% include "aboutuslist.njk" %}
-</div>
-<div class="static-content-container grid-two">
-  <h1>{{ aboutUs.title }}</h1>
-  {{ aboutUs.body | markdownify | safe }}
-  <p><a href="{{ '/' | url }}">← Home</a></p>
+<div class="content-container">
+  <div class="subnav">
+    <ul class="content-navigation">
+  {% for aboutUs in collections.theAboutUs %}
+  {% set currentAboutUs = aboutUs.data.aboutUs %}
+    <li><a href="{{ currentAboutUs.url | url }}">{{ currentAboutUs.title }}</a></li>
+  {% endfor %}
+  </ul>
+  </div>
+  <div class="static-content-container grid-two">
+    <h1>{{ aboutUs.title }}</h1>
+    {{ aboutUs.body | markdownify | safe }}
+    <p><a href="{{ '/' | url }}">← Home</a></p>
+  </div>
 </div>

@@ -2,12 +2,17 @@
 layout: layouts/base.njk
 templateClass: tmpl-pretrialProblem
 ---
-<div class="subnav grid-one">
-  {% set pretrialproblemlist = collections.thePretrialProblem %}
-  {% include "pretrialproblemlist.njk" %}
-</div>
-<div class="static-content-container grid-two">
-  <h1>{{ pretrialProblem.title }}</h1>
-  {{ pretrialProblem.body | markdownify | safe }}
-  <p><a href="{{ '/' | url }}">← Home</a></p>
+<div class="content-container">
+  <div class="subnav">
+    <ul class="content-navigation">
+  {% for pretrialProblem in collections.thePretrialProblem %}
+  {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
+    <li><a href="{{ currentPretrialProblem.url | url }}">{{ currentPretrialProblem.title }}</a></li>
+  {% endfor %}
+  </ul>
+  </div>
+  <div class="static-content-container">
+    <h1>{{ pretrialProblem.title }}</h1>
+    {{ pretrialProblem.body | markdownify | safe }}
+  </div>
 </div>

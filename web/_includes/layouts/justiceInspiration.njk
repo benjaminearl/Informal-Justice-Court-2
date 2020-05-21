@@ -2,12 +2,17 @@
 layout: layouts/base.njk
 templateClass: tmpl-justiceInspiration
 ---
-<div class="subnav grid-one">
-  {% set justiceinspirationlist = collections.theJusticeInspiration %}
-  {% include "justiceinspirationlist.njk" %}
-</div>
-<div class="static-content-container grid-two">
+<div class="content-container">
+  <div class="subnav">
+    <ul class="content-navigation">
+    {% for justiceInspiration in collections.theJusticeInspiration %}
+    {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
+      <li><a href="{{ currentJusticeInspiration.url | url }}">{{ currentJusticeInspiration.title }}</a></li>
+    {% endfor %}
+      </ul>
+      </div>
+<div class="static-content-container">
   <h1>{{ justiceInspiration.title }}</h1>
   {{ justiceInspiration.body | markdownify | safe }}
-  <p><a href="{{ '/' | url }}">← Home</a></p>
+</div>
 </div>

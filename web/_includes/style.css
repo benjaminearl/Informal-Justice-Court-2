@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Courier Prime', monospace;
+  font-family: 'Courier New', monospace;
   font-weight: lighter;
   color: #008751;
 }
@@ -66,6 +66,7 @@ header {
 
 .title a {
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .header-item {
@@ -114,7 +115,7 @@ header {
 }
 
 .column-header {
-  border-bottom: 1px solid #008751;
+  border-bottom: 1px dashed #008751;
   height: 50px;
   padding-top: 13px;
 }
@@ -145,4 +146,42 @@ img.thumbnail {
 
 .content-column a {
     text-decoration: none;
+}
+
+.content-box {
+  border-bottom: 1px dashed #008751;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.subnav {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-right: 1px solid #008751;
+  height: 100vh;
+}
+
+.content-navigation {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.content-navigation li {
+  padding: 15px 10px;
+  border-bottom: 1px dashed #008751;
+}
+
+.content-navigation a {
+  text-decoration: none;
+}
+
+.static-content-container {
+  grid-column-start: 3;
+  grid-column-end: 9;
+  border-right: 1px solid #008751;
+  padding: 10px;
 }
