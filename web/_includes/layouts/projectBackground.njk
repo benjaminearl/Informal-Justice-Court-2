@@ -11,7 +11,8 @@ templateClass: tmpl-projectBackground
       {% endfor %}
       </ul>
 </div>
-<div class="static-content-container grid-two">
+<div class="static-content-container">
+  <img src="{{ projectBackground.imageUrl }}" class="cover-image" />
   <h1>{{ projectBackground.title }}</h1>
   {{ projectBackground.body | markdownify | safe }}
 </div>

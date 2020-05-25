@@ -2,45 +2,56 @@
 layout: layouts/home.njk
 title: Informal Justice Court
 ---
-<div class="splash-container">
-  <img src="https://previews.dropbox.com/p/thumb/AAwNzFMVU-ZxVQVVVSUqReb4CFvs37ToNgauHvSBXqlC5F71U0tvWz4KiqnUbLFt9jbkrlQ_xOVC4qfkkhxUYUK37LwBM39OTHb3vs2kW6eholcsEBRLoJclU7cSVOT4MDsDrVbkL6bJTXPjSG3w2gCheyQPq2IJ4tfikSha3hXS7A8DCMC-qjQUiXrX-7IDH9--voUXkXp-8OkqQ9kBrSQ5GieHmQ-6UkNsCMlm11buPMU1Oreu2B73Os60il46xs0xTo5ocO43yivxmPSlGaQpdWLT2Pf0GKpkW6vGNXgb7VwVolV_y3BuhGB41HNWieNAhJ3aXIb2hnQpG3jcgMeu2QtNcm9wKRHwCuRvI73cvco8so1z3m5Em5OGJxlUVUI73zfGkfDVxM_7fY_8wJ8Y_AIcV_xK1wETD8kCM85d9XckUUX1EoF3UbDHqjbziTOiPq9RczMWTrNi1UFkhqFxlv_-4Yxihm8wF3j9-SNt8w/p.jpeg?fv_content=true&size_mode=5" />
-</div>
-<div class="spacer">
-</div>
-<div class="content-menu">
-  <div class="project-background content-column">
-  <div class="column-header">
-    <h3>PROJECT BACKGROUND</h3>
+  <div id="homeimage-container">
+    <img src="{{ metadata.imageUrl }}"  id="myimage" />
+    </div>
+  <div class="content-menu" id="homecontent">
+    <div class="project-background content-column">
+      <a href="#homecontent">
+    <div class="column-header">
+      <h3>PROJECT BACKGROUND</h3>
+    </div>
+    </a>
+      {% set projectbackgroundlist = collections.theProjectBackground %}
+      {% include "projectbackgroundlist.njk" %}
+    </div>
+    <div class="pretrial-problem content-column">
+    <a href="#homecontent">
+    <div class="column-header">
+      <h3>PRETRIAL PROBLEM</h3>
+    </div>
+    </a>
+      {% set pretrialproblemlist = collections.thePretrialProblem %}
+      {% include "pretrialproblemlist.njk" %}
+    </div>
+    <div class="justice-inspiration content-column">
+    <a href="#homecontent">
+    <div class="column-header">
+      <h3>JUSTICE INSPIRATION</h3>
+    </div>
+    </a>
+      {% set justiceinspirationlist = collections.theJusticeInspiration %}
+      {% include "justiceinspirationlist.njk" %}
+    </div>
+    <div class="work content-column">
+      <a href="#homecontent">
+    <div class="column-header">
+      <h3>WORK</h3>
+    </div>
+    </a>
+      {% set articlelist = collections.theArticle %}
+      {% include "articlelist.njk" %}
+    </div>
+    <div class="about-us content-column">
+      <a href="#homecontent">
+    <div class="column-header">
+      <h3>ABOUT US</h3>
+    </div>
+    </a>
+      {% set aboutuslist = collections.theAboutUs %}
+      {% include "aboutuslist.njk" %}
+    </div>
   </div>
-    {% set projectbackgroundlist = collections.theProjectBackground %}
-    {% include "projectbackgroundlist.njk" %}
-  </div>
-  <div class="pretrial-problem content-column">
-  <div class="column-header">
-    <h3>PRETRIAL PROBLEM</h3>
-  </div>
-    {% set pretrialproblemlist = collections.thePretrialProblem %}
-    {% include "pretrialproblemlist.njk" %}
-  </div>
-  <div class="justice-inspiration content-column">
-  <div class="column-header">
-    <h3>JUSTICE INSPIRATION</h3>
-  </div>
-    {% set justiceinspirationlist = collections.theJusticeInspiration %}
-    {% include "justiceinspirationlist.njk" %}
-  </div>
-  <div class="work content-column">
-  <div class="column-header">
-    <h3>WORK</h3>
-  </div>
-    {% set articlelist = collections.theArticle %}
-    {% include "articlelist.njk" %}
-  </div>
-  <div class="about-us content-column">
-  <div class="column-header">
-    <h3>ABOUT US</h3>
-  </div>
-    {% set aboutuslist = collections.theAboutUs %}
-    {% include "aboutuslist.njk" %}
-  </div>
-</div>
+<script>
+  magnify("myimage", 3);
+</script>

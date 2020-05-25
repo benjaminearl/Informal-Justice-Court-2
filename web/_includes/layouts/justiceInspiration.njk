@@ -12,6 +12,7 @@ templateClass: tmpl-justiceInspiration
       </ul>
       </div>
 <div class="static-content-container">
+  <img src="{{ justiceInspiration.imageUrl }}" class="cover-image" />
   <h1>{{ justiceInspiration.title }}</h1>
   {{ justiceInspiration.body | markdownify | safe }}
 </div>

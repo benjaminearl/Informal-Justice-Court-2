@@ -12,8 +12,6 @@ import pretrialProblem from './documents/pretrialProblem'
 import justiceInspiration from './documents/justiceInspiration'
 import aboutUs from './documents/aboutUs'
 import article from './documents/article'
-import newsItem from './documents/newsItem'
-import splashImage from './documents/splashImage'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -40,9 +38,7 @@ export default createSchema({
     pretrialProblem,
     justiceInspiration,
     aboutUs,
-    article,
-    newsItem,
-    splashImage
+    article
 
   ])
 })

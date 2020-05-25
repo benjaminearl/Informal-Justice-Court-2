@@ -12,6 +12,7 @@ templateClass: tmpl-pretrialProblem
   </ul>
   </div>
   <div class="static-content-container">
+    <img src="{{ pretrialProblem.imageUrl }}" class="cover-image" />
     <h1>{{ pretrialProblem.title }}</h1>
     {{ pretrialProblem.body | markdownify | safe }}
   </div>
