@@ -2,17 +2,42 @@
 layout: layouts/base.njk
 templateClass: tmpl-projectBackground
 ---
+<div class="content-menu-fixed">
+<div class="column-header-fixed active-menu-item">
+  <h3>PROJECT BACKGROUND</h3>
+</div>
+<a href="/pretrialproblem">
+<div class="column-header-fixed">
+  <h3>PRETRIAL PROBLEM</h3>
+</div>
+</a>
+<a href="/justiceinspiration">
+<div class="column-header-fixed">
+  <h3>JUSTICE INSPIRATION</h3>
+</div>
+</a>
+<a href="/article">
+<div class="column-header-fixed">
+  <h3>RESULTS</h3>
+</div>
+</a>
+<a href="/aboutus">
+<div class="column-header-fixed">
+  <h3>ABOUT US</h3>
+</div>
+</a>
+</div>
 <div class="content-container">
 <div class="subnav">
 <ul class="content-navigation">
-      {% for justiceInspiration in collections.theJusticeInspiration %}
-      {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
-        <li><a href="{{ currentJusticeInspiration.url | url }}">{{ currentJusticeInspiration.title }}</a></li>
+      {% for projectBackground in collections.theProjectBackground %}
+      {% set currentProjectBackground = projectBackground.data.projectBackground %}
+        <li><a href="{{ projectBackground.url | url }}">{{ currentProjectBackground.title }}</a></li>
       {% endfor %}
       </ul>
 </div>
 <div class="static-content-container">
+<h1>{{ projectBackground.title }}</h1>
   <img src="{{ projectBackground.imageUrl }}" class="cover-image" />
-  <h1>{{ projectBackground.title }}</h1>
   {{ projectBackground.body | markdownify | safe }}
 </div>

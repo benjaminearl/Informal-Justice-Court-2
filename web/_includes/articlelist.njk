@@ -3,8 +3,8 @@
   {% set currentArticle = article.data.article %}
   <a href="{{ article.url | url }}" class="static-content-link">
       <li class="content-box">
-      <img src="{{ currentArticle.imageUrl }}" class="thumbnail"/>
-        {% if currentArticle.title %}{{ currentArticle.title }}{% else %}<code>{{ article.url }}</code>{% endif %}
+      {% if currentArticle.title %}<h3 class="content-box-title">{{ currentArticle.title }}</h3>{% else %}<code>{{ article.url }}</code>{% endif %}
+      <img src="{{ currentArticle.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
     </li>
     </a>
 {% endfor %}

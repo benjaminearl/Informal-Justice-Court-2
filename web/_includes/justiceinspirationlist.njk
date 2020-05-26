@@ -3,9 +3,9 @@
   {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
     <a href="{{ justiceInspiration.url | url }}" class="static-content-link">
       <li class="content-box">
-      <img src="{{ currentJusticeInspiration.imageUrl }}" class="thumbnail"/>
-        {% if currentJusticeInspiration.title %}{{ currentJusticeInspiration.title }}
-        {% else %}<code>{{ justiceInspiration.url }}</code>{% endif %}
+      {% if currentJusticeInspiration.title %}<h3 class="content-box-title">{{ currentJusticeInspiration.title }}</h3>
+      {% else %}<code>{{ justiceInspiration.url }}</code>{% endif %}
+      <img src="{{ currentJusticeInspiration.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
     </li>
     </a>
 {% endfor %}

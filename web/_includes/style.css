@@ -67,7 +67,6 @@ header {
   grid-template-columns: repeat(10, 1fr);
 }
 
-
 .title a {
   text-decoration: none;
   text-transform: uppercase;
@@ -121,10 +120,35 @@ img#myimage {
   height: calc(100vh - 49px);
 }
 
+.content-menu-fixed {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: sticky;
+  top: 50px;
+  background-color: white;
+  border-right: 1px solid #008751;
+}
+
+.content-menu-fixed a {
+  text-decoration: none;
+}
+
 .column-header {
   border-bottom: 1px dashed #008751;
   height: 50px;
   padding-top: 13px;
+}
+
+.column-header-fixed {
+  border-bottom: 1px solid #008751;
+  border-right: 1px solid #008751;
+  height: 50px;
+  padding-top: 13px;
+  text-align: center;
+}
+
+.active-menu-item {
+  border-bottom: 1px dashed #008751;
 }
 
 .content-column {
@@ -144,11 +168,12 @@ img.thumbnail {
 
 .content-column ul {
   list-style: none;
-  padding-left: 0px;
+  padding: 0px 15px;
+  margin-top: 0px;
 }
 
 .content-column li {
-  padding: 10px;
+  padding: 15px 0px;
 }
 
 .content-column a {
@@ -156,13 +181,20 @@ img.thumbnail {
 }
 
 .content-box {
-  padding: 30px 0px;
   border-bottom: 1px dashed #008751;
+}
+
+h3.content-box-title {
+  padding-bottom: 15px;
+  text-align: left;
 }
 
 .content-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 100px);
 }
 
 .subnav {
@@ -193,12 +225,12 @@ img.thumbnail {
   grid-column-end: 9;
   border-right: 1px solid #008751;
   padding: 20px;
+  overflow: scroll;
 }
 
 .cover-image {
   margin-bottom: 20px;
   width: 100%;
-
 }
 
 .static-content-container p {

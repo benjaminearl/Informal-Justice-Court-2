@@ -3,8 +3,8 @@
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
       <a href="{{ pretrialProblem.url | url }}" class="static-content-link">
       <li class="content-box">
-      <img src="{{ currentPretrialProblem.imageUrl }}" class="thumbnail"/>
-        {% if currentPretrialProblem.title %}{{ currentPretrialProblem.title }}{% else %}<code>{{ pretrialProblem.url }}</code>{% endif %}
+      {% if currentPretrialProblem.title %}<h3 class="content-box-title">{{ currentPretrialProblem.title }}</h3>{% else %}<code>{{ pretrialProblem.url }}</code>{% endif %}
+      <img src="{{ currentPretrialProblem.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
     </li>
     </a>
 {% endfor %}

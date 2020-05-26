@@ -5,5 +5,41 @@ tags:
   - nav
 permalink: /pretrialProblem/
 ---
-{% set pretrialproblemlist = collections.thePretrialProblem %}
-{% include "pretrialproblemlist.njk" %}
+<div class="content-menu-fixed">
+<a href="/projectbackground">
+<div class="column-header-fixed">
+  <h3>PROJECT BACKGROUND</h3>
+</div>
+</a>
+<div class="column-header-fixed active-menu-item">
+  <h3>PRETRIAL PROBLEM</h3>
+</div>
+<a href="/justiceinspiration">
+<div class="column-header-fixed">
+  <h3>JUSTICE INSPIRATION</h3>
+</div>
+</a>
+<a href="/article">
+<div class="column-header-fixed">
+  <h3>RESULTS</h3>
+</div>
+</a>
+<a href="/aboutus">
+<div class="column-header-fixed">
+  <h3>ABOUT US</h3>
+</div>
+</a>
+</div>
+<div class="content-container">
+  <div class="subnav">
+    <ul class="content-navigation">
+  {% for pretrialProblem in collections.thePretrialProblem %}
+  {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
+    <li><a href="{{ pretrialProblem.url | url }}">{{ currentPretrialProblem.title }}</a></li>
+  {% endfor %}
+  </ul>
+  </div>
+  <div class="static-content-container">
+
+  </div>
+</div>

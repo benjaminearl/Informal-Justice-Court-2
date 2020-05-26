@@ -3,8 +3,8 @@
   {% set currentProjectBackground = projectBackground.data.projectBackground %}
   <a href="{{ projectBackground.url | url }}" class="static-content-link">
       <li class="content-box">
-      <img src="{{ currentProjectBackground.imageUrl }}" class="thumbnail"/>
-        {% if currentProjectBackground.title %}{{ currentProjectBackground.title }}{% else %}<code>{{ projectBackground.url }}</code>{% endif %}
+      {% if currentProjectBackground.title %}<h3 class="content-box-title">{{ currentProjectBackground.title }}</h3>{% else %}<code>{{ projectBackground.url }}</code>{% endif %}
+      <img src="{{ currentProjectBackground.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
     </li>
     </a>
 {% endfor %}
