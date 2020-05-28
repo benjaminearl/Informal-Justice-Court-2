@@ -3,14 +3,14 @@ layout: layouts/base.njk
 templateClass: tmpl-aboutUs
 ---
 <div class="content-menu-fixed">
+  <a href="/pretrialproblem">
+  <div class="column-header-fixed">
+    <h3>PRETRIAL PROBLEM</h3>
+  </div>
+  </a>
 <a href="/projectbackground">
 <div class="column-header-fixed">
   <h3>PROJECT BACKGROUND</h3>
-</div>
-</a>
-<a href="/pretrialproblem">
-<div class="column-header-fixed">
-  <h3>PRETRIAL PROBLEM</h3>
 </div>
 </a>
 <a href="/justiceinspiration">
@@ -28,7 +28,7 @@ templateClass: tmpl-aboutUs
 </div>
 </div>
 <div class="content-container">
-  <div class="subnav">
+  <div class="subnav mobile-subnav">
     <ul class="content-navigation">
   {% for aboutUs in collections.theAboutUs %}
   {% set currentAboutUs = aboutUs.data.aboutUs %}
@@ -37,7 +37,8 @@ templateClass: tmpl-aboutUs
   </ul>
   </div>
   <div class="static-content-container grid-two">
-    <h1>{{ aboutUs.title }}</h1>
+    <h2>{{ aboutUs.title }}</h2>
+    <h1>{{ aboutUs.subtitle }}</h1>
     <img src="{{ aboutUs.imageUrl }}" class="cover-image" />
     {{ aboutUs.body | markdownify | safe }}
   </div>

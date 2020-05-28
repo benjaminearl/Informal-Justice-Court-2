@@ -1,5 +1,5 @@
 <ul class="static-nav-item{% if aboutUs.url == url %} aboutuslist-item-active{% endif %}">
-{% for aboutUs in aboutuslist | reverse %}
+{% for aboutUs in aboutuslist %}
   {% set currentAboutUs = aboutUs.data.aboutUs %}
   <a href="{{ aboutUs.url | url }}" class="static-content-link">
       <li class="content-box">

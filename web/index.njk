@@ -6,23 +6,27 @@ title: Informal Justice Court
     <img src="{{ metadata.imageUrl }}"  id="myimage" />
     </div>
   <div class="content-menu" id="homecontent">
-    <div class="project-background content-column">
-      <a href="#homecontent">
-    <div class="column-header">
-      <h3>PROJECT BACKGROUND</h3>
-    </div>
-    </a>
-      {% set projectbackgroundlist = collections.theProjectBackground %}
-      {% include "projectbackgroundlist.njk" %}
-    </div>
     <div class="pretrial-problem content-column">
     <a href="#homecontent">
     <div class="column-header">
       <h3>PRETRIAL PROBLEM</h3>
     </div>
     </a>
+    <div class="content-scroller">
       {% set pretrialproblemlist = collections.thePretrialProblem %}
       {% include "pretrialproblemlist.njk" %}
+      </div>
+    </div>
+    <div class="project-background content-column">
+      <a href="#homecontent">
+    <div class="column-header">
+      <h3>PROJECT BACKGROUND</h3>
+    </div>
+    </a>
+    <div class="content-scroller">
+      {% set projectbackgroundlist = collections.theProjectBackground %}
+      {% include "projectbackgroundlist.njk" %}
+      </div>
     </div>
     <div class="justice-inspiration content-column">
     <a href="#homecontent">
@@ -30,8 +34,10 @@ title: Informal Justice Court
       <h3>INSPIRATION</h3>
     </div>
     </a>
+    <div class="content-scroller">
       {% set justiceinspirationlist = collections.theJusticeInspiration %}
       {% include "justiceinspirationlist.njk" %}
+      </div>
     </div>
     <div class="work content-column">
       <a href="#homecontent">
@@ -39,8 +45,10 @@ title: Informal Justice Court
       <h3>RESULTS</h3>
     </div>
     </a>
+    <div class="content-scroller">
       {% set articlelist = collections.theArticle %}
       {% include "articlelist.njk" %}
+      </div>
     </div>
     <div class="about-us content-column">
       <a href="#homecontent">
@@ -48,8 +56,10 @@ title: Informal Justice Court
       <h3>ABOUT US</h3>
     </div>
     </a>
+    <div class="content-scroller">
       {% set aboutuslist = collections.theAboutUs %}
       {% include "aboutuslist.njk" %}
+      </div>
     </div>
   </div>
 <script>

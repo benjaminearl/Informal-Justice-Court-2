@@ -18,6 +18,7 @@ async function getArticle () {
     _id,
     title,
     slug,
+    subtitle,
     "imageUrl": mainImage.asset->url,
     excerpt[]{
       ...,

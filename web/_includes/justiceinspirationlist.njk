@@ -1,5 +1,5 @@
   <ul class="static-nav-item{% if justiceInspiration.url == url %} justiceinspirationlist-item-active{% endif %}">
-{% for justiceInspiration in justiceinspirationlist | reverse %}
+{% for justiceInspiration in justiceinspirationlist %}
   {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
     <a href="{{ justiceInspiration.url | url }}" class="static-content-link">
       <li class="content-box">

@@ -3,14 +3,14 @@ layout: layouts/base.njk
 templateClass: tmpl-justiceInspiration
 ---
   <div class="content-menu-fixed">
+  <a href="/pretrialproblem">
+  <div class="column-header-fixed">
+    <h3>PRETRIAL PROBLEM</h3>
+  </div>
+  </a>
 <a href="/projectbackground">
 <div class="column-header-fixed">
   <h3>PROJECT BACKGROUND</h3>
-</div>
-</a>
-<a href="/pretrialproblem">
-<div class="column-header-fixed">
-  <h3>PRETRIAL PROBLEM</h3>
 </div>
 </a>
 <div class="column-header-fixed active-menu-item">
@@ -28,7 +28,7 @@ templateClass: tmpl-justiceInspiration
 </a>
   </div>
 <div class="content-container">
-  <div class="subnav">
+  <div class="subnav mobile-subnav">
     <ul class="content-navigation">
     {% for justiceInspiration in collections.theJusticeInspiration %}
     {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
@@ -37,7 +37,8 @@ templateClass: tmpl-justiceInspiration
       </ul>
       </div>
 <div class="static-content-container">
-  <h1>{{ justiceInspiration.title }}</h1>
+  <h2>{{ justiceInspiration.title }}</h2>
+  <h1>{{ justiceInspiration.subtitle }}</h1>
   <img src="{{ justiceInspiration.imageUrl }}" class="cover-image" />
   {{ justiceInspiration.body | markdownify | safe }}
 </div>

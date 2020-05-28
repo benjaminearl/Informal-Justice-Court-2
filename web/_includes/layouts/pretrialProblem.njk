@@ -3,14 +3,14 @@ layout: layouts/base.njk
 templateClass: tmpl-pretrialProblem
 ---
 <div class="content-menu-fixed">
+<div class="column-header-fixed active-menu-item">
+  <h3>PRETRIAL PROBLEM</h3>
+</div>
 <a href="/projectbackground">
 <div class="column-header-fixed">
   <h3>PROJECT BACKGROUND</h3>
 </div>
 </a>
-<div class="column-header-fixed active-menu-item">
-  <h3>PRETRIAL PROBLEM</h3>
-</div>
 <a href="/justiceinspiration">
 <div class="column-header-fixed">
   <h3>JUSTICE INSPIRATION</h3>
@@ -28,7 +28,7 @@ templateClass: tmpl-pretrialProblem
 </a>
 </div>
 <div class="content-container">
-  <div class="subnav">
+  <div class="subnav mobile-subnav">
     <ul class="content-navigation">
   {% for pretrialProblem in collections.thePretrialProblem %}
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
@@ -37,7 +37,8 @@ templateClass: tmpl-pretrialProblem
   </ul>
   </div>
   <div class="static-content-container">
-    <h1>{{ pretrialProblem.title }}</h1>
+    <h2>{{ pretrialProblem.title }}</h2>
+    <h1>{{ pretrialProblem.subtitle }}</h1>
     <img src="{{ pretrialProblem.imageUrl }}" class="cover-image" />
     {{ pretrialProblem.body | markdownify | safe }}
   </div>

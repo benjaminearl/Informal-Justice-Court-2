@@ -3,14 +3,14 @@ layout: layouts/base.njk
 templateClass: tmpl-projectBackground
 ---
 <div class="content-menu-fixed">
-<div class="column-header-fixed active-menu-item">
-  <h3>PROJECT BACKGROUND</h3>
-</div>
 <a href="/pretrialproblem">
 <div class="column-header-fixed">
   <h3>PRETRIAL PROBLEM</h3>
 </div>
 </a>
+<div class="column-header-fixed active-menu-item">
+  <h3>PROJECT BACKGROUND</h3>
+</div>
 <a href="/justiceinspiration">
 <div class="column-header-fixed">
   <h3>JUSTICE INSPIRATION</h3>
@@ -28,7 +28,7 @@ templateClass: tmpl-projectBackground
 </a>
 </div>
 <div class="content-container">
-<div class="subnav">
+<div class="subnav mobile-subnav">
 <ul class="content-navigation">
       {% for projectBackground in collections.theProjectBackground %}
       {% set currentProjectBackground = projectBackground.data.projectBackground %}
@@ -37,7 +37,8 @@ templateClass: tmpl-projectBackground
       </ul>
 </div>
 <div class="static-content-container">
-<h1>{{ projectBackground.title }}</h1>
+<h2>{{ projectBackground.title }}</h2>
+<h1>{{ projectBackground.subtitle }} </h1>
   <img src="{{ projectBackground.imageUrl }}" class="cover-image" />
   {{ projectBackground.body | markdownify | safe }}
 </div>
