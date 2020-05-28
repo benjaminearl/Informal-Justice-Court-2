@@ -109,6 +109,7 @@ img#myimage {
 .img-magnifier-glass {
   position: absolute;
   border-radius: 50%;
+  border: 1px solid #008751;
   cursor: none;
   width: 150px;
   height: 150px;
@@ -304,7 +305,7 @@ h2.article-subtitle {
   }
 
   .mobile-navigation {
-    display: inline-block;
+    display: block;
     width: 100vw;
     z-index: 10;
     height: 50px;
@@ -320,6 +321,7 @@ h2.article-subtitle {
     list-style: none;
     background-color: white;
     border-bottom: 1px solid #008751;
+    z-index: 10;
   }
 
   .mobile-nav li {
@@ -377,14 +379,21 @@ h2.article-subtitle {
 
   .content-container {
     grid-template-columns: repeat(1, 1fr);
-    z-index: -1;
+    z-index: 0;
+    position: inherit;
   }
 
   .subnav {
-    border-right: none
+    border-right: none;
+    grid-column: 1;
   }
 
   .mobile-subnav {
     display: none;
+  }
+
+  .content-navigation {
+    position: relative;
+    z-index: -1;
   }
 }

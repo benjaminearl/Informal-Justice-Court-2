@@ -35,7 +35,9 @@ permalink: /projectbackground/
 <ul class="content-navigation">
       {% for projectBackground in collections.theProjectBackground %}
       {% set currentProjectBackground = projectBackground.data.projectBackground %}
-        <li><a href="{{ projectBackground.url | url }}">{{ currentProjectBackground.title }}</a></li>
+      <a href="{{ projectBackground.url | url }}">
+        <li>{{ currentProjectBackground.title }}</li>
+      </a>
       {% endfor %}
       </ul>
 </div>
