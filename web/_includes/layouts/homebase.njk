@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ renderData.title or title or metadata.title }}</title>
+    <title>{{ metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
       {# <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}"> #}
     {% set css %}
@@ -12,15 +12,13 @@
     <style>
       {{ css | cssmin | safe }}
     </style>
-    {% set js %}
-      {% include "script.js" %}
-    {% endset %}
-    <script>
-      {{ js | jsmin | safe }}
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
 
   </head>
   <body>
+    <div id="splash-page" class="{% if home.url == page.url %}splash-off{% endif %}">
+      <span id="splashText"></span>
+    </div>
     <div class="header-container">
       <header>
         <div class="title header-item">
@@ -48,6 +46,7 @@
       <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
       </main>
+      <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
       <script>
         new TypeIt("#splashText", {
             speed: 50
@@ -80,6 +79,11 @@
           .type("<br>INFORMALJUSTICECOURT.ORG")
           .go();
       </script>
-
+      {% set js %}
+        {% include "script.js" %}
+      {% endset %}
+      <script>
+        {{ js | jsmin | safe }}
+      </script>
   </body>
 </html>

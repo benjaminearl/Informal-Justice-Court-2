@@ -34,6 +34,7 @@ templateClass: tmpl-article
     {% set currentArticle = article.data.article %}
       <li><a href="{{ article.url | url }}">{{ currentArticle.title }}</a></li>
     {% endfor %}
+    </ul>
 </div>
 <div class="static-content-container grid-two">
   <h1>{{ article.title }}</h1>

@@ -53,6 +53,22 @@ a {
   margin: 0px;
 }
 
+#splash-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #008751;
+  position: sticky;
+  top: 0px;
+}
+
+#splashText {
+  color: white;
+}
+
+.splash-off {
+  display: none;
+}
+
 .header-container {
   position: sticky;
   top: 0;
@@ -90,16 +106,35 @@ header {
   grid-column-end: 9;
 }
 
+.contact {
+  grid-column-start: 9;
+  grid-column-end: 12;
+}
+
 .mobile-navigation {
   display: none;
 }
 
-#homeimage-container {
+.carousel-container {
   position: sticky;
   top: 50px;
-  left: 14vw;
-  width: 70vw;
+  width: 100%;
   height: calc(100vh - 100px);
+  background-color: #008751;
+  border: 1px solid black
+}
+
+.carousel-slide {
+  display: flex;
+  width: 200%;
+}
+
+.item {
+  background-color: white;
+  width: 60%;
+  height: 70vh;
+  margin-right: 50px;
+  margin-top: 20px;
 }
 
 img#myimage {
