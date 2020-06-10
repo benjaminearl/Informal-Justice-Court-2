@@ -43,6 +43,6 @@ export default {
         {type: 'projectBackground'},
         {type: 'article'}
       ]
-    },
+    }
   ]
 }
