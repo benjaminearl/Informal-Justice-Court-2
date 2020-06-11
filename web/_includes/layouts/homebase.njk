@@ -16,10 +16,14 @@
 
   </head>
   <body>
-    <div id="splash-page" class="{% if home.url == page.url %}splash-off{% endif %}">
-      <span id="splashText"></span>
+
+    <div id="splash-page">
+      <div class="script-container">
+        <span id="splashText"></span>
+      </div>
     </div>
-    <div class="header-container">
+
+    <div id="header-container">
       <header>
         <div class="title header-item">
           <h1><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
@@ -31,6 +35,7 @@
           <a href="#">Contact Us</a>
         </div>
       </header>
+
       <div class="mobile-navigation header-item">
         <p onclick="openMenu()" class="menu-button">menu</p>
         <ul id="mobile-menu" class="mobile-nav">
@@ -42,42 +47,69 @@
           <li><a href="/aboutus">About Us</a></li>
         </ul>
       </div>
+
+      <div class="carousel-container">
+
+        <ul class="carousel-slide">
+          <li class="item">
+            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
+            <p class="carousel-item-excerpt"> Aardschap Foundation is an action-research group from the Netherlands that uses methods from arts and science to help communities transform their environment.</p>
+            <a class="carousel-item-link" href="#">Read more</a>
+          </li>
+          <li class="item">
+            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
+            <p class="carousel-item-excerpt"> The Informal Justice Court is, firstly, a training program for pre-trial detention inmates in Ikoyi Prison, aimed at improving and accelerating inmates’ judiciary process through mock trials.</p>
+            <a class="carousel-item-link" href="#">Read more</a>
+          </li>
+          <li class="item">
+            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
+            <p class="carousel-item-excerpt"> Throughout the criminal justice and prison system, participatory arts have the power to transform people's lives for the better.</p>
+            <a class="carousel-item-link" href="#">Read more</a>
+          </li>
+          <li class="item">
+            <img src="https://cdn.sanity.io/images/an03st3n/production/b3fee3e4af1705009dd7b75561f94c20d080b403-1180x785.jpg" />
+            <p class="carousel-item-excerpt"> Every year nearly 15 million people around the world end up in prison cells awaiting their trial without seeing a lawyer or judge. Many will spend months or even years behind bars in pre-trial detention.</p>
+            <a class="carousel-item-link" href="#">Read more</a>
+          </li>
+          <li class="item">
+            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
+            <p class="carousel-item-excerpt"> The project aims to bring about a positive change for inmates in Ikoyi, Nigeria and the world through five interrelated goals.</p>
+            <a class="carousel-item-link" href="#">Read more</a>
+          </li>
+          <li class="item">
+            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
+            <p class="carousel-item-excerpt"> Aardschap Foundation initiates experiments where we work together with local communities in a process of “learning by doing”, which we call action- researcht.</p>
+            <a class="carousel-item-link" href="#">Read more</a>
+          </li>
+        </ul>
+
+        <div id="prevBtn"></div>
+        <div id="nextBtn"></div>
+
+      </div>
     </div>
       <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
       </main>
+
       <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
       <script>
         new TypeIt("#splashText", {
-            speed: 50
-          })
-          .type("EXT. LAGOS, NIGERIA")
-          .pause(2000)
-          .type("<br><br>Every year nearly 15 million people around the world end up in prison cells awaiting their trial without seeing a lawyer or judge.")
-          .pause(1000)
-          .type(" Many will spend months or even years behind bars in pre-trial detention.")
-          .pause(1000)
-          .type(" Specifically, fast growing urban areas around the world, like the mega-city Lagos (Nigeria), are affected.")
-          .pause(1000)
-          .type("<br><br><h2>AARDSCHAP FOUNDATION</h2>")
-          .pause(1000)
-          .type("<h3>In close collaboration with NGO’s, artists and scholars from Nigeria and the Netherlands, Aardschap Foundation (an action-research organisation from the Netherlands) is carrying out a multidisciplinary project.</h3>")
-          .pause(1000)
-          .type("<br><h4>CUT TO:</h4>")
-          .pause(1000)
-          .type("<br>INT. IKOYI PRISON")
-          .pause(1000)
-          .type("<br><br>The Informal Justice Court is a training program for pre-trial detention inmates in Lagos largest prison (Ikoyi) aimed at improving inmates’ judiciary process through mock trials.")
-          .type("<br><br><h2>INMATE</h2>")
-          .pause(1000)
-          .type("<h3>In the court that will be constructed in the prison, we will act out our own cases, assisted by pro bono lawyers, theatre makers and law students.</h3>")
-          .pause(1000)
-          .type("<h3> By taking on the different roles such as a judge and prosecutor, we gain legal knowledge and learn the skills to defend our case in court.</h3>")
-          .pause(1000)
-          .type("<br><h4>CUT TO:</h4>")
-          .pause(1000)
-          .type("<br>INFORMALJUSTICECOURT.ORG")
-          .go();
+          strings: ["<h1>ACT I</h1>", "<br /><h1>SCENE 1</h1>", "<br />SETTING: IKOYI PRISON, LAGOS, NIGERIA", "<br><br>Mega cities grow fast and so does the pressure on the justice system. Today 15 million people around the world await their trail behind bars. Often for months or even years.", "<br />How can we change this injustice?", "<br><br>In Lagos a broad international collective of NGOs, researchers and artists have joined forces to come up with solutions. This year an experiment will take place in Ikoyi prison: The Informal Justice Court.", "<br><br>In the court inmates act out their own cases with the guidance of pro bono lawyers, theater makers and law officials to prepare their trial. The inmates become actors in a play that will be performed inside Ikoyi prison to all inmates.", "<br><br><h4>(continued)</h4>", " ", " ", " "],
+          speed: 50,
+          lifeLike: true,
+          breakLines: true,
+          waitUntilVisible: true,
+          afterComplete: function(step, instance) {
+
+            var element = document.getElementById("header-container");
+            // smooth scroll to element and align it at the bottom
+            element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+
+          }
+        }).go();
+
       </script>
       {% set js %}
         {% include "script.js" %}

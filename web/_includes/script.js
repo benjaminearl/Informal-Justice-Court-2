@@ -32,7 +32,7 @@ carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 //button listeners
 nextBtn.addEventListener('click', ()=>{
-  if (counter < carouselItems.length - 1) {
+  if (counter < carouselItems.length) {
     carouselSlide.style.transition = "transform 0.5s ease-in-out";
     counter++;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';

@@ -21,7 +21,7 @@
 
   </head>
   <body>
-    <div class="header-container">
+    <div id="header-container">
       <header>
         <div class="title header-item">
           <h1><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
@@ -48,38 +48,5 @@
       <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
       </main>
-      <script>
-        new TypeIt("#splashText", {
-            speed: 50
-          })
-          .type("EXT. LAGOS, NIGERIA")
-          .pause(2000)
-          .type("<br><br>Every year nearly 15 million people around the world end up in prison cells awaiting their trial without seeing a lawyer or judge.")
-          .pause(1000)
-          .type(" Many will spend months or even years behind bars in pre-trial detention.")
-          .pause(1000)
-          .type(" Specifically, fast growing urban areas around the world, like the mega-city Lagos (Nigeria), are affected.")
-          .pause(1000)
-          .type("<br><br><h2>AARDSCHAP FOUNDATION</h2>")
-          .pause(1000)
-          .type("<h3>In close collaboration with NGO’s, artists and scholars from Nigeria and the Netherlands, Aardschap Foundation (an action-research organisation from the Netherlands) is carrying out a multidisciplinary project.</h3>")
-          .pause(1000)
-          .type("<br><h4>CUT TO:</h4>")
-          .pause(1000)
-          .type("<br>INT. IKOYI PRISON")
-          .pause(1000)
-          .type("<br><br>The Informal Justice Court is a training program for pre-trial detention inmates in Lagos largest prison (Ikoyi) aimed at improving inmates’ judiciary process through mock trials.")
-          .type("<br><br><h2>INMATE</h2>")
-          .pause(1000)
-          .type("<h3>In the court that will be constructed in the prison, we will act out our own cases, assisted by pro bono lawyers, theatre makers and law students.</h3>")
-          .pause(1000)
-          .type("<h3> By taking on the different roles such as a judge and prosecutor, we gain legal knowledge and learn the skills to defend our case in court.</h3>")
-          .pause(1000)
-          .type("<br><h4>CUT TO:</h4>")
-          .pause(1000)
-          .type("<br>INFORMALJUSTICECOURT.ORG")
-          .go();
-      </script>
-
   </body>
 </html>
