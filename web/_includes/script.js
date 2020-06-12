@@ -47,19 +47,25 @@ prevBtn.addEventListener('click', ()=>{
   }
 })
 
-// mobile accordion
-var acc = document.getElementsByClassName("accordion-opener");
-var i;
+if (document.documentElement.clientWidth < 850) {
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  // mobile accordion
+  var acc = document.getElementsByClassName("accordion-opener");
+  var i;
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      for(j = 0; j < acc.length; j++) {
+        acc[j].nextElementSibling.style.display == "none";
+      }
+
+      /* Toggle between hiding and showing the active panel */
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
 }
