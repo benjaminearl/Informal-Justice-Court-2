@@ -36,18 +36,6 @@
         </div>
       </header>
 
-      <div class="mobile-navigation header-item">
-        <p onclick="openMenu()" class="menu-button">menu</p>
-        <ul id="mobile-menu" class="mobile-nav">
-          <li class="mobile-tagline"><p>{{ metadata.tagline }}</p></li>
-          <li><a href="/projectbackground">Project Background</a></li>
-          <li><a href="/pretrialproblem">Pretrial Problem</a></li>
-          <li><a href="/justiceinspiration">Inspiration</a></li>
-          <li><a href="/article">Results</a></li>
-          <li><a href="/aboutus">About Us</a></li>
-        </ul>
-      </div>
-
       <div class="carousel-container">
 
         <ul class="carousel-slide">
@@ -88,15 +76,18 @@
 
       </div>
     </div>
-      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <div class="mobile-home-space">
+
+    </div>
+      <div{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
-      </main>
+      </div>
 
       <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
 
       <script>
         new TypeIt("#splashText", {
-          strings: ["<h1>ACT I</h1>", "<br /><h1>SCENE 1</h1>", "<br />SETTING: IKOYI PRISON, LAGOS, NIGERIA", "<br><br>Mega cities grow fast and so does the pressure on the justice system. Today 15 million people around the world await their trail behind bars. Often for months or even years.", "<br />How can we change this injustice?", "<br><br>In Lagos a broad international collective of NGOs, researchers and artists have joined forces to come up with solutions. This year an experiment will take place in Ikoyi prison: The Informal Justice Court.", "<br><br>In the court inmates act out their own cases with the guidance of pro bono lawyers, theater makers and law officials to prepare their trial. The inmates become actors in a play that will be performed inside Ikoyi prison to all inmates.", "<br><br><h4>(continued)</h4>", " ", " ", " "],
+          strings: ["<h1>ACT I</h1>", "<br /><h1>SCENE 1</h1>", "<br />SETTING: IKOYI PRISON, LAGOS, NIGERIA", "<br><br>Mega cities grow fast and so does the pressure on the justice system. Today 15 million people around the world await their trail behind bars. Often for months or even years.", "<br />How can we change this injustice?", "<br>In Lagos a broad international collective of NGOs, researchers and artists have joined forces to come up with solutions. This year an experiment will take place in Ikoyi prison: The Informal Justice Court.", "<br>In the court inmates act out their own cases with the guidance of pro bono lawyers, theater makers and law officials to prepare their trial. The inmates become actors in a play that will be performed inside Ikoyi prison to all inmates.", "<br><h4>(continued)</h4>", " ", " ", " "],
           speed: 50,
           lifeLike: true,
           breakLines: true,

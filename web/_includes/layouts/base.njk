@@ -33,20 +33,12 @@
           <a href="#">Contact Us</a>
         </div>
       </header>
-      <div class="mobile-navigation header-item">
-        <p onclick="openMenu()" class="menu-button">menu</p>
-        <ul id="mobile-menu" class="mobile-nav">
-          <li class="mobile-tagline"><p>{{ metadata.tagline }}</p></li>
-          <li><a href="/projectbackground">Project Background</a></li>
-          <li><a href="/pretrialproblem">Pretrial Problem</a></li>
-          <li><a href="/justiceinspiration">Inspiration</a></li>
-          <li><a href="/article">Results</a></li>
-          <li><a href="/aboutus">About Us</a></li>
-        </ul>
-      </div>
     </div>
-      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <div class="mobile-home-space">
+
+    </div>
+      <div{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
-      </main>
+      </div>
   </body>
 </html>
