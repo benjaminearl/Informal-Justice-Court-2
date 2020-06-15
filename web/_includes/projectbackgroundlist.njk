@@ -1,5 +1,5 @@
-  <ul class="static-nav-item{% if projectBackground.url == url %} projectbackgroundlist-item-active{% endif %}">
-{% for projectBackground in projectbackgroundlist %}
+  <ul class="static-nav-item{% if projectBackground.url == url %} projectbackgroundlist-item-active{% endif %}" style="counter-reset: start-from {{ projectBackgroundList.length + 1 }}>
+{% for projectBackground in projectbackgroundlist | reverse %}
   {% set currentProjectBackground = projectBackground.data.projectBackground %}
   <a href="{{ projectBackground.url | url }}" class="static-content-link">
       <li class="content-box">
