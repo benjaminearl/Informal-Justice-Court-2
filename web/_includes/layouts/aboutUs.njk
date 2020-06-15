@@ -28,14 +28,9 @@ templateClass: tmpl-aboutUs
 </div>
 </div>
 <div class="content-container">
-  <div class="subnav mobile-subnav">
-    <ul class="content-navigation">
-  {% for aboutUs in collections.theAboutUs %}
-  {% set currentAboutUs = aboutUs.data.aboutUs %}
-    <li><a href="{{ aboutUs.url | url }}">{{ currentAboutUs.title }}</a></li>
-  {% endfor %}
-  </ul>
-  </div>
+<div class="mobile-article-category">
+  <p>ABOUT US</p>
+</div>
   <div class="static-content-container grid-two">
     <h2>{{ aboutUs.title }}</h2>
     <h1>{{ aboutUs.subtitle }}</h1>

@@ -12,7 +12,6 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'Some frontends will require a slug to be set to be able to show the person',
       options: {
         source: 'name',
         maxLength: 96
@@ -28,12 +27,5 @@ export default {
       type: 'bioPortableText',
       title: 'Biography'
     }
-  ],
-  preview: {
-    select: {
-      title: 'name',
-      subtitle: 'slug.current',
-      media: 'image'
-    }
-  }
+  ]
 }

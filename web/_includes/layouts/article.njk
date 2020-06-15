@@ -28,13 +28,8 @@ templateClass: tmpl-article
 </a>
   </div>
 <div class="content-container">
-  <div class="subnav mobile-subnav">
-    <ul class="content-navigation">
-    {% for article in collections.theArticle %}
-    {% set currentArticle = article.data.article %}
-      <li><a href="{{ article.url | url }}">{{ currentArticle.title }}</a></li>
-    {% endfor %}
-    </ul>
+<div class="mobile-article-category">
+  <p>RESULTS</p>
 </div>
 <div class="static-content-container grid-two">
   <h1>{{ article.title }}</h1>

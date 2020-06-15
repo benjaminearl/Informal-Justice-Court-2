@@ -4,7 +4,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
 import teamMember from './documents/teamMember'
-import category from './documents/category'
 import siteSettings from './documents/siteSettings'
 import partner from './documents/partner'
 import projectBackground from './documents/projectBackground'
@@ -27,7 +26,6 @@ export default createSchema({
 
   types: schemaTypes.concat([
     siteSettings,
-    category,
     teamMember,
     mainImage,
     teamMemberReference,

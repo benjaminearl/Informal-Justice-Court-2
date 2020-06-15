@@ -1,24 +1,6 @@
-function openMenu() {
-  document.getElementById("mobile-menu").classList.toggle("open-menu");
-}
-
-// // Close the dropdown menu if the user clicks outside of it
-// window.onclick = function(event) {
-//   if (!event.target.matches('.dropbtn')) {
-//     var dropdowns = document.getElementsByClassName("dropdown-content");
-//     var i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       var openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains('show')) {
-//         openDropdown.classList.remove('show');
-//       }
-//     }
-//   }
-// }
-
+// •••••••Homepage Carousel••••••••• //
 const carouselSlide = document.querySelector('.carousel-slide');
 const carouselItems = document.querySelectorAll('.carousel-slide li');
-console.log(carouselItems)
 
 //buttons
 const prevBtn = document.querySelector('#prevBtn');
@@ -47,20 +29,26 @@ prevBtn.addEventListener('click', ()=>{
   }
 })
 
-if (document.documentElement.clientWidth < 850) {
 
-  // mobile accordion
+// •••••••Mobile only script••••••••• //
+if (document.documentElement.clientWidth < 1025) {
+
+
+  // •••••••Homepage accordion••••••••• //
   var acc = document.getElementsByClassName("accordion-opener");
   var i;
 
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
+      var panel = this.nextElementSibling;
       for(j = 0; j < acc.length; j++) {
-        acc[j].nextElementSibling.style.display == "none";
+        if (panel.style.display === "block") {
+          acc[j].nextElementSibling.style.display == "none";
+          console.log(acc[j].nextElementSibling)
+        }
       }
 
       /* Toggle between hiding and showing the active panel */
-      var panel = this.nextElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
       } else {
@@ -68,4 +56,8 @@ if (document.documentElement.clientWidth < 850) {
       }
     });
   }
+
+// •••••••Article Menu••••••••• //
+
+
 }

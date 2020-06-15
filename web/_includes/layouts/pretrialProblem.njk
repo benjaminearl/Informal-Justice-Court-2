@@ -28,14 +28,9 @@ templateClass: tmpl-pretrialProblem
 </a>
 </div>
 <div class="content-container">
-  <div class="subnav mobile-subnav">
-    <ul class="content-navigation">
-  {% for pretrialProblem in collections.thePretrialProblem %}
-  {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
-    <li><a href="{{ pretrialProblem.url | url }}">{{ currentPretrialProblem.title }}</a></li>
-  {% endfor %}
-  </ul>
-  </div>
+<div class="mobile-article-category">
+  <p>PRETRIAL PROBLEM</p>
+</div>
   <div class="static-content-container">
     <h2>{{ pretrialProblem.title }}</h2>
     <h1>{{ pretrialProblem.subtitle }}</h1>

@@ -16,6 +16,12 @@ export default {
       title: 'Subtitle'
     },
     {
+      name: 'position',
+      type: 'number',
+      title: 'Position',
+      description: 'Order of article on homepage. 1 at the top.',
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
@@ -39,5 +45,14 @@ export default {
       type: 'bodyPortableText',
       title: 'Body'
     }
+  ],
+  orderings: [
+    {
+      title: 'Position',
+      name: 'position',
+      by: [
+        {field: 'position', direction: 'asc'}
+      ]
+    },
   ]
 }

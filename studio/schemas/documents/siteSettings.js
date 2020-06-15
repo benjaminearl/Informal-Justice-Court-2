@@ -34,12 +34,6 @@ export default {
       options: {
         layout: 'tags'
       }
-    },
-    {
-      name: 'teamMember',
-      type: 'reference',
-      title: 'Team Member',
-      to: [{type: 'teamMember'}]
     }
   ]
 }
