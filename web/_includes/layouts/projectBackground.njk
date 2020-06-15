@@ -31,6 +31,14 @@ templateClass: tmpl-projectBackground
 <div class="mobile-article-category">
   <p>PROJECT BACKGROUND</p>
 </div>
+<div class="subnav">
+  <ul class="content-navigation">
+  {% for projectBackground in collections.theProjectBackground %}
+  {% set currentProjectBackground = projectBackground.data.projectBackground %}
+    <li><a href="{{ projectBackground.url | url }}">{{ currentProjectBackground.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
 <div class="static-content-container">
 <h2>{{ projectBackground.title }}</h2>
 <h1>{{ projectBackground.subtitle }} </h1>

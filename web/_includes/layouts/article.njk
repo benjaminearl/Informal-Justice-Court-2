@@ -31,6 +31,14 @@ templateClass: tmpl-article
 <div class="mobile-article-category">
   <p>RESULTS</p>
 </div>
+<div class="subnav">
+  <ul class="content-navigation">
+  {% for article in collections.theArticle %}
+  {% set currentArticle = article.data.article %}
+    <li><a href="{{ article.url | url }}">{{ currentArticle.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
 <div class="static-content-container grid-two">
   <h1>{{ article.title }}</h1>
   <img src="{{ article.imageUrl }}" class="cover-image" />

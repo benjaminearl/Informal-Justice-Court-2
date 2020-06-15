@@ -48,7 +48,11 @@ export default {
                 type: 'reference',
                 title: 'Reference',
                 to: [
-                  { type: 'newsItem' },
+                  { type: 'aboutUs' },
+                  { type: 'article' },
+                  { type: 'justiceInspiration' },
+                  { type: 'pretrialProblem' },
+                  { type: 'projectBackground' },
                   { type: 'partner' },
                   { type: 'teamMember' },
                   // other types you may want to link to

@@ -31,6 +31,14 @@ templateClass: tmpl-justiceInspiration
 <div class="mobile-article-category">
   <p>JUSTICE INSPIRATION</p>
 </div>
+<div class="subnav">
+  <ul class="content-navigation">
+  {% for justiceInspiration in collections.theJusticeInspiration %}
+  {% set currentJusticeInspiration = justiceInspiration.data.justiceInspiration %}
+    <li><a href="{{ justiceInspiration.url | url }}">{{ currentJusticeInspiration.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
 <div class="static-content-container">
   <h2>{{ justiceInspiration.title }}</h2>
   <h1>{{ justiceInspiration.subtitle }}</h1>

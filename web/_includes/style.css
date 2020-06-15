@@ -479,6 +479,7 @@ h2.article-subtitle {
   .subnav {
     border-right: none;
     grid-column: 1;
+    display: none;
   }
 
   .mobile-subnav {
