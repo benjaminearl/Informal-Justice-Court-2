@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -20,6 +20,9 @@
     <div id="splash-page">
       <div class="script-container">
         <span id="splashText"></span>
+        <div class="skip button">
+
+        </div>
       </div>
     </div>
 
@@ -37,11 +40,13 @@
       </header>
 
       <div class="carousel-container">
-
+        <div class="test">
+          {{ carousel.title }}
+        </div>
         <ul class="carousel-slide">
           <li class="item">
-            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
-            <p class="carousel-item-excerpt"> Aardschap Foundation is an action-research group from the Netherlands that uses methods from arts and science to help communities transform their environment.</p>
+            <img src="{{ carousel.carouselOneImage }}" />
+            <p class="carousel-item-excerpt"> {{ carousel.carouselItemOne.excerpt}}.</p>
             <a class="carousel-item-link" href="#">Read more</a>
           </li>
           <li class="item">
@@ -79,7 +84,7 @@
     <div class="mobile-home-space">
       <div class="mobile-space-container">
         <p>{{ metadata.tagline }}</p>
-      </div>  
+      </div>
     </div>
       <div{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
@@ -89,7 +94,7 @@
 
       <script>
         new TypeIt("#splashText", {
-          strings: ["<h1>ACT I</h1>", "<br /><h1>SCENE 1</h1>", "<br />SETTING: IKOYI PRISON, LAGOS, NIGERIA", "<br><br>Mega cities grow fast and so does the pressure on the justice system. Today 15 million people around the world await their trail behind bars. Often for months or even years.", "<br />How can we change this injustice?", "<br>In Lagos a broad international collective of NGOs, researchers and artists have joined forces to come up with solutions. This year an experiment will take place in Ikoyi prison: The Informal Justice Court.", "<br>In the court inmates act out their own cases with the guidance of pro bono lawyers, theater makers and law officials to prepare their trial. The inmates become actors in a play that will be performed inside Ikoyi prison to all inmates.", "<br><h4>(continued)</h4>", " ", " ", " "],
+          strings: ["<h1>ACT I</h1>", "<br /><h1>SCENE 1</h1>", "<br />SETTING: IKOYI PRISON, LAGOS, NIGERIA", "<br><br>Mega cities grow fast and so does the pressure on the justice system. Today 15 million people around the world await their trail behind bars. Often for months or even years.", "<br />How can we change this injustice?",   "<br><h4>(continued)</h4>", " ", " ", " "],
           speed: 50,
           lifeLike: true,
           breakLines: true,

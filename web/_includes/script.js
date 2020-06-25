@@ -41,11 +41,9 @@ if (document.documentElement.clientWidth < 1025) {
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       var panel = this.nextElementSibling;
+
       for(j = 0; j < acc.length; j++) {
-        if (panel.style.display === "block") {
           acc[j].nextElementSibling.style.display == "none";
-          console.log(acc[j].nextElementSibling)
-        }
       }
 
       /* Toggle between hiding and showing the active panel */

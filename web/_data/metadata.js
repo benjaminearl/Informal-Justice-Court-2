@@ -5,7 +5,7 @@ module.exports =  async function() {
     *[_id == "siteSettings"]{
       "imageUrl": mainImage.asset->url,
       ...,
-      teamMember->
+      test->
     }[0]
   `)
 }

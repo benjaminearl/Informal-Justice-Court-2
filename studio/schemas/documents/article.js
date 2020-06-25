@@ -53,7 +53,7 @@ export default {
     {
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'excerptPortableText',
+      type: 'string',
       description: 'The excerpt will be featured on the carousel if this content is chosen to appear. One sentance max.'
     },
     {

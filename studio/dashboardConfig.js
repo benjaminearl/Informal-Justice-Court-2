@@ -9,7 +9,7 @@ export default {
             name: 'netlify',
             options: {
               description:
-                'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
+                'When you have finished uploading content to the site then press the deploy button. Please add all the content before pressing the deploy button because the service hosting the site tracks how many times you have deployed and will start charging if it exceeds a certain amount per month.',
               sites: [
                 {
                   buildHookId: '5eae88fb0ecc6b4860d0b205',
@@ -27,10 +27,5 @@ export default {
       }
     },
     {name: 'project-users', layout: {height: 'auto'}},
-    {
-      name: 'document-list',
-      options: {title: 'Recent news', order: '_createdAt desc', types: ['newsItem']},
-      layout: {width: 'medium'}
-    }
   ]
 }

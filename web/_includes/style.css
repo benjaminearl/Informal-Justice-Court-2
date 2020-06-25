@@ -197,7 +197,6 @@ a.carousel-item-link {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   position: sticky;
-  height: calc(100vh - 49px);
 }
 
 .content-menu-fixed {
@@ -417,8 +416,6 @@ h2.article-subtitle {
     position: relative;
     background-color: #008751;
     z-index: -10;
-    position: sticky;
-    top: 50px;
     padding: 10px;
   }
 
@@ -441,6 +438,21 @@ h2.article-subtitle {
     border-bottom: 1px solid #008751;
   }
 
+  .pretrial-problem {
+    position: sticky;
+    top: 50px;
+  }
+
+  .project-background {
+    position: sticky;
+    top: 100px;
+  }
+
+  .justice-inspiration {
+    position: sticky;
+    top: 150px;
+  }
+
   .content-menu {
     position: relative;
     height: auto;
@@ -449,12 +461,12 @@ h2.article-subtitle {
   }
 
   .content-column {
-    overflow:visible;
+    overflow: scroll;
     border: none;
+    background-color: white;
   }
 
   .column-header {
-    top: 50px;
     border-bottom: 1px solid #008751;
   }
 

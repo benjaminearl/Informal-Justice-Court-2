@@ -15,10 +15,7 @@ import carousel from './documents/carousel'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
-import bioPortableText from './objects/bioPortableText'
-import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
-import teamMemberReference from './objects/teamMemberReference'
 
 export default createSchema({
 
@@ -28,10 +25,7 @@ export default createSchema({
     siteSettings,
     teamMember,
     mainImage,
-    teamMemberReference,
     bodyPortableText,
-    bioPortableText,
-    excerptPortableText,
     partner,
     projectBackground,
     pretrialProblem,
