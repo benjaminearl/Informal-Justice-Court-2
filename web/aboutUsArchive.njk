@@ -6,39 +6,65 @@ tags:
 permalink: /aboutUs/
 ---
 <div class="content-menu-fixed">
-<a href="/pretrialproblem">
-<div class="column-header-fixed">
-  <h3>PRETRIAL PROBLEM</h3>
-</div>
-</a>
-<a href="/projectbackground">
-<div class="column-header-fixed">
-  <h3>PROJECT BACKGROUND</h3>
-</div>
-</a>
-<a href="/justiceinspiration">
-<div class="column-header-fixed">
-  <h3>JUSTICE INSPIRATION</h3>
-</div>
-</a>
-<a href="/article">
-<div class="column-header-fixed">
-  <h3>RESULTS</h3>
-</div>
-</a>
-<div class="column-header-fixed  active-menu-item">
-  <h3>ABOUT US</h3>
-</div>
+  <a href="/pretrialproblem">
+    <div class="column-header-fixed">
+      <h3>PRETRIAL PROBLEM</h3>
+    </div>
+  </a>
+  <a href="/projectbackground">
+    <div class="column-header-fixed">
+      <h3>PROJECT BACKGROUND</h3>
+    </div>
+  </a>
+  <a href="/justiceinspiration">
+    <div class="column-header-fixed">
+      <h3>JUSTICE INSPIRATION</h3>
+    </div>
+  </a>
+  <a href="/article">
+    <div class="column-header-fixed">
+      <h3>RESULTS</h3>
+    </div>
+  </a>
+  <div class="column-header-fixed  active-menu-item">
+    <h3>ABOUT US</h3>
+  </div>
 </div>
 <div class="content-container">
+  <div class="mobile-article-category">
+    <p>ABOUT US</p>
+  </div>
   <div class="subnav">
     <ul class="content-navigation">
-  {% for aboutUs in collections.theAboutUs %}
-  {% set currentAboutUs = aboutUs.data.aboutUs %}
-    <li><a href="{{ aboutUs.url | url }}">{{ currentAboutUs.title }}</a></li>
-  {% endfor %}
+    {% for aboutUs in collections.theAboutUs %}
+    {% set currentAboutUs = aboutUs.data.aboutUs %}
+      <a href="{{ aboutUs.url | url }}">
+        <li>
+          <p class="mobileNavTitle">{{ currentAboutUs.title }}</p>
+          <img src="{{ currentAboutUs.imageUrl | url }}" class="mobileNavImage" />
+        </li>
+      </a>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+<div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
+  <p>menu</p>
+  <ul id="showDiv" style="display:none;">
+    <li class="list-item">
+      <a href="/pretrialproblem">Pretrial Problem</a>
+    </li>
+    <li class="list-item">
+      <a href="/projectbackground">Project Background</a>
+    </li>
+    <li class="list-item">
+      <a href="/justiceinspiration">Justice Inspiration</a>
+    </li>
+    <li class="list-item">
+      <a href="/article">Results</a>
+    </li>
+    <li class="list-item">
+      <a href="/aboutus">About Us</a>
+    </li>
   </ul>
-  </div>
-  <div class="static-content-container grid-two archive-content">
-  </div>
 </div>

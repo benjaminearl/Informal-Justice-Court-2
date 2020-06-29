@@ -21,12 +21,7 @@ async function getProjectBackground () {
     slug,
     subtitle,
     "imageUrl": mainImage.asset->url,
-    excerpt[]{
-      ...,
-      children[]{
-        ...,
-      }
-    },
+    excerpt,
     body[]{
       ...,
       children[]{

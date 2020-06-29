@@ -12,13 +12,6 @@
     <style>
       {{ css | cssmin | safe }}
     </style>
-    {% set js %}
-      {% include "script.js" %}
-    {% endset %}
-    <script>
-      {{ js | jsmin | safe }}
-    </script>
-
   </head>
   <body>
     <div id="header-container">
@@ -34,8 +27,15 @@
         </div>
       </header>
     </div>
-      <div{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      <div class="main"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
         {{ content | safe }}
       </div>
+    </script>
+    {% set js %}
+      {% include "script.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
   </body>
 </html>

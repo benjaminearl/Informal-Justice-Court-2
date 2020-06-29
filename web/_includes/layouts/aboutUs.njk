@@ -31,7 +31,7 @@ templateClass: tmpl-aboutUs
 <div class="mobile-article-category">
   <p>ABOUT US</p>
 </div>
-<div class="subnav">
+<div class="subnav contentNav">
   <ul class="content-navigation">
   {% for aboutUs in collections.theAboutUs %}
   {% set currentAboutUs = aboutUs.data.aboutUs %}
@@ -45,7 +45,28 @@ templateClass: tmpl-aboutUs
     <img src="{{ aboutUs.imageUrl }}" class="cover-image" />
     {{ aboutUs.body | markdownify | safe }}
   </div>
+  <div id="mobile-related-content">
+    <p class="relatedContentTitle">related content</p>
+    <ul class="related-list">
+    {% for aboutUs in collections.theAboutUs %}
+    {% set currentAboutUs = aboutUs.data.aboutUs %}
+    <a href="{{ aboutUs.url | url }}">
+      <li>
+        <p class="mobileNavTitle">{{ currentAboutUs.title }}</p>
+        <img src="{{ currentAboutUs.imageUrl | url }}" class="mobileNavImage" />
+      </li>
+    </a>
+    {% endfor %}
+    </ul>
+  </div>
 </div>
-<div class="mobile-content-menu">
+<div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
   <p>menu</p>
+  <ul id="showDiv" style="display:none;">
+    <li class="list-item"><a href="/pretrialproblem">Pretrial Problem</a></li>
+    <li class="list-item"><a href="/projectbackground">Project Background</a></li>
+    <li class="list-item"><a href="/justiceinspiration">Justice Inspiration</a></li>
+    <li class="list-item"><a href="/article">Results</a></li>
+    <li class="list-item"><a href="/aboutus">About Us</a></li>
+  </ul>
 </div>

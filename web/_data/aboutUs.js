@@ -20,12 +20,7 @@ async function getAboutUs () {
     slug,
     subtitle,
     "imageUrl": mainImage.asset->url,
-    excerpt[]{
-      ...,
-      children[]{
-        ...,
-      }
-    },
+    excerpt,
     body[]{
       ...,
       children[]{

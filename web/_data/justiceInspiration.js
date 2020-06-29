@@ -9,7 +9,6 @@ function generateJusticeInspiration (justiceInspiration) {
   return {
     ...justiceInspiration,
     body: BlocksToMarkdown(justiceInspiration.body, { serializers, ...client.config() }),
-    excerpt: BlocksToMarkdown(justiceInspiration.excerpt, { serializers, ...client.config() })
   }
 }
 
@@ -21,12 +20,7 @@ async function getJusticeInspiration () {
     slug,
     subtitle,
     "imageUrl": mainImage.asset->url,
-    excerpt[]{
-      ...,
-      children[]{
-        ...,
-      }
-    },
+    excerpt,
     body[]{
       ...,
       children[]{

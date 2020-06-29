@@ -20,9 +20,11 @@
     <div id="splash-page">
       <div class="script-container">
         <span id="splashText"></span>
-        <div class="skip button">
-
-        </div>
+      </div>
+      <div class="skip-button">
+        <a href="#header-container">
+          <img src="/assets/skip.png"  />
+        </a>
       </div>
     </div>
 
@@ -40,39 +42,31 @@
       </header>
 
       <div class="carousel-container">
-        <div class="test">
-          {{ carousel.title }}
-        </div>
         <ul class="carousel-slide">
           <li class="item">
             <img src="{{ carousel.carouselOneImage }}" />
-            <p class="carousel-item-excerpt"> {{ carousel.carouselItemOne.excerpt}}.</p>
-            <a class="carousel-item-link" href="#">Read more</a>
+            <p class="carousel-item-excerpt">{{ carousel.carouselItemOne.excerpt }}</p>
+            <a class="carousel-item-link" href="{{ carousel.carouselItemOne.url | url }}">Read more</a>
           </li>
           <li class="item">
-            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
-            <p class="carousel-item-excerpt"> The Informal Justice Court is, firstly, a training program for pre-trial detention inmates in Ikoyi Prison, aimed at improving and accelerating inmates’ judiciary process through mock trials.</p>
-            <a class="carousel-item-link" href="#">Read more</a>
+            <img src="{{ carousel.carouselTwoImage }}" />
+            <p class="carousel-item-excerpt">{{ carousel.carouselItemTwo.excerpt }}</p>
+            <a class="carousel-item-link" href="{{ carousel.carouselItemTwo.url | url }}">Read more</a>
           </li>
           <li class="item">
-            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
-            <p class="carousel-item-excerpt"> Throughout the criminal justice and prison system, participatory arts have the power to transform people's lives for the better.</p>
-            <a class="carousel-item-link" href="#">Read more</a>
+            <img src="{{ carousel.carouselThreeImage }}" />
+            <p class="carousel-item-excerpt">{{ carousel.carouselItemThree.excerpt }}</p>
+            <a class="carousel-item-link" href="{{ carousel.carouselItemThree.url | url }}">Read more</a>
           </li>
           <li class="item">
-            <img src="https://cdn.sanity.io/images/an03st3n/production/b3fee3e4af1705009dd7b75561f94c20d080b403-1180x785.jpg" />
-            <p class="carousel-item-excerpt"> Every year nearly 15 million people around the world end up in prison cells awaiting their trial without seeing a lawyer or judge. Many will spend months or even years behind bars in pre-trial detention.</p>
-            <a class="carousel-item-link" href="#">Read more</a>
+            <img src="{{ carousel.carouselFourImage }}" />
+            <p class="carousel-item-excerpt">{{ carousel.carouselItemFour.excerpt }}</p>
+            <a class="carousel-item-link" href="{{ carousel.carouselItemFour.url | url }}">Read more</a>
           </li>
           <li class="item">
-            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
-            <p class="carousel-item-excerpt"> The project aims to bring about a positive change for inmates in Ikoyi, Nigeria and the world through five interrelated goals.</p>
-            <a class="carousel-item-link" href="#">Read more</a>
-          </li>
-          <li class="item">
-            <img src="https://cdn.sanity.io/images/an03st3n/production/d067ff91ffc1913787748eed49746c9be176849a-2560x1707.png" />
-            <p class="carousel-item-excerpt"> Aardschap Foundation initiates experiments where we work together with local communities in a process of “learning by doing”, which we call action- researcht.</p>
-            <a class="carousel-item-link" href="#">Read more</a>
+            <img src="{{ carousel.carouselFiveImage }}" />
+            <p class="carousel-item-excerpt">{{ carousel.carouselItemFive.excerpt }}</p>
+            <a class="carousel-item-link" href="{{ carousel.carouselItemFive.url | url }}">Read more</a>
           </li>
         </ul>
 
@@ -94,7 +88,7 @@
 
       <script>
         new TypeIt("#splashText", {
-          strings: ["<h1>ACT I</h1>", "<br /><h1>SCENE 1</h1>", "<br />SETTING: IKOYI PRISON, LAGOS, NIGERIA", "<br><br>Mega cities grow fast and so does the pressure on the justice system. Today 15 million people around the world await their trail behind bars. Often for months or even years.", "<br />How can we change this injustice?",   "<br><h4>(continued)</h4>", " ", " ", " "],
+          strings: ["<h1>ACT I</h1>", "<br /><h1>SCENE 1</h1>", "<br />SETTING: IKOYI PRISON, LAGOS, NIGERIA", "<br><br>Mega cities grow fast and so does the pressure on the justice system. Today 15 million people around the world await their trail behind bars. Often for months or even years.", "<br />How can we change this injustice?", " ", " ", " "],
           speed: 50,
           lifeLike: true,
           breakLines: true,

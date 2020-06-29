@@ -30,32 +30,11 @@ prevBtn.addEventListener('click', ()=>{
 })
 
 
-// •••••••Mobile only script••••••••• //
-if (document.documentElement.clientWidth < 1025) {
-
-
-  // •••••••Homepage accordion••••••••• //
-  var acc = document.getElementsByClassName("accordion-opener");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      var panel = this.nextElementSibling;
-
-      for(j = 0; j < acc.length; j++) {
-          acc[j].nextElementSibling.style.display == "none";
-      }
-
-      /* Toggle between hiding and showing the active panel */
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-
 // •••••••Article Menu••••••••• //
-
-
+function showDiv(){
+    if(document.getElementById('showDiv').style.display == 'none'){
+        document.getElementById('showDiv').style.display = 'block';
+    }else{
+        document.getElementById('showDiv').style.display = 'none';
+    }
 }

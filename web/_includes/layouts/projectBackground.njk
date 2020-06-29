@@ -31,7 +31,7 @@ templateClass: tmpl-projectBackground
 <div class="mobile-article-category">
   <p>PROJECT BACKGROUND</p>
 </div>
-<div class="subnav">
+<div class="subnav contentNav">
   <ul class="content-navigation">
   {% for projectBackground in collections.theProjectBackground %}
   {% set currentProjectBackground = projectBackground.data.projectBackground %}
@@ -45,7 +45,28 @@ templateClass: tmpl-projectBackground
   <img src="{{ projectBackground.imageUrl }}" class="cover-image" />
   {{ projectBackground.body | markdownify | safe }}
 </div>
+<div id="mobile-related-content">
+  <p class="relatedContentTitle">related content</p>
+  <ul class="related-list">
+  {% for projectBackground in collections.theProjectBackground %}
+  {% set currentProjectBackground = projectBackground.data.projectBackground %}
+  <a href="{{ projectBackground.url | url }}">
+    <li>
+      <p class="mobileNavTitle">{{ currentProjectBackground.title }}</p>
+      <img src="{{ currentProjectBackground.imageUrl | url }}" class="mobileNavImage" />
+    </li>
+  </a>
+  {% endfor %}
+  </ul>
 </div>
-<div class="mobile-content-menu">
+</div>
+<div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
   <p>menu</p>
+  <ul id="showDiv" style="display:none;">
+    <li class="list-item"><a href="/pretrialproblem">Pretrial Problem</a></li>
+    <li class="list-item"><a href="/projectbackground">Project Background</a></li>
+    <li class="list-item"><a href="/justiceinspiration">Justice Inspiration</a></li>
+    <li class="list-item"><a href="/article">Results</a></li>
+    <li class="list-item"><a href="/aboutus">About Us</a></li>
+  </ul>
 </div>

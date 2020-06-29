@@ -43,6 +43,30 @@ export default {
         {type: 'projectBackground'},
         {type: 'article'}
       ]
+    },
+    {
+      name: 'carouselItemFour',
+      title: 'Carousel Item Four',
+      type: 'reference',
+      to: [
+        {type: 'aboutUs'},
+        {type: 'justiceInspiration'},
+        {type: 'pretrialProblem'},
+        {type: 'projectBackground'},
+        {type: 'article'}
+      ]
+    },
+    {
+      name: 'carouselItemFive',
+      title: 'Carousel Item Five',
+      type: 'reference',
+      to: [
+        {type: 'aboutUs'},
+        {type: 'justiceInspiration'},
+        {type: 'pretrialProblem'},
+        {type: 'projectBackground'},
+        {type: 'article'}
+      ]
     }
   ]
 }
