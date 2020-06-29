@@ -552,6 +552,7 @@ h2.article-subtitle {
     position: fixed;
     z-index: 15;
     background-color: white;
+    display: block;
   }
 
   #mobile-content-menu p {
