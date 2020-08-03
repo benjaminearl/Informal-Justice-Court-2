@@ -4,11 +4,6 @@ export default {
   title: 'Carousel',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
-    },
-    {
       name: 'carouselItemOne',
       title: 'Carousel Item One',
       type: 'reference',
