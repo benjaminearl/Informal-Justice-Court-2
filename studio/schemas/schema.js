@@ -11,7 +11,6 @@ import pretrialProblem from './documents/pretrialProblem'
 import justiceInspiration from './documents/justiceInspiration'
 import aboutUs from './documents/aboutUs'
 import article from './documents/article'
-import carousel from './documents/carousel'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -32,7 +31,6 @@ export default createSchema({
     justiceInspiration,
     aboutUs,
     article,
-    carousel
 
   ])
 })

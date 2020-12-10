@@ -239,6 +239,15 @@ a.carousel-item-link {
   background-color: white;
 }
 
+.empty-space {
+  height: 85%;
+}
+
+.carousel-details {
+  vertical-align: bottom;
+  position: relative;
+}
+
 .column-header-fixed {
   border-bottom: 1px solid #008751;
   border-right: 1px solid #008751;

@@ -19,14 +19,6 @@ export default () =>
             .documentId('siteSettings')
         ),
         S.listItem()
-          .title('Homepage Carousel')
-          .child(
-            S.editor()
-                .id('carousel')
-                .schemaType('carousel')
-                .documentId('carousel')
-        ),
-        S.listItem()
           .title('Content')
           .child(
             S.list()
