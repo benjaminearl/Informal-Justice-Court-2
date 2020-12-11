@@ -25,25 +25,25 @@ export default () =>
               .title('Content')
               .items([
                 S.listItem()
-                  .title('Pretrial Problem')
+                  .title('Informal Justice Court')
                   .schemaType('pretrialProblem')
-                  .child(S.documentTypeList('pretrialProblem').title('Pretrial Problem')),
+                  .child(S.documentTypeList('pretrialProblem').title('Informal Justice Court')),
                 S.listItem()
-                  .title('Project Background')
+                  .title('Pre-trial Problem')
                   .schemaType('projectBackground')
-                  .child(S.documentTypeList('projectBackground').title('Project Background')),
+                  .child(S.documentTypeList('projectBackground').title('Pre-trial Problem')),
                 S.listItem()
-                  .title('Justice Inspiration')
+                  .title('Partners in Justice')
                   .schemaType('justiceInspiration')
-                  .child(S.documentTypeList('justiceInspiration').title('Justice Inspiration')),
+                  .child(S.documentTypeList('justiceInspiration').title('Partners in Justice')),
                 S.listItem()
-                  .title('Results')
+                  .title('Behind the scenes')
                   .schemaType('article')
-                  .child(S.documentTypeList('article').title('Article')),
+                  .child(S.documentTypeList('article').title('Behind the scenes')),
                 S.listItem()
-                  .title('About Us')
+                  .title('About Aardschap')
                   .schemaType('aboutUs')
-                  .child(S.documentTypeList('aboutUs').title('About Us')),
+                  .child(S.documentTypeList('aboutUs').title('About Aardschap')),
               ])
           ),
 
