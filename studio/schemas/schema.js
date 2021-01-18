@@ -6,11 +6,11 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import teamMember from './documents/teamMember'
 import siteSettings from './documents/siteSettings'
 import partner from './documents/partner'
-import projectBackground from './documents/projectBackground'
 import pretrialProblem from './documents/pretrialProblem'
-import justiceInspiration from './documents/justiceInspiration'
-import aboutUs from './documents/aboutUs'
-import article from './documents/article'
+import informalJusticeCourt from './documents/informalJusticeCourt'
+import partnersInJustice from './documents/partnersInJustice'
+import aboutAardschap from './documents/aboutAardschap'
+import behindTheScenes from './documents/behindTheScenes'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -26,11 +26,11 @@ export default createSchema({
     mainImage,
     bodyPortableText,
     partner,
-    projectBackground,
     pretrialProblem,
-    justiceInspiration,
-    aboutUs,
-    article,
+    informalJusticeCourt,
+    partnersInJustice,
+    aboutAardschap,
+    behindTheScenes,
 
   ])
 })

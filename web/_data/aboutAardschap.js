@@ -5,17 +5,18 @@ const serializers = require('../utils/serializers')
 const overlayDrafts = require('../utils/overlayDrafts')
 const hasToken = !!client.config().token
 
-function generateJusticeInspiration (justiceInspiration) {
+function generateAboutAardschap (aboutAardschap) {
   return {
-    ...justiceInspiration,
-    body: BlocksToMarkdown(justiceInspiration.body, { serializers, ...client.config() }),
+    ...aboutAardschap,
+    body: BlocksToMarkdown(aboutAardschap.body, { serializers, ...client.config() })
   }
 }
 
-async function getJusticeInspiration () {
-  const filter = groq`*[_type == "justiceInspiration" && defined(slug)]`
+async function getAboutAardschap () {
+  const filter = groq`*[_type == "aboutAardschap" && defined(slug) && publishedAt < now()]`
   const projection = groq`{
     _id,
+    publishedAt,
     title,
     slug,
     subtitle,
@@ -28,11 +29,12 @@ async function getJusticeInspiration () {
       }
     },
   }`
-  const query = [filter, projection].join(' ')
+  const order = `| order(publishedAt desc)`
+  const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
-  const prepareJusticeInspiration = reducedDocs.map(generateJusticeInspiration)
-  return prepareJusticeInspiration
+  const prepareAboutAardschap = reducedDocs.map(generateAboutAardschap)
+  return prepareAboutAardschap
 }
 
-module.exports = getJusticeInspiration
+module.exports = getAboutAardschap

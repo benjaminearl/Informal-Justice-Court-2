@@ -5,17 +5,18 @@ const serializers = require('../utils/serializers')
 const overlayDrafts = require('../utils/overlayDrafts')
 const hasToken = !!client.config().token
 
-function generateAboutUs (aboutUs) {
+function generateBehindTheScenes (behindTheScenes) {
   return {
-    ...aboutUs,
-    body: BlocksToMarkdown(aboutUs.body, { serializers, ...client.config() })
+    ...behindTheScenes,
+    body: BlocksToMarkdown(behindTheScenes.body, { serializers, ...client.config() })
   }
 }
 
-async function getAboutUs () {
-  const filter = groq`*[_type == "aboutUs" && defined(slug)]`
+async function getBehindTheScenes () {
+  const filter = groq`*[_type == "behindTheScenes" && defined(slug) && publishedAt < now()]`
   const projection = groq`{
     _id,
+    publishedAt,
     title,
     slug,
     subtitle,
@@ -28,11 +29,12 @@ async function getAboutUs () {
       }
     },
   }`
-  const query = [filter, projection].join(' ')
+  const order = `| order(publishedAt desc)`
+  const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
-  const prepareAboutUs = reducedDocs.map(generateAboutUs)
-  return prepareAboutUs
+  const prepareBehindTheScenes = reducedDocs.map(generateBehindTheScenes)
+  return prepareBehindTheScenes
 }
 
-module.exports = getAboutUs
+module.exports = getBehindTheScenes

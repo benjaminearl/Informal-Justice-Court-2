@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.njk
-navtitle: Pretrial Problem
+navtitle: partnersInJustice
 tags:
   - nav
-permalink: /pretrialProblem/
+permalink: /partnersInJustice/
 ---
 <div class="content-menu-fixed">
   <a href="/informalJusticeCourt">
@@ -11,14 +11,14 @@ permalink: /pretrialProblem/
       <h3>INFORMAL JUSTICE COURT</h3>
     </div>
   </a>
-    <div class="column-header-fixed active-menu-item">
+  <a href="/pretrialProblem">
+    <div class="column-header-fixed">
       <h3>PRE-TRIAL PROBLEM</h3>
     </div>
-  <a href="/partnersInJustice">
-    <div class="column-header-fixed">
-      <h3>PARTNERS IN JUSTICE</h3>
-    </div>
   </a>
+  <div class="column-header-fixed active-menu-item">
+    <h3>PARTNERS IN JUSTICE</h3>
+  </div>
   <a href="/behindTheScenes">
     <div class="column-header-fixed">
       <h3>BEHIND THE SCENES</h3>
@@ -32,20 +32,20 @@ permalink: /pretrialProblem/
 </div>
 <div class="content-container">
   <div class="mobile-article-category">
-    <p>PRE-TRIAL PROBLEM</p>
+    <p>PARTNERS IN JUSTICE</p>
   </div>
   <div class="subnav">
     <ul class="content-navigation">
-    {% for pretrialProblem in collections.thePretrialProblem %}
-    {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
-      <a href="{{ pretrialProblem.url | url }}">
-        <li>
-          <p class="mobileNavTitle">{{ currentPretrialProblem.title }}</p>
-          <img src="{{ currentPretrialProblem.imageUrl | url }}" class="mobileNavImage" />
-        </li>
+    {% for partnersInJustice in collections.thePartnersInJustice %}
+    {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
+    <a href="{{ partnersInJustice.url | url }}">
+      <li>
+          <p class="mobileNavTitle">{{ currentPartnersInJustice.title }}</p>
+          <img src="{{ currentPartnersInJustice.imageUrl | url }}" class="mobileNavImage" />
+          </li>
       </a>
     {% endfor %}
-    </ul>
+      </ul>
   </div>
 </div>
 <div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
@@ -53,7 +53,7 @@ permalink: /pretrialProblem/
   <ul id="showDiv" style="display:none;">
     <li class="list-item"><a href="/informalJusticeCourt">Informal Justice Court</a></li>
     <li class="list-item"><a href="/pretrialProblem">Pre-trial Problem</a></li>
-    <li class="list-item"><a href="/partnersInJustice">Partners In  Justice</a></li>
+    <li class="list-item"><a href="/partnersInJustice">Partners In Justice</a></li>
     <li class="list-item"><a href="/behindTheScenes">Behind The Scenes</a></li>
     <li class="list-item"><a href="/aboutaardschap">About Aardschap</a></li>
   </ul>

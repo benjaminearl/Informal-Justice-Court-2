@@ -5,17 +5,18 @@ const serializers = require('../utils/serializers')
 const overlayDrafts = require('../utils/overlayDrafts')
 const hasToken = !!client.config().token
 
-function generateArticle (article) {
+function generatePartnersInJustice (partnersInJustice) {
   return {
-    ...article,
-    body: BlocksToMarkdown(article.body, { serializers, ...client.config() })
+    ...partnersInJustice,
+    body: BlocksToMarkdown(partnersInJustice.body, { serializers, ...client.config() }),
   }
 }
 
-async function getArticle () {
-  const filter = groq`*[_type == "article" && defined(slug)]`
+async function getPartnersInJustice () {
+  const filter = groq`*[_type == "partnersInJustice" && defined(slug) && publishedAt < now()]`
   const projection = groq`{
     _id,
+    publishedAt,
     title,
     slug,
     subtitle,
@@ -28,11 +29,12 @@ async function getArticle () {
       }
     },
   }`
-  const query = [filter, projection].join(' ')
+  const order = `| order(publishedAt desc)`
+  const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
-  const prepareArticle = reducedDocs.map(generateArticle)
-  return prepareArticle
+  const preparePartnersInJustice = reducedDocs.map(generatePartnersInJustice)
+  return preparePartnersInJustice
 }
 
-module.exports = getArticle
+module.exports = getPartnersInJustice

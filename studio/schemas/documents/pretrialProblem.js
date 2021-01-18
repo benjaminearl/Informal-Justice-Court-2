@@ -29,6 +29,12 @@ export default {
       }
     },
     {
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Published at',
+      description: 'This can be used to schedule post for publishing'
+    },
+    {
       name: 'mainImage',
       title: 'Thumbnail Image',
       type: 'mainImage',

@@ -1,0 +1,11 @@
+  <ul class="static-nav-item{% if behindTheScenes.url == url %} behindthecceneslist-item-active{% endif %}">
+{% for behindTheScenes in behindthesceneslist | reverse %}
+  {% set currentBehindTheScenes = behindTheScenes.data.behindTheScenes %}
+  <a href="{{ behindTheScenes.url | url }}" class="static-content-link">
+      <li class="content-box">
+      {% if currentBehindTheScenes.title %}<h3 class="content-box-title">{{ currentBehindTheScenes.title }}</h3>{% else %}<code>{{ behindTheScenes.url }}</code>{% endif %}
+      <img src="{{ currentBehindTheScenes.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
+    </li>
+    </a>
+{% endfor %}
+  </ul>

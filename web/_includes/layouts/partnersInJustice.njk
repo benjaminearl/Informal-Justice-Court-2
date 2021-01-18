@@ -1,21 +1,21 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-pretrialProblem
+templateClass: tmpl-partnersInJustice
 ---
-<div class="content-menu-fixed">
-<a href="/informalJusticeCourt">
+  <div class="content-menu-fixed">
+  <a href="/informalJusticeCourt">
+  <div class="column-header-fixed">
+    <h3>INFORMAL JUSTICE COURT</h3>
+  </div>
+  </a>
+<a href="/pretrialProblem">
 <div class="column-header-fixed">
-  <h3>INFORMAL JUSTICE COURT</h3>
+  <h3>PRE-TRIAL PROBLEM</h3>
 </div>
 </a>
 <div class="column-header-fixed active-menu-item">
-  <h3>PRE-TRIAL PROBLEM</h3>
-</div>
-<a href="/partnersInJustice">
-<div class="column-header-fixed">
   <h3>PARTNERS IN JUSTICE</h3>
 </div>
-</a>
 <a href="/behindTheScenes">
 <div class="column-header-fixed">
   <h3>BEHIND THE SCENES</h3>
@@ -26,34 +26,34 @@ templateClass: tmpl-pretrialProblem
   <h3>ABOUT AARDSCHAP</h3>
 </div>
 </a>
-</div>
+  </div>
 <div class="content-container">
 <div class="mobile-article-category">
-  <p>PRE-TRIAL PROBLEM</p>
+  <p>PARTNERS IN JUSTICE</p>
 </div>
 <div class="subnav contentNav">
   <ul class="content-navigation">
-  {% for pretrialProblem in collections.thePretrialProblem %}
-  {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
-    <li><a href="{{ pretrialProblem.url | url }}">{{ currentPretrialProblem.title }}</a></li>
+  {% for partnersInJustice in collections.thePartnersInJustice %}
+  {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
+    <li><a href="{{ partnersInJustice.url | url }}">{{ currentPartnersInJustice.title }}</a></li>
   {% endfor %}
   </ul>
 </div>
 <div class="static-content-container">
-<h1>{{ pretrialProblem.title }}</h1>
-<h2>{{ pretrialProblem.subtitle }} </h2>
-  <img src="{{ pretrialProblem.imageUrl }}" class="cover-image" />
-  {{ pretrialProblem.body | markdownify | safe }}
+  <h1>{{ partnersInJustice.title }}</h1>
+  <h2>{{ partnersInJustice.subtitle }}</h2>
+  <img src="{{ partnersInJustice.imageUrl }}" class="cover-image" />
+  {{ partnersInJustice.body | markdownify | safe }}
 </div>
 <div id="mobile-related-content">
   <p class="relatedContentTitle">related content</p>
   <ul class="related-list">
-  {% for pretrialProblem in collections.thePretrialProblem %}
-  {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
-  <a href="{{ pretrialProblem.url | url }}">
+  {% for partnersInJustice in collections.thePartnersInJustice %}
+  {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
+  <a href="{{ partnersInJustice.url | url }}">
     <li>
-      <p class="mobileNavTitle">{{ currentPretrialProblem.title }}</p>
-      <img src="{{ currentPretrialProblem.imageUrl | url }}" class="mobileNavImage" />
+      <p class="mobileNavTitle">{{ currentPartnersInJustice.title }}</p>
+      <img src="{{ currentPartnersInJustice.imageUrl | url }}" class="mobileNavImage" />
     </li>
   </a>
   {% endfor %}

@@ -1,27 +1,27 @@
 ---
 layout: layouts/base.njk
-navtitle: About Us
+navtitle: About Aardschap
 tags:
   - nav
-permalink: /aboutUs/
+permalink: /aboutAardschap/
 ---
 <div class="content-menu-fixed">
-  <a href="/pretrialproblem">
+  <a href="/informalJusticeCourt">
     <div class="column-header-fixed">
       <h3>INFORMAL JUSTICE COURT</h3>
     </div>
   </a>
-  <a href="/projectbackground">
+  <a href="/pretrialProblem">
     <div class="column-header-fixed">
       <h3>PRE-TRIAL PROBLEM</h3>
     </div>
   </a>
-  <a href="/justiceinspiration">
+  <a href="/partnersInJustice">
     <div class="column-header-fixed">
       <h3>PARTNERS IN JUSTICE</h3>
     </div>
   </a>
-  <a href="/article">
+  <a href="/behindTheScenes">
     <div class="column-header-fixed">
       <h3>BEHIND THE SCENES</h3>
     </div>
@@ -36,12 +36,12 @@ permalink: /aboutUs/
   </div>
   <div class="subnav">
     <ul class="content-navigation">
-    {% for aboutUs in collections.theAboutUs %}
-    {% set currentAboutUs = aboutUs.data.aboutUs %}
-      <a href="{{ aboutUs.url | url }}">
+    {% for aboutAardschap in collections.theAboutAardschap %}
+    {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
+      <a href="{{ aboutAardschap.url | url }}">
         <li>
-          <p class="mobileNavTitle">{{ currentAboutUs.title }}</p>
-          <img src="{{ currentAboutUs.imageUrl | url }}" class="mobileNavImage" />
+          <p class="mobileNavTitle">{{ currentAboutAardschap.title }}</p>
+          <img src="{{ currentAboutAardschap.imageUrl | url }}" class="mobileNavImage" />
         </li>
       </a>
     {% endfor %}
@@ -52,19 +52,19 @@ permalink: /aboutUs/
   <p>menu</p>
   <ul id="showDiv" style="display:none;">
     <li class="list-item">
-      <a href="/pretrialproblem">Pretrial Problem</a>
+      <a href="/informalJusticeCourt">Informal Justice Court</a>
     </li>
     <li class="list-item">
-      <a href="/projectbackground">Project Background</a>
+      <a href="/pretrialProblem">Pre-trial Problem</a>
     </li>
     <li class="list-item">
-      <a href="/justiceinspiration">Justice Inspiration</a>
+      <a href="/partnersInJustice">Partners In Justice</a>
     </li>
     <li class="list-item">
-      <a href="/article">Results</a>
+      <a href="/behindTheScenes">Behind The Scenes</a>
     </li>
     <li class="list-item">
-      <a href="/aboutus">About Us</a>
+      <a href="/aboutaardschap">About Aardschap</a>
     </li>
   </ul>
 </div>

@@ -4,19 +4,19 @@ const client = require('../utils/sanityClient.js')
 const serializers = require('../utils/serializers')
 const overlayDrafts = require('../utils/overlayDrafts')
 const hasToken = !!client.config().token
-const urlFor = require('../utils/imageUrl')
 
-function generateProjectBackground (projectBackground) {
+function generateInformalJusticeCourt (informalJusticeCourt) {
   return {
-    ...projectBackground,
-    body: BlocksToMarkdown(projectBackground.body, { serializers, ...client.config() })
+    ...informalJusticeCourt,
+    body: BlocksToMarkdown(informalJusticeCourt.body, { serializers, ...client.config() })
   }
 }
 
-async function getProjectBackground () {
-  const filter = groq`*[_type == "projectBackground" && defined(slug)]`
+async function getInformalJusticeCourt () {
+  const filter = groq`*[_type == "informalJusticeCourt" && defined(slug) && publishedAt < now()]`
   const projection = groq`{
     _id,
+    publishedAt,
     title,
     slug,
     subtitle,
@@ -29,11 +29,12 @@ async function getProjectBackground () {
       }
     },
   }`
-  const query = [filter, projection].join(' ')
+  const order = `| order(publishedAt desc)`
+  const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
-  const prepareProjectBackground = reducedDocs.map(generateProjectBackground)
-  return prepareProjectBackground
+  const prepareInformalJusticeCourt = reducedDocs.map(generateInformalJusticeCourt)
+  return prepareInformalJusticeCourt
 }
 
-module.exports = getProjectBackground
+module.exports = getInformalJusticeCourt

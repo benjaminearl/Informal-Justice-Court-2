@@ -1,0 +1,72 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-informalJusticeCourt
+---
+<div class="content-menu-fixed">
+  <div class="column-header-fixed active-menu-item">
+    <h3>INFORMAL JUSTICE COURT</h3>
+  </div>
+  <a href="/pretrialProblem">
+    <div class="column-header-fixed">
+      <h3>PRE-TRIAL PROBLEM</h3>
+    </div>
+  </a>
+  <a href="/partnersInJustice">
+    <div class="column-header-fixed">
+      <h3>PARTNERS IN JUSTICE</h3>
+    </div>
+  </a>
+  <a href="/behindTheScenes">
+    <div class="column-header-fixed">
+      <h3>BEHIND THE SCENE</h3>
+    </div>
+  </a>
+  <a href="/aboutaardschap">
+    <div class="column-header-fixed">
+      <h3>ABOUT AARDSCHAP</h3>
+    </div>
+  </a>
+</div>
+<div class="content-container">
+  <div class="mobile-article-category">
+    <p>INFORMAL JUSTICE COURT</p>
+  </div>
+<div class="subnav contentNav">
+  <ul class="content-navigation">
+  {% for informalJusticeCourt in collections.theInformalJusticeCourt %}
+  {% set currentInformalJusticeCourt = informalJusticeCourt.data.informalJusticeCourt %}
+    <li><a href="{{ informalJusticeCourt.url | url }}">{{ currentInformalJusticeCourt.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
+  <div class="static-content-container">
+    <h1>{{ informalJusticeCourt.title }}</h1>
+    <h2>{{ informalJusticeCourt.subtitle }}</h2>
+    <img src="{{ informalJusticeCourt.imageUrl }}" class="cover-image" />
+    {{ informalJusticeCourt.body | markdownify | safe }}
+  </div>
+  <div id="mobile-related-content">
+    <p class="relatedContentTitle">related content</p>
+    <ul class="related-list">
+    {% for informalJusticeCourt in collections.theInformalJusticeCourt %}
+    {% set currentInformalJusticeCourt = informalJusticeCourt.data.informalJusticeCourt %}
+    <a href="{{ informalJusticeCourt.url | url }}">
+      <li>
+        <p class="mobileNavTitle">{{ currentInformalJusticeCourt.title }}</p>
+        <img src="{{ currentInformalJusticeCourt.imageUrl | url }}" class="mobileNavImage" />
+      </li>
+    </a>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+<div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
+  <p>menu</p>
+  <ul id="showDiv" style="display:none;">
+    <li class="list-item"><a href="/informalJusticeCourt">Informal Justice Court</a></li>
+    <li class="list-item"><a href="/pretrialProblem">Pre-trial Problem</a></li>
+    <li class="list-item"><a href="/partnersInJustice">Partners In Justice</a></li>
+    <li class="list-item"><a href="/behindTheScenes">Behind The Scenes</a></li>
+    <li class="list-item"><a href="/aboutaardschap">About Aardschap</a></li>
+  </ul>
+</div>

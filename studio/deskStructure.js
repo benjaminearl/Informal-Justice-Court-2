@@ -3,7 +3,7 @@ import MdSettings from 'react-icons/lib/md/settings'
 import MdPerson from 'react-icons/lib/md/person'
 
 const hiddenDocTypes = listItem =>
-  !['teamMember', 'siteSettings', 'partner', 'post', 'carousel', 'aboutUs', 'justiceInspiration', 'pretrialProblem', 'projectBackground', 'article'].includes(listItem.getId())
+  !['teamMember', 'siteSettings', 'partner', 'post', 'carousel', 'aboutAardschap', 'partnersInJustice', 'informalJusticeCourt', 'pretrialProblem', 'behindTheScenes'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -26,24 +26,24 @@ export default () =>
               .items([
                 S.listItem()
                   .title('Informal Justice Court')
-                  .schemaType('pretrialProblem')
-                  .child(S.documentTypeList('pretrialProblem').title('Informal Justice Court')),
+                  .schemaType('informalJusticeCourt')
+                  .child(S.documentTypeList('informalJusticeCourt').title('Informal Justice Court')),
                 S.listItem()
                   .title('Pre-trial Problem')
-                  .schemaType('projectBackground')
-                  .child(S.documentTypeList('projectBackground').title('Pre-trial Problem')),
+                  .schemaType('pretrialProblem')
+                  .child(S.documentTypeList('pretrialProblem').title('Pre-trial Problem')),
                 S.listItem()
                   .title('Partners in Justice')
-                  .schemaType('justiceInspiration')
-                  .child(S.documentTypeList('justiceInspiration').title('Partners in Justice')),
+                  .schemaType('partnersInJustice')
+                  .child(S.documentTypeList('partnersInJustice').title('Partners in Justice')),
                 S.listItem()
                   .title('Behind the scenes')
-                  .schemaType('article')
-                  .child(S.documentTypeList('article').title('Behind the scenes')),
+                  .schemaType('behindTheScenes')
+                  .child(S.documentTypeList('behindTheScenes').title('Behind the scenes')),
                 S.listItem()
                   .title('About Aardschap')
-                  .schemaType('aboutUs')
-                  .child(S.documentTypeList('aboutUs').title('About Aardschap')),
+                  .schemaType('aboutAardschap')
+                  .child(S.documentTypeList('aboutAardschap').title('About Aardschap')),
               ])
           ),
 

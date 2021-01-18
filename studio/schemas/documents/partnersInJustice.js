@@ -2,8 +2,8 @@ import {format} from 'date-fns'
 
 export default {
   type: 'document',
-  name: 'projectBackground',
-  title: 'Project Background',
+  name: 'partnersInJustice',
+  title: 'Partners In Justice',
   fields: [
     {
       name: 'title',
@@ -27,6 +27,12 @@ export default {
         source: 'title',
         maxLength: 96
       }
+    },
+    {
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Published at',
+      description: 'This can be used to schedule post for publishing'
     },
     {
       name: 'mainImage',

@@ -1,0 +1,72 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-behindTheScenes
+---
+  <div class="content-menu-fixed">
+  <a href="/informalJusticeCourt">
+  <div class="column-header-fixed">
+    <h3>INFORMAL JUSTICE COURT</h3>
+  </div>
+  </a>
+<a href="/pretrialProblem">
+<div class="column-header-fixed">
+  <h3>PRE-TRIAL PROBLEM</h3>
+</div>
+</a>
+<a href="/partnersInJustice">
+<div class="column-header-fixed">
+  <h3>PARTNERS IN JUSTICE</h3>
+</div>
+</a>
+<div class="column-header-fixed active-menu-item">
+  <h3>BEHIND THE SCENES</h3>
+</div>
+<a href="/aboutaardschap">
+<div class="column-header-fixed">
+  <h3>ABOUT AARDSCHAP</h3>
+</div>
+</a>
+  </div>
+<div class="content-container">
+  <div class="mobile-article-category">
+    <p>BEHIND THE SCENES</p>
+  </div>
+<div class="subnav contentNav">
+  <ul class="content-navigation">
+  {% for behindTheScenes in collections.theBehindTheScenes %}
+  {% set currentBehindTheScenes = behindTheScenes.data.behindTheScenes %}
+    <li><a href="{{ behindTheScenes.url | url }}">{{ currentBehindTheScenes.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
+<div class="static-content-container grid-two">
+  <h1>{{ behindTheScenes.title }}</h1>
+  <img src="{{ behindTheScenes.imageUrl }}" class="cover-image" />
+  <h2 class="behindTheScenes-subtitle">{{ behindTheScenes.subtitle }}</h2>
+  {{ behindTheScenes.body | markdownify | safe }}
+</div>
+<div id="mobile-related-content">
+  <p class="relatedContentTitle">related content</p>
+  <ul class="related-list">
+  {% for behindTheScenes in collections.theBehindTheScenes %}
+  {% set currentBehindTheScenes = behindTheScenes.data.behindTheScenes %}
+  <a href="{{ behindTheScenes.url | url }}">
+    <li>
+      <p class="mobileNavTitle">{{ currentBehindTheScenes.title }}</p>
+      <img src="{{ currentBehindTheScenes.imageUrl | url }}" class="mobileNavImage" />
+    </li>
+  </a>
+  {% endfor %}
+  </ul>
+</div>
+</div>
+<div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
+  <p>menu</p>
+  <ul id="showDiv" style="display:none;">
+    <li class="list-item"><a href="/informalJusticeCourt">Informal Justice Court</a></li>
+    <li class="list-item"><a href="/pretrialProblem">Pre-trial Problem</a></li>
+    <li class="list-item"><a href="/partnersInJustice">Partners In Justice</a></li>
+    <li class="list-item"><a href="/behindTheScenes">Behind The Scenes</a></li>
+    <li class="list-item"><a href="/aboutaardschap">About Aardschap</a></li>
+  </ul>
+</div>
