@@ -1,11 +1,11 @@
-  <ol class="static-nav-item{% if pretrialProblem.url == url %} pretrialproblemlist-item-active{% endif %}">
+<ol reversed class="static-nav-item{% if pretrialProblem.url == url %} pretrialproblemlist-item-active{% endif %}">
 {% for pretrialProblem in pretrialproblemlist %}
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
   <a href="{{ pretrialProblem.url | url }}" class="static-content-link">
-      <li class="content-box">
+    <li class="content-box">
       {% if currentPretrialProblem.title %}<h3 class="content-box-title">{{ currentPretrialProblem.title }}</h3>{% else %}<code>{{ pretrialProblem.url }}</code>{% endif %}
       <img src="{{ currentPretrialProblem.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
     </li>
-    </a>
+  </a>
 {% endfor %}
-  </ol>
+</ol>

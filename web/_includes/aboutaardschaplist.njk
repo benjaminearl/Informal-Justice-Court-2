@@ -1,4 +1,4 @@
-<ol class="static-nav-item{% if aboutAardschap.url == url %} aboutaardschaplist-item-active{% endif %}">
+<ol reversed class="static-nav-item{% if aboutAardschap.url == url %} aboutaardschaplist-item-active{% endif %}">
 {% for aboutAardschap in aboutaardschaplist %}
   {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
   <a href="{{ aboutAardschap.url | url }}" class="static-content-link">
