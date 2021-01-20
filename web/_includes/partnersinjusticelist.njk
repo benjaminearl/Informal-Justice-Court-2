@@ -1,4 +1,4 @@
-  <ul class="static-nav-item{% if partnersInJustice.url == url %} partnersinjusticelist-item-active{% endif %}">
+  <ol class="static-nav-item{% if partnersInJustice.url == url %} partnersinjusticelist-item-active{% endif %}">
 {% for partnersInJustice in partnersinjusticelist %}
   {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
     <a href="{{ partnersInJustice.url | url }}" class="static-content-link">
@@ -9,4 +9,4 @@
     </li>
     </a>
 {% endfor %}
-  </ul>
+  </ol>

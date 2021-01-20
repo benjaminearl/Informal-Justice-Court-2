@@ -16,10 +16,10 @@ async function getAboutAardschap () {
   const filter = groq`*[_type == "aboutAardschap" && defined(slug) && publishedAt < now()]`
   const projection = groq`{
     _id,
-    publishedAt,
     title,
-    slug,
     subtitle,
+    slug,
+    publishedAt,
     "imageUrl": mainImage.asset->url,
     excerpt,
     body[]{
@@ -29,7 +29,7 @@ async function getAboutAardschap () {
       }
     },
   }`
-  const order = `| order(publishedAt asc)`
+  const order = `| order(publishedAt desc)`
   const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)

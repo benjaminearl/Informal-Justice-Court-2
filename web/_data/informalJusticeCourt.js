@@ -16,10 +16,10 @@ async function getInformalJusticeCourt () {
   const filter = groq`*[_type == "informalJusticeCourt" && defined(slug) && publishedAt < now()]`
   const projection = groq`{
     _id,
-    publishedAt,
     title,
-    slug,
     subtitle,
+    slug,
+    publishedAt,
     "imageUrl": mainImage.asset->url,
     excerpt,
     body[]{
