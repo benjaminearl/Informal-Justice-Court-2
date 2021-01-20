@@ -1,5 +1,5 @@
   <ul class="static-nav-item{% if behindTheScenes.url == url %} behindthecceneslist-item-active{% endif %}">
-{% for behindTheScenes in behindthesceneslist | reverse %}
+{% for behindTheScenes in behindthesceneslist %}
   {% set currentBehindTheScenes = behindTheScenes.data.behindTheScenes %}
   <a href="{{ behindTheScenes.url | url }}" class="static-content-link">
       <li class="content-box">
