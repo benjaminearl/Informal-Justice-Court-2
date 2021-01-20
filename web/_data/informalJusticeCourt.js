@@ -29,7 +29,7 @@ async function getInformalJusticeCourt () {
       }
     },
   }`
-  const order = `| order(publishedAt asc)`
+  const order = `| order(publishedAt desc)`
   const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
