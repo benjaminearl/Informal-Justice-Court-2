@@ -1,5 +1,5 @@
 <ol reversed class="static-nav-item{% if partnersInJustice.url == url %} partnersinjusticelist-item-active{% endif %}">
-{% for partnersInJustice in partnersinjusticelist %}
+{% for partnersInJustice in partnersinjusticelist | reverse %}
   {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
   <a href="{{ partnersInJustice.url | url }}" class="static-content-link">
     <li class="content-box">

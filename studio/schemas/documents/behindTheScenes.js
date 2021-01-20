@@ -70,5 +70,35 @@ export default {
       title: 'Body',
       description: 'This is the main content of the page you are adding. Images and text can be added.'
     }
+  ],
+  orderings: [
+    {
+      name: 'publishingDateAsc',
+      title: 'Publishing date new–>old',
+      by: [
+        {
+          field: 'publishedAt',
+          direction: 'asc'
+        },
+        {
+          field: 'title',
+          direction: 'asc'
+        }
+      ]
+    },
+    {
+      name: 'publishingDateDesc',
+      title: 'Publishing date old->new',
+      by: [
+        {
+          field: 'publishedAt',
+          direction: 'desc'
+        },
+        {
+          field: 'title',
+          direction: 'asc'
+        }
+      ]
+    }
   ]
 }
