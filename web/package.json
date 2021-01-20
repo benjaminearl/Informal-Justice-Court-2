@@ -1,7 +1,6 @@
 {
   "name": "sanity-eleventy-blog-web",
   "version": "1.0.2",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
@@ -28,5 +27,6 @@
     "@sanity/image-url": "^0.140.19",
     "normalize.css": "^8.0.1",
     "terser": "^4.6.13"
-  }
+  },
+  "description": ""
 }

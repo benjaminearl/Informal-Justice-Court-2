@@ -31,10 +31,7 @@ export default {
     {
       name: 'publishedAt',
       type: 'date',
-      title: 'Published at',
-      options: {
-        dateFormat: 'DD-MM-YYYY'
-      }
+      title: 'Published at'
     },
     {
       name: 'mainImage',

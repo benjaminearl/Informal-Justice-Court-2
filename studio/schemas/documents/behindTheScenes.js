@@ -31,26 +31,7 @@ export default {
     {
       name: 'publishedAt',
       type: 'date',
-      title: 'Published at',
-      options: {
-        dateFormat: 'DD-MM-YYYY'
-      }
-    },
-    {
-      title: 'Content Type',
-      name: 'contentType',
-      type: 'array',
-      description: 'This is not currently in use but once there is more content this will allow the website to filter the results by type',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Article', value: 'article'},
-          {title: 'Interview', value: 'interview'},
-          {title: 'Exhibitions and Seminars', value: 'exhibitonsSeminars'},
-          {title: 'Art and Research', value: 'artResearch'},
-          {title: 'Data and Resources', value: 'dataResources'}
-        ]
-      }
+      title: 'Published at'
     },
     {
       name: 'mainImage',
