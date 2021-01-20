@@ -30,9 +30,11 @@ export default {
     },
     {
       name: 'publishedAt',
-      type: 'datetime',
+      type: 'date',
       title: 'Published at',
-      description: 'This can be used to schedule post for publishing'
+      options: {
+        dateFormat: 'DD-MM-YYYY'
+      }
     },
     {
       title: 'Content Type',
