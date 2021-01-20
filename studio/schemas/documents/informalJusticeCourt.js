@@ -30,7 +30,7 @@ export default {
     },
     {
       name: 'publishedAt',
-      type: 'date',
+      type: 'datetime',
       title: 'Published at'
     },
     {
