@@ -1,4 +1,4 @@
-<ol reversed class="content-navigation" style="counter-reset: start-from {{ postslist.length + 1 }}">
+<ol reversed class="content-navigation" style="counter-reset: start-from {{ pretrialproblemlist.length + 1 }}">
 {% for pretrialProblem in pretrialproblemlist | reverse %}
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
   <a href="{{ pretrialProblem.url | url }}" class="static-content-link">

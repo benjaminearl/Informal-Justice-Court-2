@@ -1,5 +1,5 @@
-<ol reversed class="static-nav-item{% if aboutAardschap.url == url %} aboutaardschaplist-item-active{% endif %} content-navigation">
-{% for aboutAardschap in aboutaardschaplist %}
+<ol reversed class="content-navigation" style="counter-reset: start-from {{ aboutaardschaplist.length + 1 }}">>
+{% for aboutAardschap in aboutaardschaplist | reverse %}
   {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
   <a href="{{ aboutAardschap.url | url }}" class="static-content-link">
       <li class="content-box">
