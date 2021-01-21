@@ -1,10 +1,10 @@
-<ol reversed class="static-nav-item{% if aboutAardschap.url == url %} aboutaardschaplist-item-active{% endif %}">
-{% for aboutAardschap in aboutaardschaplist | reverse %}
+<ol reversed class="static-nav-item{% if aboutAardschap.url == url %} aboutaardschaplist-item-active{% endif %} content-navigation">
+{% for aboutAardschap in aboutaardschaplist %}
   {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
   <a href="{{ aboutAardschap.url | url }}" class="static-content-link">
       <li class="content-box">
       {% if currentAboutAardschap.title %}<h3 class="content-box-title">{{ currentAboutAardschap.title }}</h3>{% else %}<code>{{ aboutAardschap.url }}</code>{% endif %}
-      <img src="{{ currentAboutAardschap.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
+      <time class="postlist-date" datetime="{{ currentAboutAardschap.publishedAt }}"></time>
     </li>
   </a>
 {% endfor %}

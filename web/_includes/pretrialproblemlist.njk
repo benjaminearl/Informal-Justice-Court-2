@@ -4,7 +4,7 @@
   <a href="{{ pretrialProblem.url | url }}" class="static-content-link">
     <li class="content-box">
       {% if currentPretrialProblem.title %}<h3 class="content-box-title">{{ currentPretrialProblem.title }}</h3>{% else %}<code>{{ pretrialProblem.url }}</code>{% endif %}
-      <time class="postlist-date" datetime="{{ currentPretrialProblem.publishedAt }}">{{ currentPretrialProblem.publishedAt|readableDate }}</time>
+      <time class="postlist-date" datetime="{{ currentPretrialProblem.publishedAt }}"></time>
     </li>
   </a>
 {% endfor %}

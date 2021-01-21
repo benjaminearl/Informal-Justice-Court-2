@@ -32,12 +32,8 @@ templateClass: tmpl-aboutAardschap
   <p>ABOUT AARDSCHAP</p>
 </div>
 <div class="subnav contentNav">
-  <ul class="content-navigation">
-  {% for aboutAardschap in collections.theAboutAardschap %}
-  {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
-    <li><a href="{{ aboutAardschap.url | url }}">{{ currentAboutAardschap.title }}</a></li>
-  {% endfor %}
-  </ul>
+    {% set aboutaardschaplist = collections.theAboutAardschap %}
+    {% include "aboutaardschaplist.njk" %}
 </div>
   <div class="static-content-container grid-two">
     <h1>{{ aboutAardschap.title }}</h1>

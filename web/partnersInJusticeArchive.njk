@@ -35,17 +35,8 @@ permalink: /partnersInJustice/
     <p>PARTNERS IN JUSTICE</p>
   </div>
   <div class="subnav">
-    <ul class="content-navigation">
-    {% for partnersInJustice in collections.thePartnersInJustice %}
-    {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
-    <a href="{{ partnersInJustice.url | url }}">
-      <li>
-          <p class="mobileNavTitle">{{ currentPartnersInJustice.title }}</p>
-          <img src="{{ currentPartnersInJustice.imageUrl | url }}" class="mobileNavImage" />
-          </li>
-      </a>
-    {% endfor %}
-      </ul>
+    {% set partnersinjusticelist = collections.thePartnersInJustice%}
+    {% include "partnersinjusticelist.njk" %}
   </div>
 </div>
 <div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">

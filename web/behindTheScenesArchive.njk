@@ -35,16 +35,8 @@ permalink: /behindTheScenes/
     <p>BEHIND THE SCENES</p>
   </div>
   <div class="subnav">
-    <ul class="content-navigation">
-    {% for behindTheScenes in collections.theBehindTheScenes %}
-    {% set currentBehindTheScenes = behindTheScenes.data.behindTheScenes %}
-      <a href="{{ behindTheScenes.url | url }}">
-        <li>
-          <p class="mobileNavTitle">{{ currentBehindTheScenes.title }}</p>
-          <img src="{{ currentBehindTheScenes.imageUrl | url }}" class="mobileNavImage" />
-        </li>
-      </a>
-    {% endfor %}
+    {% set behindthesceneslist = collections.theBehindTheScenes %}
+    {% include "behindthesceneslist.njk" %}
   </div>
 </div>
 <div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">

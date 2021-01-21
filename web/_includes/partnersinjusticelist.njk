@@ -1,11 +1,11 @@
-<ol reversed class="static-nav-item{% if partnersInJustice.url == url %} partnersinjusticelist-item-active{% endif %}">
-{% for partnersInJustice in partnersinjusticelist | reverse %}
+<ol reversed class="static-nav-item{% if partnersInJustice.url == url %} partnersinjusticelist-item-active{% endif %} content-navigation">
+{% for partnersInJustice in partnersinjusticelist %}
   {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
   <a href="{{ partnersInJustice.url | url }}" class="static-content-link">
     <li class="content-box">
       {% if currentPartnersInJustice.title %}<h3 class="content-box-title">{{ currentPartnersInJustice.title }}</h3>
       {% else %}<code>{{ partnersInJustice.url }}</code>{% endif %}
-      <img src="{{ currentPartnersInJustice.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
+      <time class="postlist-date" datetime="{{ currentPartnersInJustice.publishedAt }}"></time>
     </li>
   </a>
 {% endfor %}

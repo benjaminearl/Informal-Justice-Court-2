@@ -35,17 +35,8 @@ permalink: /aboutAardschap/
     <p>ABOUT AARDSCHAP</p>
   </div>
   <div class="subnav">
-    <ul class="content-navigation">
-    {% for aboutAardschap in collections.theAboutAardschap %}
-    {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
-      <a href="{{ aboutAardschap.url | url }}">
-        <li>
-          <p class="mobileNavTitle">{{ currentAboutAardschap.title }}</p>
-          <img src="{{ currentAboutAardschap.imageUrl | url }}" class="mobileNavImage" />
-        </li>
-      </a>
-    {% endfor %}
-    </ul>
+    {% set aboutaardschaplist = collections.theAboutAardschap %}
+    {% include "aboutaardschaplist.njk" %}
   </div>
 </div>
 <div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">

@@ -32,12 +32,8 @@ templateClass: tmpl-partnersInJustice
   <p>PARTNERS IN JUSTICE</p>
 </div>
 <div class="subnav contentNav">
-  <ul class="content-navigation">
-  {% for partnersInJustice in collections.thePartnersInJustice %}
-  {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
-    <li><a href="{{ partnersInJustice.url | url }}">{{ currentPartnersInJustice.title }}</a></li>
-  {% endfor %}
-  </ul>
+    {% set partnersinjusticelist = collections.thePartnersInJustice%}
+    {% include "partnersinjusticelist.njk" %}
 </div>
 <div class="static-content-container">
   <h1>{{ partnersInJustice.title }}</h1>

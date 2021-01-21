@@ -35,17 +35,8 @@ permalink: /informalJusticeCourt/
     <p>INFORMAL JUSTICE COURT</p>
   </div>
   <div class="subnav">
-    <ul class="content-navigation">
-  {% for informalJusticeCourt in collections.theInformalJusticeCourt %}
-  {% set currentInformalJusticeCourt = informalJusticeCourt.data.informalJusticeCourt %}
-      <a href="{{ informalJusticeCourt.url | url }}">
-        <li>
-          <p class="mobileNavTitle">{{ currentInformalJusticeCourt.title }}</p>
-          <img src="{{ currentInformalJusticeCourt.imageUrl | url }}" class="mobileNavImage" />
-        </li>
-      </a>
-  {% endfor %}
-  </ul>
+    {% set informaljusticecourtlist = collections.theInformalJusticeCourt %}
+    {% include "informaljusticecourtlist.njk" %}
   </div>
 </div>
 <div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">

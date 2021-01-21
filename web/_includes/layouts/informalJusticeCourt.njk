@@ -32,12 +32,8 @@ templateClass: tmpl-informalJusticeCourt
     <p>INFORMAL JUSTICE COURT</p>
   </div>
 <div class="subnav contentNav">
-  <ul class="content-navigation">
-  {% for informalJusticeCourt in collections.theInformalJusticeCourt %}
-  {% set currentInformalJusticeCourt = informalJusticeCourt.data.informalJusticeCourt %}
-    <li><a href="{{ informalJusticeCourt.url | url }}">{{ currentInformalJusticeCourt.title }}</a></li>
-  {% endfor %}
-  </ul>
+    {% set informaljusticecourtlist = collections.theInformalJusticeCourt %}
+    {% include "informaljusticecourtlist.njk" %}
 </div>
   <div class="static-content-container">
     <h1>{{ informalJusticeCourt.title }}</h1>

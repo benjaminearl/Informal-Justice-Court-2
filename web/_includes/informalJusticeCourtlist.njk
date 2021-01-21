@@ -1,10 +1,10 @@
-<ol reversed class="static-nav-item{% if informalJusticeCourt.url == url %} informaljusticecourtlist-item-active{% endif %}" >
-{% for informalJusticeCourt in informaljusticecourtlist | reverse %}
+<ol reversed class="static-nav-item{% if informalJusticeCourt.url == url %} informaljusticecourtlist-item-active{% endif %} content-navigation" >
+{% for informalJusticeCourt in informaljusticecourtlist %}
   {% set currentInformalJusticeCourt = informalJusticeCourt.data.informalJusticeCourt %}
       <a href="{{ informalJusticeCourt.url | url }}" class="static-content-link">
       <li class="content-box">
       {% if currentInformalJusticeCourt.title %}<h3 class="content-box-title">{{ currentInformalJusticeCourt.title }}</h3>{% else %}<code>{{ informalJusticeCourt.url }}</code>{% endif %}
-      <img src="{{ currentInformalJusticeCourt.imageUrl }}?rect=0,0,400,300" class="thumbnail"/>
+      <time class="postlist-date" datetime="{{ currentInformalJusticeCourt.publishedAt }}"></time>
     </li>
     </a>
 {% endfor %}

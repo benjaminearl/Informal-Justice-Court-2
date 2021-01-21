@@ -32,12 +32,8 @@ templateClass: tmpl-behindTheScenes
     <p>BEHIND THE SCENES</p>
   </div>
 <div class="subnav contentNav">
-  <ul class="content-navigation">
-  {% for behindTheScenes in collections.theBehindTheScenes %}
-  {% set currentBehindTheScenes = behindTheScenes.data.behindTheScenes %}
-    <li><a href="{{ behindTheScenes.url | url }}">{{ currentBehindTheScenes.title }}</a></li>
-  {% endfor %}
-  </ul>
+    {% set behindthesceneslist = collections.theBehindTheScenes %}
+    {% include "behindthesceneslist.njk" %}
 </div>
 <div class="static-content-container grid-two">
   <h1>{{ behindTheScenes.title }}</h1>
