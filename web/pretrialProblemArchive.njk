@@ -41,7 +41,7 @@ permalink: /pretrialProblem/
       <a href="{{ pretrialProblem.url | url }}">
         <li>
           <p class="mobileNavTitle">{{ currentPretrialProblem.title }}</p>
-          <img src="{{ currentPretrialProblem.imageUrl | url }}" class="mobileNavImage" />
+          <time class="postlist-date" datetime="{{ currentPretrialProblem.publishedAt }}"></time>
         </li>
       </a>
     {% endfor %}
