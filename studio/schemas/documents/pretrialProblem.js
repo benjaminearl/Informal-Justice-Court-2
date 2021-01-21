@@ -9,7 +9,6 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: 'Title of page. This will appear on the homepage with an image'
     },
     {
       name: 'subtitle',
@@ -31,7 +30,8 @@ export default {
     {
       name: 'publishedAt',
       type: 'datetime',
-      title: 'Published at'
+      title: 'Published at',
+      description: 'This can be used to schedule post for publishing'
     },
     {
       name: 'mainImage',
@@ -81,5 +81,22 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      publishedAt: 'publishedAt',
+      slug: 'slug',
+      media: 'mainImage'
+    },
+    prepare ({title = 'No title', publishedAt, slug = {}, media}) {
+      const dateSegment = format(publishedAt, 'YYYY/MM')
+      const path = `/${dateSegment}/${slug.current}/`
+      return {
+        title,
+        media,
+        subtitle: publishedAt ? path : 'Missing publishing date'
+      }
+    }
+  }
 }

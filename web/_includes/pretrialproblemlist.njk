@@ -1,5 +1,5 @@
-<ol reversed class="static-nav-item{% if pretrialProblem.url == url %} pretrialproblemlist-item-active{% endif %} content-navigation">
-{% for pretrialProblem in pretrialproblemlist %}
+<ol reversed class="content-navigation" style="counter-reset: start-from {{ postslist.length + 1 }}">
+{% for pretrialProblem in pretrialproblemlist | reverse %}
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
   <a href="{{ pretrialProblem.url | url }}" class="static-content-link">
     <li class="content-box">

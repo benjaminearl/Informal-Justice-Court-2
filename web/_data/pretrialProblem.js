@@ -16,20 +16,20 @@ async function getPretrialProblem () {
   const filter = groq`*[_type == "pretrialProblem" && defined(slug) && publishedAt < now()]`
   const projection = groq`{
     _id,
-    title,
-    subtitle,
-    slug,
     publishedAt,
+    title,
+    slug,
+    subtitle,
     "imageUrl": mainImage.asset->url,
     excerpt,
     body[]{
       ...,
       children[]{
-        ...,
+        ...
       }
-    },
+    }
   }`
-  const order = `| order(publishedAt desc)`
+  const order = `| order(publishedAt asc)`
   const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
