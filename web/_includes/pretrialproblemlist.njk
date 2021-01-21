@@ -1,4 +1,4 @@
-<ul reversed class="static-nav-item{% if pretrialProblem.url == url %} pretrialproblemlist-item-active{% endif %} content-navigation">
+<ol reversed class="static-nav-item{% if pretrialProblem.url == url %} pretrialproblemlist-item-active{% endif %} content-navigation">
 {% for pretrialProblem in pretrialproblemlist | reverse %}
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
   <a href="{{ pretrialProblem.url | url }}" class="static-content-link">
@@ -7,4 +7,4 @@
     </li>
   </a>
 {% endfor %}
-</ul>
+</ol>
