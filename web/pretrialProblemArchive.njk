@@ -35,17 +35,8 @@ permalink: /pretrialProblem/
     <p>PRE-TRIAL PROBLEM</p>
   </div>
   <div class="subnav">
-    <ul class="content-navigation">
-    {% for pretrialProblem in collections.thePretrialProblem %}
-    {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
-      <a href="{{ pretrialProblem.url | url }}">
-        <li>
-          <p class="mobileNavTitle">{{ currentPretrialProblem.title }}</p>
-          <time class="postlist-date" datetime="{{ currentPretrialProblem.publishedAt }}"></time>
-        </li>
-      </a>
-    {% endfor %}
-    </ul>
+    {% set pretrialproblemlist = collections.thePretrialProblem%}
+    {% include "pretrialproblemlist.njk" %}
   </div>
 </div>
 <div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
