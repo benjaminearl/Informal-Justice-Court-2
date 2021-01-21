@@ -14,6 +14,8 @@ import behindTheScenes from './documents/behindTheScenes'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
+import bioPortableText from './objects/bioPortableText'
+import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 
 export default createSchema({
@@ -31,6 +33,8 @@ export default createSchema({
     partnersInJustice,
     aboutAardschap,
     behindTheScenes,
+    bioPortableText,
+    excerptPortableText
 
   ])
 })

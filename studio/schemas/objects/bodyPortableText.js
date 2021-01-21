@@ -1,7 +1,7 @@
 export default {
   name: 'bodyPortableText',
   type: 'array',
-  title: 'detail',
+  title: 'Post body',
   of: [
     {
       type: 'block',
@@ -18,7 +18,7 @@ export default {
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'}
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}, {title: 'Numbered', value: 'number'}],
+      lists: [{title: 'Bullet', value: 'bullet'}, {title: 'Number', value: 'number'}],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -37,37 +37,15 @@ export default {
                 type: 'url'
               }
             ]
-          },
-          {
-            name: 'internalLink',
-            type: 'object',
-            title: 'Internal link',
-            fields: [
-              {
-                name: 'reference',
-                type: 'reference',
-                title: 'Reference',
-                to: [
-                  { type: 'aboutUs' },
-                  { type: 'article' },
-                  { type: 'justiceInspiration' },
-                  { type: 'pretrialProblem' },
-                  { type: 'projectBackground' },
-                  { type: 'partner' },
-                  { type: 'teamMember' },
-                  // other types you may want to link to
-                ]
-              }
-            ]
           }
         ]
-      }
+      },
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'image',
+      type: 'mainImage',
       options: {hotspot: true}
     }
   ]
