@@ -2,7 +2,7 @@
 {% for pretrialProblem in pretrialproblemlist | reverse %}
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
   <a href="{{ pretrialProblem.url | url }}" class="static-content-link">
-    <li class="content-box">
+    <li class="content-box postlist-item{% if post.url == url %} postlist-item-active{% endif %}"">
       {% if currentPretrialProblem.title %}<h3 class="content-box-title">{{ currentPretrialProblem.title }}</h3>{% else %}<code>{{ pretrialProblem.url }}</code>{% endif %}
       <time class="postlist-date" datetime="{{ currentPretrialProblem.publishedAt }}"></time>
     </li>
