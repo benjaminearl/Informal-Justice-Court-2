@@ -1,4 +1,4 @@
-<ol reversed class="content-navigation" style="counter-reset: start-from {{ aboutaardschaplist.length + 1 }}">>
+<ol reversed class="content-navigation" style="counter-reset: start-from {{ aboutaardschaplist.length + 1 }}">
 {% for aboutAardschap in aboutaardschaplist | reverse %}
   {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
   <a href="{{ aboutAardschap.url | url }}" class="static-content-link">

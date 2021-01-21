@@ -32,7 +32,7 @@ templateClass: tmpl-informalJusticeCourt
     <p>INFORMAL JUSTICE COURT</p>
   </div>
 <div class="subnav contentNav">
-    {% set informaljusticecourtlist = collections.theInformalJusticeCourt %}
+    {% set informaljusticecourtlist = collections.ijc %}
     {% include "informaljusticecourtlist.njk" %}
 </div>
   <div class="static-content-container">
@@ -44,7 +44,7 @@ templateClass: tmpl-informalJusticeCourt
   <div id="mobile-related-content">
     <p class="relatedContentTitle">related content</p>
     <ul class="related-list">
-    {% for informalJusticeCourt in collections.theInformalJusticeCourt %}
+    {% for informalJusticeCourt in collections.ijc %}
     {% set currentInformalJusticeCourt = informalJusticeCourt.data.informalJusticeCourt %}
     <a href="{{ informalJusticeCourt.url | url }}">
       <li>

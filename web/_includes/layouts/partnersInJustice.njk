@@ -32,7 +32,7 @@ templateClass: tmpl-partnersInJustice
   <p>PARTNERS IN JUSTICE</p>
 </div>
 <div class="subnav contentNav">
-    {% set partnersinjusticelist = collections.thePartnersInJustice%}
+    {% set partnersinjusticelist = collections.partners%}
     {% include "partnersinjusticelist.njk" %}
 </div>
 <div class="static-content-container">
@@ -44,7 +44,7 @@ templateClass: tmpl-partnersInJustice
 <div id="mobile-related-content">
   <p class="relatedContentTitle">related content</p>
   <ul class="related-list">
-  {% for partnersInJustice in collections.thePartnersInJustice %}
+  {% for partnersInJustice in collections.partners %}
   {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
   <a href="{{ partnersInJustice.url | url }}">
     <li>

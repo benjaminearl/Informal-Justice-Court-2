@@ -32,7 +32,7 @@ templateClass: tmpl-pretrialProblem
   <p>PRE-TRIAL PROBLEM</p>
 </div>
 <div class="subnav contentNav">
-    {% set pretrialproblemlist = collections.thePretrialProblem%}
+    {% set pretrialproblemlist = collections.pretrial %}
     {% include "pretrialproblemlist.njk" %}
 </div>
 <div class="static-content-container">
@@ -44,7 +44,7 @@ templateClass: tmpl-pretrialProblem
 <div id="mobile-related-content">
   <p class="relatedContentTitle">related content</p>
   <ul class="related-list">
-  {% for pretrialProblem in collections.thePretrialProblem %}
+  {% for pretrialProblem in collections.pretrial %}
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
   <a href="{{ pretrialProblem.url | url }}">
     <li>
