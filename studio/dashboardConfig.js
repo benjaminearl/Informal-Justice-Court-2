@@ -12,17 +12,17 @@ export default {
                 'When you have finished uploading content to the site then press the deploy button. Please add all the content before pressing the deploy button because the service hosting the site tracks how many times you have deployed and will start charging if it exceeds a certain amount per month.',
               sites: [
                 {
-                  buildHookId: '5eae88fb0ecc6b4860d0b205',
+                  buildHookId: '600a840b4f4dcdab351ede40',
                   title: 'Website',
-                  name: 'Informal-Justice-Court-2',
-                  apiId: 'd81c4e4f-e457-45a1-b0d6-a7e4eea6a214'
+                  name: 'informaljusticecourt-2',
+                  apiId: '7edb0717-c3e0-472c-873f-94f5bcdcce38'
                 }
               ]
             }
           }
         ],
         data: [
-          {title: 'Frontend', value: 'https://Informal-Justice-Court-2.netlify.app', category: 'apps'}
+          {title: 'Frontend', value: 'https://informaljusticecourt-2.netlify.app', category: 'apps'}
         ]
       }
     },

@@ -1,5 +1,5 @@
 <ol reversed class="static-nav-item{% if informalJusticeCourt.url == url %} informaljusticecourtlist-item-active{% endif %} content-navigation" >
-{% for informalJusticeCourt in informaljusticecourtlist %}
+{% for informalJusticeCourt in informaljusticecourtlist | reverse %}
   {% set currentInformalJusticeCourt = informalJusticeCourt.data.informalJusticeCourt %}
       <a href="{{ informalJusticeCourt.url | url }}" class="static-content-link">
       <li class="content-box">

@@ -1,5 +1,5 @@
 <ol reversed class="static-nav-item{% if behindTheScenes.url == url %} behindthecceneslist-item-active{% endif %} content-navigation">
-{% for behindTheScenes in behindthesceneslist %}
+{% for behindTheScenes in behindthesceneslist | reverse %}
   {% set currentBehindTheScenes = behindTheScenes.data.behindTheScenes %}
   <a href="{{ behindTheScenes.url | url }}" class="static-content-link">
       <li class="content-box">
