@@ -1,0 +1,11 @@
+<ol reversed class="static-nav-item{% if theProject.url == url %} theprojectlist-item-active{% endif %} content-navigation" >
+{% for theProject in theprojectlist | reverse %}
+  {% set currentTheProject = theProject.data.theProject %}
+      <a href="{{ theProject.url | url }}" class="static-content-link">
+      <li class="content-box{% if theProject.url in page.url %} postlist-item-active{% endif %}">
+      {% if currentTheProject.title %}<h3 class="content-box-title">{{ currentTheProject.title }}</h3>{% else %}<code>{{ theProject.url }}</code>{% endif %}
+      <time class="postlist-date" datetime="{{ currentTheProject.publishedAt }}"></time>
+    </li>
+    </a>
+{% endfor %}
+</ol>

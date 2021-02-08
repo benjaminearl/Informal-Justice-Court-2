@@ -7,7 +7,7 @@ import teamMember from './documents/teamMember'
 import siteSettings from './documents/siteSettings'
 import partner from './documents/partner'
 import pretrialProblem from './documents/pretrialProblem'
-import informalJusticeCourt from './documents/informalJusticeCourt'
+import theProject from './documents/theProject'
 import partnersInJustice from './documents/partnersInJustice'
 import aboutAardschap from './documents/aboutAardschap'
 import behindTheScenes from './documents/behindTheScenes'
@@ -29,7 +29,7 @@ export default createSchema({
     bodyPortableText,
     partner,
     pretrialProblem,
-    informalJusticeCourt,
+    theProject,
     partnersInJustice,
     aboutAardschap,
     behindTheScenes,

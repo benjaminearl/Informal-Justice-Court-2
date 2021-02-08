@@ -1,24 +1,24 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-informalJusticeCourt
+templateClass: tmpl-theProject
 ---
 <div class="content-menu-fixed">
   <div class="column-header-fixed active-menu-item">
-    <h3>INFORMAL JUSTICE COURT</h3>
+    <h3>THE PROJECT</h3>
   </div>
   <a href="/pretrialproblem/a-serious-problem/">
     <div class="column-header-fixed">
       <h3>PRE-TRIAL PROBLEM</h3>
     </div>
   </a>
-  <a href="/partnersinjustice/inmates-protagonists/">
-    <div class="column-header-fixed">
-      <h3>PARTNERS IN JUSTICE</h3>
-    </div>
-  </a>
   <a href="/behindthescenes/latest-news/">
     <div class="column-header-fixed">
       <h3>BEHIND THE SCENE</h3>
+    </div>
+  </a>
+    <a href="/partnersinjustice/inmates-protagonists/">
+    <div class="column-header-fixed">
+      <h3>PARTNERS IN JUSTICE</h3>
     </div>
   </a>
   <a href="/aboutaardschap/about-us/">
@@ -29,27 +29,27 @@ templateClass: tmpl-informalJusticeCourt
 </div>
 <div class="content-container">
   <div class="mobile-article-category">
-    <p>INFORMAL JUSTICE COURT</p>
+    <p>THE PROJECT</p>
   </div>
 <div class="subnav contentNav">
-    {% set informaljusticecourtlist = collections.ijc %}
-    {% include "informaljusticecourtlist.njk" %}
+    {% set theprojectlist = collections.project %}
+    {% include "theprojectlist.njk" %}
 </div>
   <div class="static-content-container">
-    <h1>{{ informalJusticeCourt.title }}</h1>
-    <h2>{{ informalJusticeCourt.subtitle }}</h2>
-    <img src="{{ informalJusticeCourt.imageUrl }}" class="cover-image" />
-    {{ informalJusticeCourt.body | markdownify | safe }}
+    <h1>{{ theProject.title }}</h1>
+    <h2>{{ theProject.subtitle }}</h2>
+    <img src="{{ theProject.imageUrl }}" class="cover-image" />
+    {{ theProject.body | markdownify | safe }}
   </div>
   <div id="mobile-related-content">
     <p class="relatedContentTitle">related content</p>
     <ul class="related-list">
-    {% for informalJusticeCourt in collections.ijc %}
-    {% set currentInformalJusticeCourt = informalJusticeCourt.data.informalJusticeCourt %}
-    <a href="{{ informalJusticeCourt.url | url }}">
+    {% for theProject in collections.project %}
+    {% set currentTheProject = theProject.data.theProject %}
+    <a href="{{ theProject.url | url }}">
       <li>
-        <p class="mobileNavTitle">{{ currentInformalJusticeCourt.title }}</p>
-        <img src="{{ currentInformalJusticeCourt.imageUrl | url }}" class="mobileNavImage" />
+        <p class="mobileNavTitle">{{ currentTheProject.title }}</p>
+        <img src="{{ currentTheProject.imageUrl | url }}" class="mobileNavImage" />
       </li>
     </a>
     {% endfor %}
@@ -59,7 +59,7 @@ templateClass: tmpl-informalJusticeCourt
 <div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
   <p>menu</p>
   <ul id="showDiv" style="display:none;">
-    <li class="list-item"><a href="/informaljusticecourt/informal-justice-court-in-prison/">Informal Justice Court</a></li>
+    <li class="list-item"><a href="/theproject/informal-justice-court-in-prison/">THE PROJECT</a></li>
     <li class="list-item"><a href="/pretrialproblem/a-serious-problem/">Pre-trial Problem</a></li>
     <li class="list-item"><a href="/partnersinjustice/inmates-protagonists/">Partners In Justice</a></li>
     <li class="list-item"><a href="/behindthescenes/latest-news/">Behind The Scenes</a></li>

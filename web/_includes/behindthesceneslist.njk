@@ -2,7 +2,7 @@
 {% for behindTheScenes in behindthesceneslist | reverse %}
   {% set currentBehindTheScenes = behindTheScenes.data.behindTheScenes %}
   <a href="{{ behindTheScenes.url | url }}" class="static-content-link">
-      <li class="content-box">
+      <li class="content-box{% if behindTheScenes.url in page.url %} postlist-item-active{% endif %}">
       {% if currentBehindTheScenes.title %}<h3 class="content-box-title">{{ currentBehindTheScenes.title }}</h3>{% else %}<code>{{ behindTheScenes.url }}</code>{% endif %}
       <time class="postlist-date" datetime="{{ currentBehindTheScenes.publishedAt }}"></time>
     </li>

@@ -295,6 +295,7 @@ img.thumbnail {
 
 .content-box {
   border-bottom: 1px dashed #008751;
+  background-color: white;
 }
 
 .content-box:hover > .thumbnail {
@@ -304,6 +305,10 @@ img.thumbnail {
 h3.content-box-title {
   padding-bottom: 15px;
   text-align: left;
+}
+
+h3.content-box-title:hover {
+  text-decoration: underline;
 }
 
 .content-container {
@@ -390,6 +395,32 @@ h2.article-subtitle {
 
 .mobile-home-space {
   display: none;
+}
+
+.postlist-item-active {
+  background-color: #008751;
+  color: white;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  display: inline;
 }
 
 /* MOBILE */

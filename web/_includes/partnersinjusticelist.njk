@@ -2,7 +2,7 @@
 {% for partnersInJustice in partnersinjusticelist | reverse %}
   {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
   <a href="{{ partnersInJustice.url | url }}" class="static-content-link">
-    <li class="content-box">
+    <li class="content-box{% if partnersInJustice.url in page.url %} postlist-item-active{% endif %}">
       {% if currentPartnersInJustice.title %}<h3 class="content-box-title">{{ currentPartnersInJustice.title }}</h3>
       {% else %}<code>{{ partnersInJustice.url }}</code>{% endif %}
       <time class="postlist-date" datetime="{{ currentPartnersInJustice.publishedAt }}"></time>

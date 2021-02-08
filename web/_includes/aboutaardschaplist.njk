@@ -2,8 +2,8 @@
 {% for aboutAardschap in aboutaardschaplist | reverse %}
   {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
   <a href="{{ aboutAardschap.url | url }}" class="static-content-link">
-      <li class="content-box">
-      {% if currentAboutAardschap.title %}<h3 class="content-box-title">{{ currentAboutAardschap.title }}</h3>{% else %}<code>{{ aboutAardschap.url }}</code>{% endif %}
+      <li class="content-box{% if aboutAardschap.url in page.url %} postlist-item-active{% endif %}">
+      {% if currentAboutAardschap.title %}<h3 class="content-box-title">{{ currentAboutAardschap.title }}</h3>{% endif %}
       <time class="postlist-date" datetime="{{ currentAboutAardschap.publishedAt }}"></time>
     </li>
   </a>

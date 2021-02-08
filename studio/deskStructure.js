@@ -25,9 +25,9 @@ export default () =>
               .title('Content')
               .items([
                 S.listItem()
-                  .title('Informal Justice Court')
-                  .schemaType('informalJusticeCourt')
-                  .child(S.documentTypeList('informalJusticeCourt').title('Informal Justice Court')),
+                  .title('The Project')
+                  .schemaType('theProject')
+                  .child(S.documentTypeList('theProject').title('The Project')),
                 S.listItem()
                   .title('Pre-trial Problem')
                   .schemaType('pretrialProblem')
