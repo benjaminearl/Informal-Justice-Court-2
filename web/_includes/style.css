@@ -264,11 +264,11 @@ a.carousel-item-link {
   display: inline-block;
   vertical-align: top;
   border-right: 1px solid #008751;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .content-scroller {
-  overflow: scroll;
+  overflow: hidden;
 }
 
 img.thumbnail {
