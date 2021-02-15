@@ -385,7 +385,7 @@ h2.article-subtitle {
   margin-bottom: 10px;
 }
 
-#mobile-home-space {
+#ben {
   display: none;
 }
 
@@ -459,7 +459,7 @@ h2.article-subtitle {
     display: none;
   }
 
-  #mobile-home-space {
+  #ben {
     width: 100%;
     display: block;
     height: calc(100vh - 300px);
