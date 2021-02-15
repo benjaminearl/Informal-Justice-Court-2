@@ -385,7 +385,7 @@ h2.article-subtitle {
   margin-bottom: 10px;
 }
 
-.mobile-home-space {
+#mobile-home-space {
   display: none;
 }
 
@@ -459,13 +459,13 @@ h2.article-subtitle {
     display: none;
   }
 
-  .mobile-home-space {
+  #mobile-home-space {
     width: 100%;
     display: block;
     height: calc(100vh - 300px);
     position: relative;
     background-color: #008751;
-    z-index: -10;
+    z-index: -5;
     padding: 10px;
   }
 

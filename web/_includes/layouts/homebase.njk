@@ -93,11 +93,11 @@
 
       </div>
     </div>
-    <div class="mobile-home-space">
+    <div id="mobile-home-space">
       <div class="mobile-space-container">
         <p>{{ metadata.tagline }}</p>
       </div>
-      <img class="homespace-img" src="/assets/carousel-img/old/Carouselitem1-mobile.jpg" alt="inmates sitting under tree" />
+      <img class="homespace-img" src="/assets/carousel-img/old/Carouselitem1-mobile.jpg" alt="inmates sitting under tree">
     </div>
       <div>
         {{ content | safe }}
@@ -114,9 +114,10 @@
           waitUntilVisible: true,
           afterComplete: function(step, instance) {
 
-            var element = document.getElementById("header-container");
+            var header = document.getElementById("header-container");
             // smooth scroll to element and align it at the bottom
-            element.scrollIntoView({ behavior: 'smooth'});
+            header.scrollIntoView({ behavior: 'smooth'});
+            instance.destroy();
 
           }
         }).go();
