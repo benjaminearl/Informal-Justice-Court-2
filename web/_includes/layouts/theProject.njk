@@ -42,14 +42,13 @@ templateClass: tmpl-theProject
     {{ theProject.body | markdownify | safe }}
   </div>
   <div id="mobile-related-content">
-    <p class="relatedContentTitle">related content</p>
+    <p class="relatedContentTitle">More of The Project</p>
     <ul class="related-list">
     {% for theProject in collections.project %}
     {% set currentTheProject = theProject.data.theProject %}
     <a href="{{ theProject.url | url }}">
       <li>
         <p class="mobileNavTitle">{{ currentTheProject.title }}</p>
-        <img src="{{ currentTheProject.imageUrl | url }}" class="mobileNavImage" />
       </li>
     </a>
     {% endfor %}

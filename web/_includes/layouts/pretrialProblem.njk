@@ -42,14 +42,13 @@ templateClass: tmpl-pretrialProblem
   {{ pretrialProblem.body | markdownify | safe }}
 </div>
 <div id="mobile-related-content">
-  <p class="relatedContentTitle">related content</p>
+  <p class="relatedContentTitle">More Pre-trial Problem</p>
   <ul class="related-list">
   {% for pretrialProblem in collections.pretrial %}
   {% set currentPretrialProblem = pretrialProblem.data.pretrialProblem %}
   <a href="{{ pretrialProblem.url | url }}">
     <li>
       <p class="mobileNavTitle">{{ currentPretrialProblem.title }}</p>
-      <img src="{{ currentPretrialProblem.imageUrl | url }}" class="mobileNavImage" />
     </li>
   </a>
   {% endfor %}

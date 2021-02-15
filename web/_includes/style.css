@@ -346,10 +346,6 @@ h3.content-box-title:hover {
   display: none;
 }
 
-.mobileNavImage {
-  display: none;
-}
-
 .static-content-container {
   grid-column-start: 3;
   grid-column-end: 9;
@@ -378,15 +374,16 @@ h2.article-subtitle {
 
 .static-content-container img {
   width: 100%;
+  margin-top: 35px;
 }
 
 .cover-image {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   width: 100%;
 }
 
 .static-content-container p {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .static-content-container h1 {
@@ -493,6 +490,11 @@ h2.article-subtitle {
     padding: 10px;
   }
 
+  .homespace-img {
+    width: 100%;
+    margin-top: 15px;
+  }
+
   .tmpl-home {
     z-index: -5;
   }
@@ -549,11 +551,6 @@ h2.article-subtitle {
 
   .archive-content {
     display: none;
-  }
-
-  .mobileNavImage {
-    display: inline-block;
-    width: 100%;
   }
 
   .content-container {
@@ -613,6 +610,7 @@ h2.article-subtitle {
 
   .list-item a {
    text-decoration: none;
+   text-transform: uppercase;
   }
 
 .mobile-content-menu-open {

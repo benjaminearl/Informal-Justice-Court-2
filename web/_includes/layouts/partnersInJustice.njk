@@ -42,14 +42,13 @@ templateClass: tmpl-partnersInJustice
   {{ partnersInJustice.body | markdownify | safe }}
 </div>
 <div id="mobile-related-content">
-  <p class="relatedContentTitle">related content</p>
+  <p class="relatedContentTitle">More Partners in Justice</p>
   <ul class="related-list">
   {% for partnersInJustice in collections.partners %}
   {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
   <a href="{{ partnersInJustice.url | url }}">
     <li>
       <p class="mobileNavTitle">{{ currentPartnersInJustice.title }}</p>
-      <img src="{{ currentPartnersInJustice.imageUrl | url }}" class="mobileNavImage" />
     </li>
   </a>
   {% endfor %}

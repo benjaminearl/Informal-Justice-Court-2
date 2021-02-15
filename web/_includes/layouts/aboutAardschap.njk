@@ -42,14 +42,13 @@ templateClass: tmpl-aboutAardschap
     {{ aboutAardschap.body | markdownify | safe }}
   </div>
   <div id="mobile-related-content">
-    <p class="relatedContentTitle">related content</p>
+    <p class="relatedContentTitle">More About Us</p>
     <ul class="related-list">
     {% for aboutAardschap in collections.about %}
-    {% set currentAboutAardschap = aboutUs.data.aboutAardschap %}
+    {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
     <a href="{{ aboutAardschap.url | url }}">
       <li>
         <p class="mobileNavTitle">{{ currentAboutAardschap.title }}</p>
-        <img src="{{ currentAboutAardschap.imageUrl | url }}" class="mobileNavImage" />
       </li>
     </a>
     {% endfor %}
@@ -57,12 +56,12 @@ templateClass: tmpl-aboutAardschap
   </div>
 </div>
 <div id="mobile-content-menu" onclick="showDiv();" style="bottom:0;">
-
+  <p>menu</p>
   <ul id="showDiv" style="display:none;">
-    <li class="list-item"><a href="/theproject/an-informal-justice-court-in-prison/">THE PROJECT</a></li>
-    <li class="list-item"><a href="/pretrialproblem/a-serious-problem/">Pre-trial Problem</a></li>
-    <li class="list-item"><a href="/behindthescenes/latest-news/">Behind The Scenes</a></li>
+    <li class="list-item"><a href="/theproject/informal-justice-court-in-prison/">THE PROJECT</a></li>
+    <li class="list-item"><a href="/pretrialproblem/a-serious-problem/">PRE-TRIAL PROBLEM</a></li>
     <li class="list-item"><a href="/partnersinjustice/inmates-protagonists/">Partners In Justice</a></li>
+    <li class="list-item"><a href="/behindthescenes/latest-news/">Behind The Scenes</a></li>
     <li class="list-item"><a href="/aboutaardschap/about-us/">About Aardschap</a></li>
   </ul>
 </div>
