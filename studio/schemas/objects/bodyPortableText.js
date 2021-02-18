@@ -29,15 +29,21 @@ export default {
           {
             name: 'link',
             type: 'object',
-            title: 'URL',
+            title: 'External link',
             fields: [
               {
-                title: 'URL',
                 name: 'href',
-                type: 'url'
+                type: 'url',
+                title: 'URL'
+              },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                description: 'Read https://css-tricks.com/use-target_blank/',
+                type: 'boolean'
               }
             ]
-          }
+          },
         ]
       },
     },
