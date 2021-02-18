@@ -39,7 +39,7 @@ templateClass: tmpl-pretrialProblem
 <h1>{{ pretrialProblem.title }}</h1>
 <h2>{{ pretrialProblem.subtitle }} </h2>
   <img src="{{ pretrialProblem.imageUrl }}" class="cover-image" />
-  {{ pretrialProblem.body | markdownify }}
+  {{ pretrialProblem.body | markdownify | safe }}
 </div>
 <div id="mobile-related-content">
   <p class="relatedContentTitle">More Pre-trial Problem</p>
