@@ -474,6 +474,7 @@ h2.article-subtitle {
     height: calc(100vh - 300px);
     position: relative;
     background-color: #008751;
+    z-index: -5;
     padding: 10px;
   }
 

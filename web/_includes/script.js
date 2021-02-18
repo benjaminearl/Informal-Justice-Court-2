@@ -22,6 +22,7 @@ nextBtn.addEventListener('click', ()=>{
 })
 
 prevBtn.addEventListener('click', ()=>{
+  
   if (counter > 0 ) {
     carouselSlide.style.transition = "transform 0.5s ease-in-out";
     counter--;

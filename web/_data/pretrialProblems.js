@@ -25,7 +25,10 @@ async function getPretrialProblem () {
     body[]{
       ...,
       children[]{
-        ...
+        ...,
+        markDefs[]{
+          ...,
+        }
       }
     }
   }`
