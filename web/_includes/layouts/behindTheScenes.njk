@@ -35,7 +35,7 @@ templateClass: tmpl-behindTheScenes
     {% set behindthesceneslist = collections.bts %}
     {% include "behindthesceneslist.njk" %}
 </div>
-<div class="static-content-container grid-two">
+<div class="static-content-container grid-two {{ behindTheScenes.title }}">
   <h1>{{ behindTheScenes.title }}</h1>
   <img src="{{ behindTheScenes.imageUrl }}" class="cover-image" />
   <h2 class="behindTheScenes-subtitle">{{ behindTheScenes.subtitle }}</h2>

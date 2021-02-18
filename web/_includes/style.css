@@ -367,9 +367,14 @@ h2.article-subtitle {
   padding-bottom: 30px;
 }
 
-.static-content-container img {
+.Gallery p img {
   width: 100%;
   margin-top: 35px;
+}
+
+.Overview p img {
+  width: 100%;
+  margin-bottom: 35px;
 }
 
 .cover-image {
