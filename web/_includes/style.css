@@ -132,6 +132,10 @@ header {
   grid-column-end: 12;
 }
 
+.social-links img {
+  height: 25px;
+}
+
 .contact a {
   text-decoration: none;
 }
