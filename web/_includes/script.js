@@ -8,7 +8,7 @@ const nextBtn = document.querySelector('#nextBtn');
 
 //counter
 let counter = 0;
-const size = 900;
+const size = 800;
 
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
