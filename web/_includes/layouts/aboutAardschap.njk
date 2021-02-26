@@ -44,7 +44,7 @@ templateClass: tmpl-aboutAardschap
   <div id="mobile-related-content">
     <p class="relatedContentTitle">More About Us</p>
     <ul class="related-list">
-    {% for aboutAardschap in collections.about %}
+    {% for aboutAardschap in collections.about | reverse %}
     {% set currentAboutAardschap = aboutAardschap.data.aboutAardschap %}
     <a href="{{ aboutAardschap.url | url }}">
       <li>

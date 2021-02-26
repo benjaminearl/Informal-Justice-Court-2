@@ -44,7 +44,7 @@ templateClass: tmpl-partnersInJustice
 <div id="mobile-related-content">
   <p class="relatedContentTitle">More Partners in Justice</p>
   <ul class="related-list">
-  {% for partnersInJustice in collections.partners %}
+  {% for partnersInJustice in collections.partners | reverse %}
   {% set currentPartnersInJustice = partnersInJustice.data.partnersInJustice %}
   <a href="{{ partnersInJustice.url | url }}">
     <li>

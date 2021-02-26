@@ -109,6 +109,17 @@ header {
   text-transform: uppercase;
 }
 
+.mobile-social-icons {
+  display: none;
+  text-align: center;
+  height: 50px;
+  padding-top: 13px;
+}
+
+.mobile-social-icons a {
+  padding-right: 15px;
+}
+
 .header-item {
   display: inline-block;
   border-right: 1px solid #008751;
@@ -156,6 +167,7 @@ header {
 .carousel-slide {
   display: flex;
   width: 250%;
+  margin: 0;
 }
 
 .item {
@@ -647,5 +659,20 @@ h2.article-subtitle {
   .related-list li {
     padding: 15px 10px;
     border-bottom: 1px dashed #008751;
+  }
+
+  .mobile-social-icons img {
+    width: 30px;
+    vertical-align: middle;
+  }
+}
+
+@media all and (max-height: 570px) {
+  .item {
+    height: 75vh;
+  }
+
+  .item img {
+    height: 70%;
   }
 }
