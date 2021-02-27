@@ -109,14 +109,14 @@ header {
   text-transform: uppercase;
 }
 
-.mobile-social-icons {
+#mobile-social-icons {
   display: none;
   text-align: center;
   height: 50px;
   padding-top: 13px;
 }
 
-.mobile-social-icons a {
+#mobile-social-icons a {
   padding-right: 15px;
 }
 
@@ -661,7 +661,7 @@ h2.article-subtitle {
     border-bottom: 1px dashed #008751;
   }
 
-  .mobile-social-icons img {
+  #mobile-social-icons img {
     width: 30px;
     vertical-align: middle;
   }

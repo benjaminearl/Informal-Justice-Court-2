@@ -1,8 +1,18 @@
 const { DateTime } = require("luxon");
 const util = require('util')
 const CleanCSS = require("clean-css");
+const externalLinks = require('eleventy-plugin-external-links')
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addPlugin(externalLinks, {
+    // Plugin defaults:
+    name: 'external-links',         // Plugin name
+    regex: /^(([a-z]+:)|(\/\/))/i,  // Regex that test if href is external
+    target: "_blank",               // 'target' attribute for external links
+    rel: "noopener",                // 'rel' attribute for external links
+    extensions: [".html"],          // Extensions to apply transform to
+})
 
   // https://www.11ty.io/docs/quicktips/inline-css/
   eleventyConfig.addFilter("cssmin", function(code) {
