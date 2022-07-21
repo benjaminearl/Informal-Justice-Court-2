@@ -27,7 +27,7 @@
   "dependencies": {
     "@sanity/image-url": "^0.140.19",
     "normalize.css": "^8.0.1",
-    "terser": "^4.8.0"
+    "terser": "^4.8.1"
   },
   "description": ""
 }
